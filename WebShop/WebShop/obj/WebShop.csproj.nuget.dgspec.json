@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {}
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
         "projectName": "WebShop",
-        "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
         "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\obj\\",
+        "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\99jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
