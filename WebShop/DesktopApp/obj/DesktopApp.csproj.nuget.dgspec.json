@@ -43,6 +43,16 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json.Bson": {
+              "target": "Package",
+              "version": "[1.0.3-beta1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3-alpha.0.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

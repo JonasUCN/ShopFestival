@@ -15,3 +15,10 @@ C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\obj\Debug\n
 C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.pdb
 C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.genruntimeconfig.cache
 C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\ref\DesktopApp.dll
+C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\bin\Debug\net6.0-windows\Newtonsoft.Json.Bson.dll
+C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\bin\Debug\net6.0-windows\RestSharp.dll
+C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\bin\Debug\net6.0-windows\Model.dll
+C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\bin\Debug\net6.0-windows\Model.pdb
+C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.ProductForm.resources
+C:\Users\99jon\source\repos\JonasUCN\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.csproj.CopyComplete
