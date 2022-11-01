@@ -40,7 +40,6 @@ namespace Database_Service.Controllers
         }
 
         [HttpGet, Route("Products/{id}")]
-
         public async Task<ActionResult<Product>> Get(int id)
         {
             ActionResult<Product> foundReturn;
@@ -48,7 +47,6 @@ namespace Database_Service.Controllers
             if (product != null)
             {
                 foundReturn = Ok(product);
-
             }
             else
             {
