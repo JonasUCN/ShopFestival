@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {}
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
         "projectName": "Database Service",
-        "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
         "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\obj\\",
+        "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\99jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
+              "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
               }
             }
           }
@@ -84,12 +84,12 @@
         }
       }
     },
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\obj\\",
         "projectStyle": "PackageReference",

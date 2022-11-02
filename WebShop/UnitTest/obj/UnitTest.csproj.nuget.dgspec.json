@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {}
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
         "projectName": "DesktopApp",
-        "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
         "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
+        "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\99jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
+              "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
               }
             }
           }
@@ -76,12 +76,12 @@
         }
       }
     },
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\obj\\",
         "projectStyle": "PackageReference",
@@ -131,12 +131,12 @@
         }
       }
     },
-    "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {
+    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
         "projectName": "UnitTest",
-        "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
+        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
         "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\UnitTest\\obj\\",
         "projectStyle": "PackageReference",
@@ -155,11 +155,11 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
-                "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj"
+              "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
+                "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj"
               },
-              "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
+              "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
               }
             }
           }

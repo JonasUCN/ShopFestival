@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FNunTsTr9ArI90y2iu1h8jdbvq6lv272gFxJvhzlbz2tiMbgI5IAKBUQ//xAp3I/bHFkXSKtGnrrlxe+zpq99Q==",
+  "dgSpecHash": "pqTwhMfwkmVYmsMCFcRnpNAZw/XyBDnzdL0ogHm7JabvMfHbYmHmcGq0nCJIxxHUr2OHEAFcK68MCdrYS4OzIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\99jon\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+  "projectFilePath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\99jon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\99jon\\.nuget\\packages\\newtonsoft.json.bson\\1.0.3-beta1\\newtonsoft.json.bson.1.0.3-beta1.nupkg.sha512",
