@@ -9,14 +9,40 @@ namespace DesktopApp
         public Form1()
         {
             InitializeComponent();
-            //ProductAccess product = new ProductAccess();
-            //product.GetProductByID(3);
         }
 
         private void btn_createProduct_Click(object sender, EventArgs e)
         {
-            ProductController productController = new ProductController();
-            productController.createProduct(22, 4, "dfhjdf", "sdsd", "dgfdf");
+            if (!String.IsNullOrEmpty(txt_createTitle.Text) &&
+                !String.IsNullOrEmpty(txt_createBrand.Text) &&
+                !String.IsNullOrEmpty(txt_createProductDescription.Text)&&
+                Int32.TryParse(txt_createStock.Text, out int Stock)&&
+                Decimal.TryParse(txt_createPrice.Text, out decimal Price))
+            {
+
+                ProductController productController = new ProductController();
+               bool success = productController.createProduct(Price, Stock, txt_createProductDescription.Text, txt_createBrand.Text, txt_createTitle.Text);
+
+                if (success)
+                {
+                    lbl_createProductSuccess.Text = "Produktet blev oprettet";
+                }
+                else
+                {
+                    lbl_createProductSuccess.Text = "Produktet blev ikke oprettet";
+                }
+
+            }
+            else
+            {
+                lbl_createProductSuccess.Text = "Fejl i indtastning";
+            }
+
+            
+
+
+
+           
 
             //Hello
         }

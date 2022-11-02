@@ -25,18 +25,12 @@ namespace DesktopApp.DataAccess
             request.AddJsonBody(json);
             var response = restClient.Execute(request);
 
+            bool success = response.IsSuccessful;
 
-            //bool success = Boolean.Parse(response.Content);
-            return true;        
+            
+            return success;        
         }
-        //var params = JsonConvert.SerializeObject{
-        //    price = product.Price,
-        //    stock = product.Stock,
-        //    productDesc = product.ProductDesc,
-        //    brand = product.Brand,
-        //    title = product.Title,
-        //};
-        //request.AddObject (params);
+       
 
 
         public Product GetProductByID(int id)

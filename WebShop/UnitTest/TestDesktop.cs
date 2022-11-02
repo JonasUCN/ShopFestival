@@ -13,7 +13,7 @@ namespace UnitTest
         [Fact]
         public void CreatingProductTest()
         {
-            Product compare = new Product();
+            //Product compare = new Product();
 
             decimal Price = 22;
             int Stock = 22;
@@ -21,18 +21,16 @@ namespace UnitTest
             string Brand = "Addias";
             string Title = "Festivals sko";
 
-            compare.Price = Price;
-            compare.Stock = Stock;
-            compare.ProductDesc = ProductDesc;
-            compare.Brand = Brand;
-            compare.Title = Title;
-           
+            //compare.Price = Price;
+            //compare.Stock = Stock;
+            //compare.ProductDesc = ProductDesc;
+            //compare.Brand = Brand;
+            //compare.Title = Title;
+
 
             ProductController productController = new ProductController();
-
-            Product Result = null;//productController.CreateProduct(Price,Stock,ProductDesc,Brand,Title);
-
-            Assert.Equal(Result, compare);
+            bool result = productController.createProduct(Price,Stock,ProductDesc,Brand,Title);
+            Assert.True(result);
         }
 
         [Fact]
@@ -40,10 +38,8 @@ namespace UnitTest
         public void FindProductTest()
         {
             int id = 3;
-
             ProductAccess productAccess = new ProductAccess();
             Product result = productAccess.GetProductByID(id);
-
             Assert.NotNull(result); 
 
         }
