@@ -138,19 +138,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marti\\.nuget\\packages\\": {}
+    "C:\\Users\\99jon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+      "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
       "projectName": "DesktopApp",
-      "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
-      "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
+      "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+      "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\99jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -164,8 +164,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj"
+            "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
             }
           }
         }
