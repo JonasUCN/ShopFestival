@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnitTest
 {
-    public class ProductAccess
+    public class TestProductAccess
     {
 
 

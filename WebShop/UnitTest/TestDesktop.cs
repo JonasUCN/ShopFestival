@@ -6,6 +6,7 @@ using Database_Service.DataAccess;
 using System.Diagnostics;
 using DesktopApp.DataAccess;
 
+
 namespace UnitTest
 {
     public class TestDesktop
@@ -33,16 +34,16 @@ namespace UnitTest
             Assert.True(result);
         }
 
-        [Fact]
+        //[Fact]
 
-        public void FindProductTest()
-        {
-            int id = 3;
-            ProductAccess productAccess = new ProductAccess();
-            Product result = productAccess.GetProductByID(id);
-            Assert.NotNull(result); 
+        //public void FindProductTest()
+        //{
+        //    int id = 3;
+        //    TestProductAccess productAccess = new TestProductAccess();
+        //    Product result = productAccess.GetProductByID(id);
+        //    Assert.NotNull(result); 
 
-        }
+        //}
 
     }
 }

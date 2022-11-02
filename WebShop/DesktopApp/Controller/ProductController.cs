@@ -18,12 +18,18 @@ namespace DesktopApp.Controller
         public bool createProduct(decimal price, int stock, string productDesc, string brand, string title)
         {
             bool success = false;
+
+            try 
+            { 
             
-            try
-            {
-                Product product = new Product() {Price = price, Stock = stock, ProductDesc = productDesc, Brand = brand, Title = title };
-                dataAccess.InsertProduct(product);
-                success = true;
+                if(price >= 0 && stock >= 0)
+                {
+                    Product product = new Product() { Price = price, Stock = stock, ProductDesc = productDesc, Brand = brand, Title = title };
+                    dataAccess.InsertProduct(product);
+                    success = true;
+                }
+
+
             }
             catch (Exception)
             {
