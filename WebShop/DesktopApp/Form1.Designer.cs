@@ -39,6 +39,7 @@
             this.txt_createStock = new System.Windows.Forms.TextBox();
             this.txt_createBrand = new System.Windows.Forms.TextBox();
             this.btn_createProduct = new System.Windows.Forms.Button();
+            this.lbl_createProductSuccess = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -131,11 +132,22 @@
             this.btn_createProduct.UseVisualStyleBackColor = true;
             this.btn_createProduct.Click += new System.EventHandler(this.btn_createProduct_Click);
             // 
+            // lbl_createProductSuccess
+            // 
+            this.lbl_createProductSuccess.AutoSize = true;
+            this.lbl_createProductSuccess.Location = new System.Drawing.Point(494, 311);
+            this.lbl_createProductSuccess.Name = "lbl_createProductSuccess";
+            this.lbl_createProductSuccess.Size = new System.Drawing.Size(48, 20);
+            this.lbl_createProductSuccess.TabIndex = 11;
+            this.lbl_createProductSuccess.Text = "Hello:";
+            this.lbl_createProductSuccess.Click += new System.EventHandler(this.label6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_createProductSuccess);
             this.Controls.Add(this.btn_createProduct);
             this.Controls.Add(this.txt_createBrand);
             this.Controls.Add(this.txt_createStock);
@@ -149,6 +161,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +180,6 @@
         private TextBox txt_createStock;
         private TextBox txt_createBrand;
         private Button btn_createProduct;
+        private Label lbl_createProductSuccess;
     }
 }

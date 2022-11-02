@@ -5,36 +5,32 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Database_Service.DataAccess;
+using DesktopApp.DataAccess;
 using Model;
 
 namespace DesktopApp.Controller
 {
-    private Product Product;
-    public class ProductController : ProductControllerIF
+    
+    public class ProductController
     {
-        public ProductController() 
-        {
-            ProductController = new ProductController;
-        }
+        private ProductAccess dataAccess = new ProductAccess();
 
-        public void createProduct()
+        public bool createProduct(decimal price, int stock, string productDesc, string brand, string title)
         {
-            Product product = new Product();
-        }
-
-        public List<Product> createProduct(decimal price, int stock, string productDesc, string brand, string title)
-        {
-            List <Product> = null;
+            bool success = false;
+            
             try
             {
-                Product product = new Product(decimal price, int stock, string productDesc, string brand, string title);
-                
+                Product product = new Product() {Price = price, Stock = stock, ProductDesc = productDesc, Brand = brand, Title = title };
+                dataAccess.InsertProduct(product);
+                success = true;
             }
             catch (Exception)
             {
 
                 throw;
             }
+            return success;
         }
     }
 }

@@ -17,26 +17,28 @@ namespace DesktopApp.DataAccess
 
         RestClient restClient = new RestClient("https://localhost:5001");
 
-        public void InsertProduct(Product product)
+        public bool InsertProduct(Product product)
         {
-            var request = new RestRequest($"api/Product/Products/");
-            var response = restClient.Put(request);
-            request.AddParameter("price", product.Price);
-            request.AddParameter("stock", product.Stock);
-            request.AddParameter("productDesc", product.ProductDesc);
-            request.AddParameter("brand", product.Brand);
-            request.AddParameter("title", product);
+            string json = JsonConvert.SerializeObject(product);
+            var request = new RestRequest($"api/Product/Create", Method.Post);
+            
+            request.AddJsonBody(json);
+            var response = restClient.Execute(request);
+
+
+            //bool success = Boolean.Parse(response.Content);
+            return true;        
         }
-            //var params = JsonConvert.SerializeObject{
-            //    price = product.Price,
-            //    stock = product.Stock,
-            //    productDesc = product.ProductDesc,
-            //    brand = product.Brand,
-            //    title = product.Title,
-            //};
-            //request.AddObject (params);
-        }
-        
+        //var params = JsonConvert.SerializeObject{
+        //    price = product.Price,
+        //    stock = product.Stock,
+        //    productDesc = product.ProductDesc,
+        //    brand = product.Brand,
+        //    title = product.Title,
+        //};
+        //request.AddObject (params);
+
+
         public Product GetProductByID(int id)
         {
             var request = new RestRequest($"api/Product/Products/{id}");
@@ -44,11 +46,11 @@ namespace DesktopApp.DataAccess
 
             Product product = JsonConvert.DeserializeObject<Product>(response.Content);
             return product;
-            
+
         }
 
 
 
-
     }
+    
 }

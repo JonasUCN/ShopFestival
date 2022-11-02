@@ -1,15 +1,19 @@
 ﻿namespace Database_Service.DataAccess
 {
-    public abstract class Product
+    public class Product
     {
-        public Product(decimal price, int stock, string productDesc, string brand, string title)
+        public Product()
         {
-            Price = price;
-            Stock = stock;
-            ProductDesc = productDesc;
-            Brand = brand;
-            Title = title;
+
         }
+        //public Product(decimal price, int stock, string productDesc, string brand, string title)
+        //{
+        //    Price = price;
+        //    Stock = stock;
+        //    ProductDesc = productDesc;
+        //    Brand = brand;
+        //    Title = title;
+        //}
 
         public int id { get; set; }
         public decimal Price { get; set; }
