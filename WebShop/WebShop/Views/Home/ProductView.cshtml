@@ -1,7 +1,11 @@
 ﻿@using Model;
+@using LayerController;
+
 @{
     ViewData["Title"] = "Produkt";
     Product p = ViewData["Product"] as Product;
+    BasketController bc = ViewData["BasketController"] as BasketController;
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="wwwwroot/lib/bootstrap/dist/css/botostrap.css" />
 }
 
@@ -12,14 +16,23 @@
             <div class="ref-preview"><img class="ref-image active" src="https://cdn.bootstrapstudio.io/products/product-30_md.jpg" data-reflow-preview-type="image" /></div>
         </div>
         <div class="ref-product-data">
-            <h2 class="ref-name">@p.ProductDesc</h2>
-            <div class="ref-categories"><span class="ref-category">Toys</span></div><strong class="ref-price ref-on-sale"><s class="ref-original-price">$100.00</s>@p.Price</strong><span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url data-reflow-addtocart-text data-reflow-product="43218622" data-reflow-variant="199976733_s">
+            <h1 class="ref-name">@p.Title</h1>
+                <h3><span class="ref-brand">Mærke: @p.Brand</span></h3>
+            <div class="ref-categories"><span class="ref-category">Toys</span></div><strong class="ref-price">@p.Price Kr.</strong><span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url data-reflow-addtocart-text data-reflow-product="43218622" data-reflow-variant="199976733_s">
                 <div class="ref-product-controls">
                     <div class="ref-variant">
-                    </span><a class="ref-button" href="#">Add to Cart</a>
+                            @using (Html.BeginForm("ProductView", "Home", FormMethod.Post))
+                            {
+                                @Html.HiddenFor(m => p.Title)
+                                @Html.HiddenFor(m => p.Price)
+                                @Html.HiddenFor(m => p.id)
+                                @Html.HiddenFor(m => p.ProductDesc)
+                                @Html.HiddenFor(m => p.Stock)
+                                <input type="submit" value="Tilføj"/>
+                            }
                 </div>
             </span>
-            <div class="ref-description">Product description goes here.</div>
+            <div class="ref-description">@p.ProductDesc</div>
         </div>
     </div>
 </div>

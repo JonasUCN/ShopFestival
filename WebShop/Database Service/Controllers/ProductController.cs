@@ -12,7 +12,7 @@ namespace Database_Service.Controllers
     [ApiController]
     public class ProductController : Controller
     {
-        LogicProductController _ProductController;
+        private LogicProductController _ProductController;
 
         public ProductController()
         {

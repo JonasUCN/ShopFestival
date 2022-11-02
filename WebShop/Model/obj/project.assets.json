@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Christopher\\.nuget\\packages\\": {}
+    "C:\\Users\\Lasse\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj",
-      "packagesPath": "C:\\Users\\Christopher\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
+      "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj",
+      "packagesPath": "C:\\Users\\Lasse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Christopher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

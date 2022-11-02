@@ -22,3 +22,15 @@ C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopF
 C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\refint\Model.dll
 C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.pdb
 C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ref\Model.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\bin\Debug\net6.0\Model.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\Model\obj\Debug\net6.0\ref\Model.dll

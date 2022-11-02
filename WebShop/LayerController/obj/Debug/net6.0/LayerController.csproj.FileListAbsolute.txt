@@ -1,0 +1,15 @@
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.deps.json
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.pdb
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Model.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Model.pdb
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.AssemblyReference.cache
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfoInputs.cache
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfo.cs
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CoreCompileInputs.cache
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CopyComplete
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\refint\LayerController.dll
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.pdb
+C:\Users\Lasse\Desktop\ProjektSemester\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\ref\LayerController.dll

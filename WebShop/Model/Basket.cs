@@ -19,5 +19,7 @@ namespace Model
         {
             if (product != null) { products.Add(product); }
         }
+
+        public List<Product> GetProducts() { return products; }
     }
 }

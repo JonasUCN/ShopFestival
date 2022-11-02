@@ -12,7 +12,6 @@ namespace Database_Service.LogicController
             dBAccessProduct = new DBAccessProduct();
         }
 
-
         public async Task<List<Product> >GetAllProducts()
         {
             List<Product> products = await dBAccessProduct.GetAllProducts();

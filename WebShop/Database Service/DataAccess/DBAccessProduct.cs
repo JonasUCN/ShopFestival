@@ -15,7 +15,7 @@ namespace Database_Service.DataAccess
         public DBAccessProduct()
         {
             string String = configuration["ConnectionStringToUse"];
-            connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;"; //configuration.GetConnectionString(String);
+            connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;TrustServerCertificate=true;"; //configuration.GetConnectionString(String);
 
         }
         public async Task<List<Product>> GetAllProducts()
