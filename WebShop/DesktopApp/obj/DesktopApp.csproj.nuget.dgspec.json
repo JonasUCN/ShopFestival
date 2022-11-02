@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {}
+    "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
+    "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
         "projectName": "DesktopApp",
-        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
-        "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
+        "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\99jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
+              "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj"
               }
             }
           }
@@ -76,17 +76,17 @@
         }
       }
     },
-    "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+    "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\obj\\",
+        "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\99jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
