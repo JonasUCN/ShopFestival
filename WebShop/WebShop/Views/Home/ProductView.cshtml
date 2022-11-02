@@ -1,0 +1,27 @@
+﻿@using Model;
+@{
+    ViewData["Title"] = "Produkt";
+    Product p = ViewData["Product"] as Product;
+    <link rel="stylesheet" href="wwwwroot/lib/bootstrap/dist/css/botostrap.css" />
+}
+
+<body>
+<div data-reflow-type="product">
+    <div class="reflow-product">
+        <div class="ref-media">
+            <div class="ref-preview"><img class="ref-image active" src="https://cdn.bootstrapstudio.io/products/product-30_md.jpg" data-reflow-preview-type="image" /></div>
+        </div>
+        <div class="ref-product-data">
+            <h2 class="ref-name">@p.ProductDesc</h2>
+            <div class="ref-categories"><span class="ref-category">Toys</span></div><strong class="ref-price ref-on-sale"><s class="ref-original-price">$100.00</s>@p.Price</strong><span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url data-reflow-addtocart-text data-reflow-product="43218622" data-reflow-variant="199976733_s">
+                <div class="ref-product-controls">
+                    <div class="ref-variant">
+                    </span><a class="ref-button" href="#">Add to Cart</a>
+                </div>
+            </span>
+            <div class="ref-description">Product description goes here.</div>
+        </div>
+    </div>
+</div>
+<script src="wwwwroot/lib/bootstrap/dist/js/botostrap.js"></script>
+</body>

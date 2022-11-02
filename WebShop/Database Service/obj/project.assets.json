@@ -834,19 +834,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\99jon\\.nuget\\packages\\": {}
+    "C:\\Users\\Christopher\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+      "projectUniqueName": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
       "projectName": "Database Service",
-      "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
-      "packagesPath": "C:\\Users\\99jon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\obj\\",
+      "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+      "packagesPath": "C:\\Users\\Christopher\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\99jon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Christopher\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -860,8 +860,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\99jon\\source\\repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj"
+            "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj"
             }
           }
         }
@@ -912,7 +912,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,4 +1,5 @@
 ﻿using Database_Service.DataAccess;
+using Model;
 
 namespace Database_Service.LogicController
 {

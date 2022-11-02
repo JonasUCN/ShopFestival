@@ -11,7 +11,7 @@ namespace Database_Service.DataAccess
     {
         ConfigurationManager configuration = new ConfigurationManager();
 
-        public string connectionString { get; set; }
+        public string connectionString;
         public DBAccessProduct()
         {
             string String = configuration["ConnectionStringToUse"];

@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebShop.Models;
+using Model;
+using Database_Service.LogicController;
+using Newtonsoft.Json;
+using RestSharp;
 
 namespace WebShop.Controllers
 {
@@ -20,6 +24,18 @@ namespace WebShop.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult ProductView()
+        {
+            string url = "https://localhost:5001/api/Product/Products/1";
+
+            var client = new RestClient(url);
+
+            var response = client.Get(new RestRequest());
+            Product product = JsonConvert.DeserializeObject<Product>(response.Content);
+            ViewData["Product"] = product;
             return View();
         }
 

@@ -1,4 +1,4 @@
-﻿namespace Database_Service.DataAccess
+﻿namespace Model
 {
     public class Product
     {
