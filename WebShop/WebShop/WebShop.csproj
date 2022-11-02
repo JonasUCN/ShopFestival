@@ -14,7 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Database Service\Database Service.csproj" />
     <ProjectReference Include="..\LayerController\LayerController.csproj" />
-    <ProjectReference Include="..\Model\Model.csproj" />
+    <ProjectReference Include="..\Model\ModelLayer.csproj" />
   </ItemGroup>
 
 </Project>

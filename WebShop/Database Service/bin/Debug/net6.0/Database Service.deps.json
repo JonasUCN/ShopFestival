@@ -9,7 +9,7 @@
       "Database Service/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.123",
-          "Model": "1.0.0",
+          "ModelLayer": "1.0.0",
           "Newtonsoft.Json": "13.0.2-beta2",
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Data.SqlClient": "4.8.4"
@@ -203,9 +203,9 @@
           }
         }
       },
-      "Model/1.0.0": {
+      "ModelLayer/1.0.0": {
         "runtime": {
-          "Model.dll": {}
+          "ModelLayer.dll": {}
         }
       }
     }
@@ -328,7 +328,7 @@
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
-    "Model/1.0.0": {
+    "ModelLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

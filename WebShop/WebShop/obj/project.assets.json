@@ -3177,7 +3177,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Dapper": "2.0.123",
-          "Model": "1.0.0",
+          "ModelLayer": "1.0.0",
           "Newtonsoft.Json": "13.0.2-beta2",
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Data.SqlClient": "4.8.4"
@@ -3196,7 +3196,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Model": "1.0.0"
+          "ModelLayer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/LayerController.dll": {}
@@ -3205,14 +3205,14 @@
           "bin/placeholder/LayerController.dll": {}
         }
       },
-      "Model/1.0.0": {
+      "ModelLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Model.dll": {}
+          "bin/placeholder/ModelLayer.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Model.dll": {}
+          "bin/placeholder/ModelLayer.dll": {}
         }
       }
     }
@@ -9277,10 +9277,10 @@
       "path": "../LayerController/LayerController.csproj",
       "msbuildProject": "../LayerController/LayerController.csproj"
     },
-    "Model/1.0.0": {
+    "ModelLayer/1.0.0": {
       "type": "project",
-      "path": "../Model/Model.csproj",
-      "msbuildProject": "../Model/Model.csproj"
+      "path": "../Model/ModelLayer.csproj",
+      "msbuildProject": "../Model/ModelLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9288,24 +9288,24 @@
       "Database Service >= 1.0.0",
       "LayerController >= 1.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
-      "Model >= 1.0.0",
+      "ModelLayer >= 1.0.0",
       "RestSharp >= 108.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lasse\\.nuget\\packages\\": {}
+    "C:\\Users\\chris\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+      "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
       "projectName": "WebShop",
-      "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
-      "packagesPath": "C:\\Users\\Lasse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\WebShop\\obj\\",
+      "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\WebShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9319,14 +9319,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
-              "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
+            "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+              "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
             },
-            "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
-              "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj"
+            "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
+              "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj"
             },
-            "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj"
+            "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+              "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
             }
           }
         }

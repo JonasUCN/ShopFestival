@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebShop.Models;
-using Model;
+using ModelLayer;
 using Database_Service.LogicController;
 using Newtonsoft.Json;
 using RestSharp;
@@ -12,6 +12,7 @@ namespace WebShop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private BasketController _basketController = new();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -37,24 +38,13 @@ namespace WebShop.Controllers
             var response = client.Get(new RestRequest());
             Product product = JsonConvert.DeserializeObject<Product>(response.Content);
 
-            ViewData["Product"] = product;
-            ViewData["BasketController"] = basketController;
-
-            return View();
+            return View(product);
         }
 
         [HttpPost]
         public IActionResult ProductView(Product _Product)
         {
-            BasketController basketController = new BasketController();
-            Product p = new Product();
-            string name = _Product.ProductDesc;
-            p.Price = _Product.Price;
-            p.Title = _Product.Title;
-            Console.WriteLine(name);
-            ViewData["Product"] = p;
-            ViewData["BasketController"] = basketController;
-
+            _basketController.addProductToBasket(_Product);
             return View(_Product);
         }
 

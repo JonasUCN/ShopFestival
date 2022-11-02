@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj": {}
+    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Lasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\obj\\",
+        "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

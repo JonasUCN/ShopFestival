@@ -1,5 +1,5 @@
 ﻿using Database_Service.DataAccess;
-using Model;
+using ModelLayer;
 
 namespace Database_Service.LogicController
 {

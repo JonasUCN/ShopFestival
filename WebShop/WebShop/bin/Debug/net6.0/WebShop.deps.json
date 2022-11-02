@@ -10,7 +10,7 @@
         "dependencies": {
           "LayerController": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.10",
-          "Model": "1.0.0",
+          "ModelLayer": "1.0.0",
           "RestSharp": "108.0.2"
         },
         "runtime": {
@@ -2076,7 +2076,7 @@
       "Database Service/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.123",
-          "Model": "1.0.0",
+          "ModelLayer": "1.0.0",
           "Newtonsoft.Json": "13.0.2-beta2",
           "System.Configuration.ConfigurationManager": "6.0.1",
           "System.Data.SqlClient": "4.8.4"
@@ -2087,15 +2087,15 @@
       },
       "LayerController/1.0.0": {
         "dependencies": {
-          "Model": "1.0.0"
+          "ModelLayer": "1.0.0"
         },
         "runtime": {
           "LayerController.dll": {}
         }
       },
-      "Model/1.0.0": {
+      "ModelLayer/1.0.0": {
         "runtime": {
-          "Model.dll": {}
+          "ModelLayer.dll": {}
         }
       }
     }
@@ -3194,7 +3194,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Model/1.0.0": {
+    "ModelLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

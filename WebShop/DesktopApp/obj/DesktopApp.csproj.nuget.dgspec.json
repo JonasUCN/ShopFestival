@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {}
+    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
+    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
         "projectName": "DesktopApp",
-        "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
-        "packagesPath": "C:\\Users\\Lasse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
+        "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

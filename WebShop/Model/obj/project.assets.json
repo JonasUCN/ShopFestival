@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Lasse\\.nuget\\packages\\": {}
+    "C:\\Users\\chris\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj",
-      "projectName": "Model",
-      "projectPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\Model.csproj",
-      "packagesPath": "C:\\Users\\Lasse\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lasse\\Desktop\\ProjektSemester\\ShopFestival\\WebShop\\Model\\obj\\",
+      "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+      "projectName": "ModelLayer",
+      "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
