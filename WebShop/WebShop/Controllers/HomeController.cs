@@ -18,7 +18,7 @@ namespace WebShop.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Produkter()
         {
             return View();
         }
