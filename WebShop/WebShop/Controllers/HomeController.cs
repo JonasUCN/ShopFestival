@@ -12,7 +12,7 @@ namespace WebShop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private BasketController _basketController = new();
+        private CartController _CartController = new();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -31,7 +31,6 @@ namespace WebShop.Controllers
 
         public IActionResult ProductView() //TODO Make it to take a para as int id to custom take what product to display
         {
-            BasketController basketController = new BasketController();
 
             string url = "https://localhost:5001/api/Product/Products/3";
             var client = new RestClient(url);
@@ -44,7 +43,11 @@ namespace WebShop.Controllers
         [HttpPost]
         public IActionResult ProductView(Product _Product)
         {
-            _basketController.addProductToBasket(_Product);
+            string url = "https://localhost:5001/api/Product/RemoveStock/" + _Product.id;
+            var client = new RestClient(url);
+            var response = client.Post(new RestRequest());
+
+            _CartController.addProductToCart(_Product);
             return View(_Product);
         }
 

@@ -67,6 +67,18 @@ namespace Database_Service.DataAccess
             }
             
         }
+        public async Task RemoveStockOnProductById(int id)
+        {
+            string sql = "UPDATE [dbo].[Product] SET [Stock] =@Stock - 1 WHERE id = @id;";
+
+            using(var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Execute(sql);
+            }
+
+        }
+
         public async Task CreateProduct(Product product)
         {
             string sql = "INSERT INTO[dbo].[Product] ([Price],[Stock],[ProductDesc],[Brand],[Title]) VALUES (@Price,@Stock,@ProductDesc,@Brand,@Title)";

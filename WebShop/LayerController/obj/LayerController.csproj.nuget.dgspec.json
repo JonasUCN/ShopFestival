@@ -1,35 +1,116 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {}
+    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
+    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
-        "projectName": "LayerController",
-        "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\LayerController\\obj\\",
+        "projectUniqueName": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj",
+        "projectName": "Database Service",
+        "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj",
+        "packagesPath": "/Users/lassehas/.nuget/packages/",
+        "outputPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/lassehas/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj": {
+                "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2-beta2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj",
+        "projectName": "LayerController",
+        "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj",
+        "packagesPath": "/Users/lassehas/.nuget/packages/",
+        "outputPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lassehas/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj": {
+                "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj"
+              },
+              "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj": {
+                "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj"
               }
             }
           }
@@ -59,28 +140,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+        "projectUniqueName": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
+        "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj",
+        "packagesPath": "/Users/lassehas/.nuget/packages/",
+        "outputPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/lassehas/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -114,7 +194,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }

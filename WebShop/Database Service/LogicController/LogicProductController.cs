@@ -25,5 +25,10 @@ namespace Database_Service.LogicController
             return p;
         }
 
+        public async void RemoveStockOnProductById(int id)
+        {
+            await dBAccessProduct.RemoveStockOnProductById(id);
+        }
+
     }
 }

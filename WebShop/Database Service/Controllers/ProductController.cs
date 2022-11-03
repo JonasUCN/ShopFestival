@@ -56,6 +56,12 @@ namespace Database_Service.Controllers
             return foundReturn;
         }
 
+        [HttpPost, Route("RemoveStock/{id}")]
+        public void RemoveStockFromProductById(int id)
+        {
+           _ProductController.RemoveStockOnProductById(id);
+        }
+
 
 
         // GET: ProductController/Details/5

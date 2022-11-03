@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{27E2B5E8-C608-4AFE-B3D6-53F8C5819E01}|GeometryService">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Database Service/DataAccess/DBAccessProduct.cs">
+    <Files>
+      <File FileName="WebShop/Controllers/HomeController.cs" Line="46" Column="74" />
+      <File FileName="LayerController/CartController.cs" Line="21" Column="10" />
+      <File FileName="Model/Cart.cs" Line="19" Column="10" />
+      <File FileName="Database Service/Controllers/ProductController.cs" Line="52" Column="17" />
+      <File FileName="Database Service/LogicController/LogicProductController.cs" Line="30" Column="59" />
+      <File FileName="Database Service/DataAccess/DBAccessProduct.cs" Line="71" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebShop" expanded="True">
+            <Node name="Database Service" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="DataAccess" expanded="True" />
+              <Node name="LogicController" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="LayerController" expanded="True" />
+            <Node name="ModelLayer" expanded="True" />
+            <Node name="WebShop" expanded="True" selected="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Database_220Service PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.WebShop PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
