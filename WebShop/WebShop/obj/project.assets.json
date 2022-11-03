@@ -855,23 +855,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tor\\.nuget\\packages\\": {},
+    "C:\\Users\\torho\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+      "projectUniqueName": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
       "projectName": "WebShop",
-      "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
-      "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\obj\\",
+      "projectPath": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+      "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\WebShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -880,14 +880,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
-              "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
+            "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+              "projectPath": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
             }
           }
         }

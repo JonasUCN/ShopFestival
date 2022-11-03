@@ -15,6 +15,8 @@ namespace WebShop.Controllers
 
         //private readonly List<Product> products = _ProductController.GetAllProducts();
 
+        //Test push
+
         public IActionResult Index()
         {
             return View();
