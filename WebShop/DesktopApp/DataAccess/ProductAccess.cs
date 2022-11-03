@@ -19,16 +19,19 @@ namespace DesktopApp.DataAccess
 
         public bool InsertProduct(Product product)
         {
-            string json = JsonConvert.SerializeObject(product);
-            var request = new RestRequest($"api/Product/Create", Method.Post);
-            
-            request.AddJsonBody(json);
-            var response = restClient.Execute(request);
+            bool success = false;
+            if (product.id == null)
+            {
+                string json = JsonConvert.SerializeObject(product);
+                var request = new RestRequest($"api/Product/Create", Method.Post);
 
-            bool success = response.IsSuccessful;
+                request.AddJsonBody(json);
+                var response = restClient.Execute(request);
 
-            
-            return success;        
+                success = response.IsSuccessful;
+
+            }
+            return success;
         }
        
 

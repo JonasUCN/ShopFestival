@@ -15,7 +15,7 @@
         //    Title = title;
         //}
 
-        public int id { get; set; }
+        public int? id { get; set; }
         public decimal Price { get; set; }
 
         public int Stock { get; set; }
