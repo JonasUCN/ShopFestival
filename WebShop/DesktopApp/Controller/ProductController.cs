@@ -38,5 +38,13 @@ namespace DesktopApp.Controller
             }
             return success;
         }
+
+
+        public async Task<List<Product>> GetProductsAsync()
+        {
+             
+            List<Product> products = await dataAccess.GetAllProductsAsync();
+            return products;
+        }
     }
 }

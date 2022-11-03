@@ -132,3 +132,13 @@ WebShop/WebShop/obj/Release/net6.0/WebShop.assets.cache
 WebShop/WebShop/obj/Release/net6.0/WebShop.GeneratedMSBuildEditorConfig.editorconfig
 WebShop/WebShop/obj/WebShop.csproj.nuget.dgspec.json
 WebShop/WebShop/obj/WebShop.csproj.nuget.g.props
+*.testlog
+.vs/ShopFestival/FileContentIndex/0f1979f3-6d51-45ea-b7e4-7d125897ea66.vsidx
+.vs/ShopFestival/FileContentIndex/0f1979f3-6d51-45ea-b7e4-7d125897ea66.vsidx
+.vs/ShopFestival/v17/.suo
+WebShop/.vs/WebShop/v17/TestStore/0/001.testlog
+.vs/ShopFestival/v17/.suo
+WebShop/.vs/WebShop/v17/TestStore/0/001.testlog
+WebShop/Database Service/obj/Database Service.csproj.nuget.dgspec.json
+WebShop/Database Service/obj/Database Service.csproj.nuget.g.props
+WebShop/Database Service/obj/Debug/net6.0/Database Service.assets.cache
