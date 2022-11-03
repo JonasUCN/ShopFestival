@@ -55,6 +55,23 @@ namespace Database_Service.Controllers
             return foundReturn;
         }
 
+        [HttpPost,Route("Create")]
+        public async Task<ActionResult> PostNewProduct(Product product)
+        {
+            ActionResult wasCreated;
+            bool success = await _ProductController.CreateProduct(product);
+            if (success)
+            {
+                wasCreated = Ok();
+            }
+            else
+            {
+                wasCreated = new StatusCodeResult(500);
+            }
+            return wasCreated;
+        }
+
+
 
 
         // GET: ProductController/Details/5
