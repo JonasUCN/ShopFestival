@@ -22,3 +22,15 @@ C:/Users/chris/OneDrive/Dokumenter/GitHub/ShopFestival/WebShop/Model/obj/Debug/n
 /Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/obj/Debug/net6.0/refint/ModelLayer.dll
 /Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/obj/Debug/net6.0/ModelLayer.pdb
 /Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/obj/Debug/net6.0/ref/ModelLayer.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\bin\Debug\net6.0\ModelLayer.deps.json
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\bin\Debug\net6.0\ModelLayer.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\bin\Debug\net6.0\ModelLayer.pdb
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ModelLayer.csproj.AssemblyReference.cache
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ModelLayer.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\refint\ModelLayer.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ModelLayer.pdb
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\Model\obj\Debug\net6.0\ref\ModelLayer.dll

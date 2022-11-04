@@ -50,3 +50,25 @@ C:/Users/chris/OneDrive/Dokumenter/GitHub/ShopFestival/WebShop/LayerController/o
 /Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/obj/Debug/net6.0/refint/LayerController.dll
 /Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/obj/Debug/net6.0/LayerController.pdb
 /Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/obj/Debug/net6.0/ref/LayerController.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\appsettings.json
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.deps.json
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.runtimeconfig.json
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.exe
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.deps.json
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.pdb
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\ModelLayer.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\ModelLayer.pdb
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.pdb
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.AssemblyReference.cache
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfoInputs.cache
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfo.cs
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CoreCompileInputs.cache
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CopyComplete
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\refint\LayerController.dll
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.pdb
+C:\Users\Christopher\OneDrive - Professionshøjskolen UCN\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\ref\LayerController.dll

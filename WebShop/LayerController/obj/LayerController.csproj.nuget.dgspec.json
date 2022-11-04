@@ -1,34 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj": {}
+    "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {}
   },
   "projects": {
-    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj": {
+    "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj",
+        "projectUniqueName": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
         "projectName": "Database Service",
-        "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj",
-        "packagesPath": "/Users/lassehas/.nuget/packages/",
-        "outputPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/obj/",
+        "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+        "packagesPath": "C:\\Users\\Christopher\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/lassehas/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Christopher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj": {
-                "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj"
+              "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -79,38 +80,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj": {
+    "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj",
+        "projectUniqueName": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
         "projectName": "LayerController",
-        "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/LayerController.csproj",
-        "packagesPath": "/Users/lassehas/.nuget/packages/",
-        "outputPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/LayerController/obj/",
+        "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
+        "packagesPath": "C:\\Users\\Christopher\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/lassehas/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Christopher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj": {
-                "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Database Service/Database Service.csproj"
+              "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+                "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
               },
-              "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj": {
-                "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj"
+              "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -140,27 +142,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj": {
+    "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/ModelLayer.csproj",
-        "packagesPath": "/Users/lassehas/.nuget/packages/",
-        "outputPath": "/Users/lassehas/Desktop/Projects/ShopFestival/WebShop/Model/obj/",
+        "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+        "packagesPath": "C:\\Users\\Christopher\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/lassehas/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Christopher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -194,7 +197,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

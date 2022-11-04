@@ -58,15 +58,14 @@ namespace Database_Service.Controllers
         }
 
         [HttpPost, Route("RemoveStock/{id}")]
-        public async Task<HttpStatusCode> RemoveStockFromProductById(int id)
+        public async void RemoveStockFromProductById(int id)
         {
             if (_ProductController.RemoveStockOnProductById(id).Result)
             {
-                Console.WriteLine("Status is true");
-                return HttpStatusCode.OK;
+                Response.StatusCode = 200;
+                return;
             }
-            Console.WriteLine("status is false");
-            return HttpStatusCode.Gone;
+            Response.StatusCode = 404;
         }
 
         // GET: ProductController/Details/5

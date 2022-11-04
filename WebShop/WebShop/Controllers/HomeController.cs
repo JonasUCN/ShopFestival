@@ -32,7 +32,7 @@ namespace WebShop.Controllers
         public IActionResult ProductView() //TODO Make it to take a para as int id to custom take what product to display
         {
 
-            string url = "https://localhost:5001/api/Product/Products/12";
+            string url = "https://localhost:5001/api/Product/Products/3";
             var client = new RestClient(url);
             var response = client.Get(new RestRequest());
             Product product = JsonConvert.DeserializeObject<Product>(response.Content);
@@ -49,10 +49,8 @@ namespace WebShop.Controllers
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                Console.WriteLine(response.StatusCode);
                 _CartController.addProductToCart(_Product);
             }
-            Console.WriteLine(response.StatusCode);
             return View(_Product);
         }
 
