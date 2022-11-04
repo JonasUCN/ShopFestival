@@ -19,10 +19,8 @@ namespace LayerController
 
         public void addProductToCart(Product product)
         {
-            cart.addItemToCart(product);
+            cart.addProduct(product);
         }
-
-        public void removeProductFromCart(Product product) { cart.removeItemFromCart(product); }
 
         public Cart getCart() { return cart; }
     }

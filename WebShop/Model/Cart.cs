@@ -21,37 +21,5 @@ namespace ModelLayer
         }
 
         public List<Product> GetProducts() { return products; }
-
-        public bool addItemToCart(Product product)
-        {
-            bool status = false;
-
-            if (product == null)
-            {
-                return false;
-            }
-
-            product.Stock--;
-            products.Add(product);
-            status = true;
-
-            return status;
-        }
-
-        public bool removeItemFromCart(Product product)
-        {
-            bool status = false;
-
-            if (product == null)
-            {
-                return false;
-            }
-
-            product.Stock++;
-            products.Remove(product);
-            status = true;
-
-            return status;
-        }
     }
 }

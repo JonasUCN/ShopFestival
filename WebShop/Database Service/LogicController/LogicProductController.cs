@@ -25,9 +25,24 @@ namespace Database_Service.LogicController
             return p;
         }
 
-        public async void RemoveStockOnProductById(int id)
+        public async Task<bool> RemoveStockOnProductById(int id)
         {
-            await dBAccessProduct.RemoveStockOnProductById(id);
+            bool status = false;
+            Product p = GetProductByID(id).Result;
+            if (p.Stock <= 0)
+            {
+                return false;
+            }
+            try
+            {
+                await dBAccessProduct.RemoveStockOnProductById(p);
+                status = true;
+            }
+            catch 
+            {
+                status = false;
+            }
+            return status;
         }
 
     }

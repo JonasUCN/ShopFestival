@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft;
 using Newtonsoft.Json;
 using ModelLayer;
+using System.Net;
 
 namespace Database_Service.Controllers
 {
@@ -57,12 +58,16 @@ namespace Database_Service.Controllers
         }
 
         [HttpPost, Route("RemoveStock/{id}")]
-        public void RemoveStockFromProductById(int id)
+        public async Task<HttpStatusCode> RemoveStockFromProductById(int id)
         {
-           _ProductController.RemoveStockOnProductById(id);
+            if (_ProductController.RemoveStockOnProductById(id).Result)
+            {
+                Console.WriteLine("Status is true");
+                return HttpStatusCode.OK;
+            }
+            Console.WriteLine("status is false");
+            return HttpStatusCode.Gone;
         }
-
-
 
         // GET: ProductController/Details/5
         public ActionResult Details(int id)
