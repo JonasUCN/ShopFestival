@@ -46,7 +46,14 @@ namespace DesktopApp.DataAccess
 
         }
 
+        public async Task<List<Product>> GetAllProductsAsync()
+        {
+            var request = new RestRequest("api/Product/Products");
+            var response = restClient.Get(request);
 
+            List<Product> products =  JsonConvert.DeserializeObject<List<Product>>(response.Content);
+            return products;
+        }
 
     }
     
