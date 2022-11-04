@@ -7,18 +7,26 @@ namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
-        LogicProductController _ProductController;
-        public ProductController(LogicProductController productController, List<Product> products)
-        {
-            _ProductController = new LogicProductController();
-        }
+        LogicProductController _ProductController = new();
 
-        //private readonly List<Product> products = _ProductController.GetAllProducts();
+        //public IActionResult List()
+        //{
+        //    List<Product> products = _ProductController.GetAllProducts();
 
-        //Test push
+        //    foreach (Product product in products)
+        //    {
+        //        products.Add(product);
+        //    }
+        //    return View(products);
+        //}
+
+        //https://learningprogramming.net/net/asp-net-mvc/pass-objects-list-from-controller-to-view-in-asp-net-mvc/
 
         public IActionResult Index()
         {
+            List<Product> products = new List<Product>();
+
+
             return View();
         }
     }
