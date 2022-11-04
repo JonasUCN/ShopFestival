@@ -28,34 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.View_Inventory = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // View_Inventory
+            // dataGridView1
             // 
-            this.View_Inventory.FormattingEnabled = true;
-            this.View_Inventory.ItemHeight = 20;
-            this.View_Inventory.Location = new System.Drawing.Point(23, 27);
-            this.View_Inventory.Name = "View_Inventory";
-            this.View_Inventory.Size = new System.Drawing.Size(251, 324);
-            this.View_Inventory.TabIndex = 0;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.Size = new System.Drawing.Size(669, 426);
+            this.dataGridView1.TabIndex = 1;
             // 
             // StockOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.View_Inventory);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "StockOverview";
             this.Text = "StockOverview";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StockOverview_FormClosed);
             this.Load += new System.EventHandler(this.StockOverview_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private ListBox View_Inventory;
+        private DataGridView dataGridView1;
     }
 }

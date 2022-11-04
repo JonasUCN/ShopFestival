@@ -20,9 +20,9 @@ namespace DesktopApp
         {
             InitializeComponent();
             this.LastPage = LastPage;
-            
 
-            
+
+
 
 
         }
@@ -31,17 +31,9 @@ namespace DesktopApp
         {
             _ProductController = new ProductController();
             List<Product> inventory = await _ProductController.GetProductsAsync();
-            View_Inventory.DataSource =inventory;
-            View_Inventory.DisplayMember = "Title";
-            View_Inventory.ValueMember = "Stock";
-            View_Inventory.Items.Add(new Product
-            {
-                Title = inventory[0].Title,
-                Stock = inventory[0].Stock
-            }) ;
-
-
-
+            var bindingList = new BindingList<Product>(inventory);
+            var source = new BindingSource(bindingList, null);
+            dataGridView1.DataSource = source;
         }
 
         private async void StockOverview_Load(object sender, EventArgs e)
@@ -53,7 +45,7 @@ namespace DesktopApp
         private void StockOverview_FormClosed(object sender, FormClosedEventArgs e)
         {
             LastPage.Show();
-            
+
         }
     }
 }
