@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.view_allOrders = new System.Windows.Forms.ListBox();
             this.btn_toMainScreen = new System.Windows.Forms.Button();
+            this.dgv_SaleOrders = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_SaleOrders)).BeginInit();
             this.SuspendLayout();
-            // 
-            // view_allOrders
-            // 
-            this.view_allOrders.FormattingEnabled = true;
-            this.view_allOrders.ItemHeight = 20;
-            this.view_allOrders.Location = new System.Drawing.Point(352, 25);
-            this.view_allOrders.Name = "view_allOrders";
-            this.view_allOrders.Size = new System.Drawing.Size(411, 304);
-            this.view_allOrders.TabIndex = 0;
             // 
             // btn_toMainScreen
             // 
@@ -51,22 +43,36 @@
             this.btn_toMainScreen.UseVisualStyleBackColor = true;
             this.btn_toMainScreen.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dgv_SaleOrders
+            // 
+            this.dgv_SaleOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_SaleOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_SaleOrders.Location = new System.Drawing.Point(12, 12);
+            this.dgv_SaleOrders.Name = "dgv_SaleOrders";
+            this.dgv_SaleOrders.ReadOnly = true;
+            this.dgv_SaleOrders.RowHeadersWidth = 51;
+            this.dgv_SaleOrders.RowTemplate.Height = 29;
+            this.dgv_SaleOrders.Size = new System.Drawing.Size(776, 372);
+            this.dgv_SaleOrders.TabIndex = 2;
+            // 
             // OrdreView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgv_SaleOrders);
             this.Controls.Add(this.btn_toMainScreen);
-            this.Controls.Add(this.view_allOrders);
             this.Name = "OrdreView";
             this.Text = "OrdreView";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OrdreView_FormClosed);
+            this.Load += new System.EventHandler(this.OrdreView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_SaleOrders)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private ListBox view_allOrders;
         private Button btn_toMainScreen;
+        private DataGridView dgv_SaleOrders;
     }
 }

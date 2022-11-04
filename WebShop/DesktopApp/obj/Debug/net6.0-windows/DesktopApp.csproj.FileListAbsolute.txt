@@ -34,7 +34,6 @@ C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\bi
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\bin\Debug\net6.0-windows\Model.pdb
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.csproj.AssemblyReference.cache
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.Form1.resources
-C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.ProductForm.resources
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.csproj.GenerateResource.cache
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.AssemblyInfoInputs.cache
@@ -71,3 +70,6 @@ C:\Users\99jon\source\repos\Github\ShopFestival\WebShop\DesktopApp\obj\Debug\net
 C:\Users\99jon\source\repos\Github\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\ref\DesktopApp.dll
 C:\Users\99jon\source\repos\Github\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.StockOverview.resources
 C:\Users\99jon\source\repos\Github\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.MainMenu.resources
+C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.MainMenu.resources
+C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.OrdreView.resources
+C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.StockOverview.resources

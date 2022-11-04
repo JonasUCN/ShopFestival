@@ -23,7 +23,7 @@ namespace Database_Service.DataAccess
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                saleOrders = (List<SaleOrder>)connection.Query<Product>(sql);
+                saleOrders = (List<SaleOrder>)connection.Query<SaleOrder>(sql);
             }
 
             return saleOrders;

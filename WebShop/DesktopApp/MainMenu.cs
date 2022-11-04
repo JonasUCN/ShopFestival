@@ -12,6 +12,7 @@ namespace DesktopApp
 {
     public partial class MainMenu : Form
     {
+        OrdreView _orderView = null;
         StockOverview _StockOverview = null;
         Form1 _Form1 = null;
         public MainMenu()
@@ -29,6 +30,13 @@ namespace DesktopApp
         {
             _Form1 = new Form1(this);
             _Form1.Show();
+        }
+
+        private void btn_OrderOverview_Click(object sender, EventArgs e)
+        {
+            _orderView = new OrdreView(this);
+            _orderView.Show();
+
         }
     }
 }

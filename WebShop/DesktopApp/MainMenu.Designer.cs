@@ -30,6 +30,7 @@
         {
             this.btn_StockOverview = new System.Windows.Forms.Button();
             this.btn_CreateProduct = new System.Windows.Forms.Button();
+            this.btn_OrderOverview = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_StockOverview
@@ -52,11 +53,22 @@
             this.btn_CreateProduct.UseVisualStyleBackColor = true;
             this.btn_CreateProduct.Click += new System.EventHandler(this.btn_CreateProduct_Click);
             // 
+            // btn_OrderOverview
+            // 
+            this.btn_OrderOverview.Location = new System.Drawing.Point(502, 137);
+            this.btn_OrderOverview.Name = "btn_OrderOverview";
+            this.btn_OrderOverview.Size = new System.Drawing.Size(169, 29);
+            this.btn_OrderOverview.TabIndex = 2;
+            this.btn_OrderOverview.Text = "Order Overview";
+            this.btn_OrderOverview.UseVisualStyleBackColor = true;
+            this.btn_OrderOverview.Click += new System.EventHandler(this.btn_OrderOverview_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_OrderOverview);
             this.Controls.Add(this.btn_CreateProduct);
             this.Controls.Add(this.btn_StockOverview);
             this.Name = "MainMenu";
@@ -69,5 +81,6 @@
 
         private Button btn_StockOverview;
         private Button btn_CreateProduct;
+        private Button btn_OrderOverview;
     }
 }
