@@ -22,5 +22,15 @@ namespace DesktopApp.DataAccess
             List<SaleOrder> saleOrders = JsonConvert.DeserializeObject<List<SaleOrder>>(response.Content);
             return saleOrders;
         }
+
+
+        public List<SaleOrder> GetActiveSaleOrders()
+        {
+            var request = new RestRequest("api/SaleOrder/SaleOrder");
+            var response = restClient.Get(request);
+
+            List<SaleOrder> saleOrders = JsonConvert.DeserializeObject<List<SaleOrder>>(response.Content);
+            return saleOrders;
+        }
     }
 }

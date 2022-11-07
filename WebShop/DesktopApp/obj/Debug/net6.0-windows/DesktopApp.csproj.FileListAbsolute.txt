@@ -73,3 +73,4 @@ C:\Users\99jon\source\repos\Github\ShopFestival\WebShop\DesktopApp\obj\Debug\net
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.MainMenu.resources
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.OrdreView.resources
 C:\Users\marti\OneDrive\Skrivebord\4.Semester\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.StockOverview.resources
+C:\Users\99jon\source\repos\Github\ShopFestival\WebShop\DesktopApp\obj\Debug\net6.0-windows\DesktopApp.OrdreView.resources

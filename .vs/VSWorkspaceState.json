@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WebShop"
+    "\\WebShop",
+    "\\WebShop\\DesktopApp"
   ],
   "SelectedNode": "\\WebShop\\WebShop.sln",
   "PreviewInSolutionExplorer": false
