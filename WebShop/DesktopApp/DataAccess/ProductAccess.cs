@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
-using Model;
-using Database_Service.DataAccess;
+using ModelLayer;
+
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Data.Common;

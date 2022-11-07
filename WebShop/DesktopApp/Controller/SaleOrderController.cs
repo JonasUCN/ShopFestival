@@ -1,11 +1,11 @@
-﻿using Database_Service.DataAccess;
+﻿
 using DesktopApp.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model;
+using ModelLayer;
 
 
 namespace DesktopApp.Controller
