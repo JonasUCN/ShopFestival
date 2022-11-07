@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelLayer", "Model\ModelLayer.csproj", "{C6A37280-D5D6-4FA0-98EE-F54F5173EFD7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LayerController", "LayerController\LayerController.csproj", "{AFEA79D4-1E5A-4488-9FA4-D82A61B60B1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest", "UnitTest\UnitTest.csproj", "{C8567644-7A22-47DE-8E5B-4F7F66A59090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

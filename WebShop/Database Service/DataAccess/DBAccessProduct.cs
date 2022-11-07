@@ -87,15 +87,15 @@ namespace Database_Service.DataAccess
 
         }
 
-        public async Task CreateProduct(Product product)
+        public async Task<bool> CreateProduct(Product product)
         {
             string sql = "INSERT INTO[dbo].[Product] ([Price],[Stock],[ProductDesc],[Brand],[Title]) VALUES (@Price,@Stock,@ProductDesc,@Brand,@Title)";
-
+            bool succes = false;
 
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                connection.Execute(sql, new
+                var result = connection.Execute(sql, new
                 {
                     product.Price,
                     product.Stock,
@@ -104,8 +104,13 @@ namespace Database_Service.DataAccess
                     product.Title
 
                 });
+                if (result > 0)
+                {
+                    succes = true;
+                }
             }
 
+            return succes;
         }
 
 
