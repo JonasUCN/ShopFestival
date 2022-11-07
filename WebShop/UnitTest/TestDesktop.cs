@@ -1,8 +1,8 @@
-using Model;
+using ModelLayer;
 using System.Runtime.InteropServices;
 using DesktopApp;
 using DesktopApp.Controller;
-using Database_Service.DataAccess;
+
 using System.Diagnostics;
 using DesktopApp.DataAccess;
 
