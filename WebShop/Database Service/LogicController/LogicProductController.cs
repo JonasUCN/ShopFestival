@@ -1,4 +1,5 @@
 ﻿using Database_Service.DataAccess;
+using ModelLayer;
 
 namespace Database_Service.LogicController
 {
@@ -10,7 +11,6 @@ namespace Database_Service.LogicController
         {
             dBAccessProduct = new DBAccessProduct();
         }
-
 
         public async Task<List<Product> >GetAllProducts()
         {
@@ -25,10 +25,31 @@ namespace Database_Service.LogicController
             return p;
         }
 
+<<<<<<< HEAD
         public async Task<bool> CreateProduct(Product product)
         {
             bool succes = await dBAccessProduct.CreateProduct(product); 
             return succes;
+=======
+        public async Task<bool> RemoveStockOnProductById(int id)
+        {
+            bool status = false;
+            Product p = GetProductByID(id).Result;
+            if (p.Stock <= 0)
+            {
+                return false;
+            }
+            try
+            {
+                await dBAccessProduct.RemoveStockOnProductById(p);
+                status = true;
+            }
+            catch 
+            {
+                status = false;
+            }
+            return status;
+>>>>>>> ProductToBasket
         }
 
     }

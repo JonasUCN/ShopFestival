@@ -138,11 +138,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\marti\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Christopher\\.nuget\\packages\\": {}
+>>>>>>> ProductToBasket
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
       "projectName": "DesktopApp",
       "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
@@ -151,6 +156,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+      "projectName": "DesktopApp",
+      "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+      "packagesPath": "C:\\Users\\Christopher\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Christopher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> ProductToBasket
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -208,7 +223,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

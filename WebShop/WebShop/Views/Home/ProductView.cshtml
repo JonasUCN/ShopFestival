@@ -1,0 +1,39 @@
+﻿@using ModelLayer;
+@using LayerController;
+@model Product;
+@{
+    ViewData["Title"] = "Produkt";
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="wwwwroot/lib/bootstrap/dist/css/botostrap.css" />
+}
+
+<body>
+<div data-reflow-type="product">
+    <div class="reflow-product">
+        <div class="ref-media">
+            <div class="ref-preview"><img class="ref-image active" src="https://cdn.bootstrapstudio.io/products/product-30_md.jpg" data-reflow-preview-type="image" /></div>
+        </div>
+        <div class="ref-product-data">
+            <h1 class="ref-name">@Model.Title</h1>
+                <h3><span class="ref-brand">Mærke: @Model.Brand</span></h3>
+            <div class="ref-categories"><span class="ref-category">Toys</span></div><strong class="ref-price">@Model.Price Kr.</strong><span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url data-reflow-addtocart-text data-reflow-product="43218622" data-reflow-variant="199976733_s">
+                <div class="ref-product-controls">
+                    <div class="ref-variant">
+                            @using (Html.BeginForm("ProductView", "Home", FormMethod.Post))
+                            {
+                                @Html.HiddenFor(m => Model.Title)
+                                @Html.HiddenFor(m => Model.Price)
+                                @Html.HiddenFor(m => Model.id)
+                                @Html.HiddenFor(m => Model.Brand)
+                                @Html.HiddenFor(m => Model.Stock)
+                                @Html.HiddenFor(m => Model.ProductDesc)
+                                <input type="submit" value="Tilføj"/>
+                            }
+                </div>
+            </span>
+            <div class="ref-description">@Model.ProductDesc</div>
+        </div>
+    </div>
+</div>
+<script src="wwwwroot/lib/bootstrap/dist/js/botostrap.js"></script>
+</body>

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "4+BiBeEz9N/ZlWcWTtQDRuebqbkh7k4VXu/eI8P5HuVNlBi2/6wQqOmTLi1buskJlmnQr7KA3nusyxLhp4hmJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj",
+=======
+  "dgSpecHash": "+jHxRxU0atqwwS8YWvGvKrvJIPpUAhnLo8SoQaYbAgIfA/tc60koWNoi3+2hxBZHdlq0VbHLEDj7pBV2Jyf9Pw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+>>>>>>> ProductToBasket
   "expectedPackageFiles": [],
   "logs": []
 }

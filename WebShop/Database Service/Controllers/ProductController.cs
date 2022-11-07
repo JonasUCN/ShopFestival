@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft;
 using Newtonsoft.Json;
+using ModelLayer;
+using System.Net;
 
 namespace Database_Service.Controllers
 {
@@ -11,7 +13,7 @@ namespace Database_Service.Controllers
     [ApiController]
     public class ProductController : Controller
     {
-        LogicProductController _ProductController;
+        private LogicProductController _ProductController;
 
         public ProductController()
         {
@@ -55,6 +57,7 @@ namespace Database_Service.Controllers
             return foundReturn;
         }
 
+<<<<<<< HEAD
         [HttpPost,Route("Create")]
         public async Task<ActionResult> PostNewProduct(Product product)
         {
@@ -73,6 +76,18 @@ namespace Database_Service.Controllers
 
 
 
+=======
+        [HttpPost, Route("RemoveStock/{id}")]
+        public async void RemoveStockFromProductById(int id)
+        {
+            if (_ProductController.RemoveStockOnProductById(id).Result)
+            {
+                Response.StatusCode = 200;
+                return;
+            }
+            Response.StatusCode = 404;
+        }
+>>>>>>> ProductToBasket
 
         // GET: ProductController/Details/5
         public ActionResult Details(int id)

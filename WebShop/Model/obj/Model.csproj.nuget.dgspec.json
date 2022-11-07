@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chris\\OneDrive\\Dokumenter\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> ProductToBasket
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

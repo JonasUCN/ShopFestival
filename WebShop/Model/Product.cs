@@ -1,4 +1,4 @@
-﻿namespace Database_Service.DataAccess
+﻿namespace ModelLayer
 {
     public class Product
     {

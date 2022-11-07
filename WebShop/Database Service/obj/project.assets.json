@@ -298,14 +298,14 @@
           }
         }
       },
-      "Model/1.0.0": {
+      "ModelLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Model.dll": {}
+          "bin/placeholder/ModelLayer.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Model.dll": {}
+          "bin/placeholder/ModelLayer.dll": {}
         }
       }
     }
@@ -818,27 +818,32 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Model/1.0.0": {
+    "ModelLayer/1.0.0": {
       "type": "project",
-      "path": "../Model/Model.csproj",
-      "msbuildProject": "../Model/Model.csproj"
+      "path": "../Model/ModelLayer.csproj",
+      "msbuildProject": "../Model/ModelLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Dapper >= 2.0.123",
-      "Model >= 1.0.0",
+      "ModelLayer >= 1.0.0",
       "Newtonsoft.Json >= 13.0.2-beta2",
       "System.Configuration.ConfigurationManager >= 6.0.1",
       "System.Data.SqlClient >= 4.8.4"
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\marti\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Christopher\\.nuget\\packages\\": {}
+>>>>>>> ProductToBasket
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
       "projectName": "Database Service",
       "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
@@ -847,6 +852,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+      "projectName": "Database Service",
+      "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+      "packagesPath": "C:\\Users\\Christopher\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Christopher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> ProductToBasket
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -860,8 +875,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj": {
               "projectPath": "C:\\Users\\marti\\OneDrive\\Skrivebord\\4.Semester\\ShopFestival\\WebShop\\Model\\Model.csproj"
+=======
+            "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+              "projectPath": "C:\\Users\\Christopher\\OneDrive - Professionshøjskolen UCN\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+>>>>>>> ProductToBasket
             }
           }
         }
@@ -912,7 +932,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
