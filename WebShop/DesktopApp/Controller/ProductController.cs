@@ -4,9 +4,9 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-
+using Database_Service.DataAccess;
 using DesktopApp.DataAccess;
-using ModelLayer;
+using Model;
 
 namespace DesktopApp.Controller
 {
@@ -37,6 +37,14 @@ namespace DesktopApp.Controller
                 throw;
             }
             return success;
+        }
+
+
+        public async Task<List<Product>> GetProductsAsync()
+        {
+             
+            List<Product> products = await dataAccess.GetAllProductsAsync();
+            return products;
         }
     }
 }
