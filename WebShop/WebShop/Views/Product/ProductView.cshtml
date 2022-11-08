@@ -19,7 +19,7 @@
             <div class="ref-categories"><span class="ref-category">Toys</span></div><strong class="ref-price">@Model.Price Kr.</strong><span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url data-reflow-addtocart-text data-reflow-product="43218622" data-reflow-variant="199976733_s">
                 <div class="ref-product-controls">
                     <div class="ref-variant">
-                            @using (Html.BeginForm("ProductView", "Home", FormMethod.Post))
+                            @using (Html.BeginForm("ProductView", "Product", FormMethod.Post))
                             {
                                 @Html.HiddenFor(m => Model.Title)
                                 @Html.HiddenFor(m => Model.Price)
