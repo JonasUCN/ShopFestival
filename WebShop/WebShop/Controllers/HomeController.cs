@@ -12,7 +12,7 @@ namespace WebShop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private CartController _CartController = new();
+        private LayerController.CartController _CartController = new();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -23,6 +23,10 @@ namespace WebShop.Controllers
         {
             return View();
         }
+        public IActionResult CartView()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
@@ -30,8 +34,7 @@ namespace WebShop.Controllers
         }
 
         public IActionResult ProductView() //TODO Make it to take a para as int id to custom take what product to display
-        {
-
+        { 
             string url = "https://localhost:5001/api/Product/Products/3";
             var client = new RestClient(url);
             var response = client.Get(new RestRequest());

@@ -16,7 +16,7 @@ namespace DesktopApp.DataAccess
 
         public async Task<List<SaleOrder>> GetAllSaleOrderAsync()
         {
-            var request = new RestRequest("api/SaleOrder/SaleOrder");
+            var request = new RestRequest("api/SaleOrder/SaleOrders");
             var response = restClient.Get(request);
 
             List<SaleOrder> saleOrders = JsonConvert.DeserializeObject<List<SaleOrder>>(response.Content);
