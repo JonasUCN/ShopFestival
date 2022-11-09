@@ -15,13 +15,10 @@ namespace WebShop.Controllers
             return View();
         }
 
-        public IActionResult ProductView(int id) //TODO Make it to take a para as int id to custom take what product to display
+        public IActionResult ProductView() //TODO Make it to take a para as int id to custom take what product to display
         {
 
-            string url = "https://localhost:5001/api/Product/Products/" + id;
-            var client = new RestClient(url);
-            var response = client.Get(new RestRequest());
-            Product product = JsonConvert.DeserializeObject<Product>(response.Content);
+            Product product = getProductFromAPIByID(3);
 
             return View(product);
         }
@@ -43,6 +40,16 @@ namespace WebShop.Controllers
         public CartController GetCartController()
         {
             return _CartController;
+        }
+
+        private Product getProductFromAPIByID(int id)
+        {
+            string url = "https://localhost:5001/api/Product/Products/" + id;
+            var client = new RestClient(url);
+            var response = client.Get(new RestRequest());
+            Product product = JsonConvert.DeserializeObject<Product>(response.Content);
+
+            return product;
         }
     }
 }
