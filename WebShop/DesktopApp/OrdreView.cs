@@ -39,7 +39,7 @@ namespace DesktopApp
         private async void getAllSaleOrders()
         {
             SaleOrderController = new SaleOrderController();
-            List<SaleOrder> saleOrders = await SaleOrderController.GetSaleOrder();
+            List<SaleOrder> saleOrders = await SaleOrderController.GetAllSaleOrders();
             var bindingList = new BindingList<SaleOrder>(saleOrders);
             var source = new BindingSource(bindingList, null);
             dgv_SaleOrders.DataSource = source;
@@ -51,10 +51,10 @@ namespace DesktopApp
             LastPage.Show();
         }
 
-        private void btn_activeOrders_Click(object sender, EventArgs e)
+        private async void btn_activeOrders_ClickAsync(object sender, EventArgs e)
         {
             SaleOrderController = new SaleOrderController();
-            List<SaleOrder> saleOrders = SaleOrderController.GetActiveSaleOrderes();
+            List<SaleOrder> saleOrders = await SaleOrderController.GetActiveSaleOrderes();
             var bindingList = new BindingList<SaleOrder>(saleOrders);
             var source = new BindingSource(bindingList, null);
             dgv_SaleOrders.DataSource = source;

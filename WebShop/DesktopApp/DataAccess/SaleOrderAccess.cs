@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
+using Newtonsoft.Json.Schema;
+using System.Text.Json.Nodes;
 
 namespace DesktopApp.DataAccess
 {
-    public class OrderAccess
+    public class SaleOrderAccess
     {
         RestClient restClient = new RestClient("https://localhost:5001");
 
@@ -18,19 +20,16 @@ namespace DesktopApp.DataAccess
         {
             var request = new RestRequest("api/SaleOrder/SaleOrders");
             var response = restClient.Get(request);
-
-            List<SaleOrder> saleOrders = JsonConvert.DeserializeObject<List<SaleOrder>>(response.Content);
+            List<SaleOrder> saleOrders = ConvertJSONToListOfSaleOrders(response.Content);
             return saleOrders;
         }
 
-
-        public List<SaleOrder> GetActiveSaleOrders()
+        public static List<SaleOrder> ConvertJSONToListOfSaleOrders(string content)
         {
-            var request = new RestRequest("api/SaleOrder/SaleOrder");
-            var response = restClient.Get(request);
-
-            List<SaleOrder> saleOrders = JsonConvert.DeserializeObject<List<SaleOrder>>(response.Content);
-            return saleOrders;
+            
+            return JsonConvert.DeserializeObject<List<SaleOrder>>(content);
         }
+
+       
     }
 }
