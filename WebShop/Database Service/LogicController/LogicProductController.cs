@@ -51,5 +51,25 @@ namespace Database_Service.LogicController
             return status;
         }
 
+        public async Task<bool> IncreaseStockOnProductById(int id)
+        {
+            bool status = false;
+            Product p = GetProductByID(id).Result;
+            if (p.Stock <= 0)
+            {
+                return false;
+            }
+            try
+            {
+                await dBAccessProduct.IncreaseStockOnProductById(p);
+                status = true;
+            }
+            catch
+            {
+                status = false;
+            }
+            return status;
+        }
+
     }
 }

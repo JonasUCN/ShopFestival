@@ -32,7 +32,7 @@ namespace WebShop.Controllers
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                _CartController.addProductToCart(_Product);
+                _CartController.addOrderLineToCart(new OrderLine { product = _Product, quantity = 1}); //TODO Fix quantity to match the page to chose the quantity 
             }
             return View(_Product);
         }

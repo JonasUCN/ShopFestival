@@ -17,9 +17,17 @@ namespace LayerController
             cart = new Cart();
         }
 
-        public void addProductToCart(Product product)
-        {if(product.Stock < 1) { return; }
-            cart.addProduct(product);
+        public void addOrderLineToCart(OrderLine orderLine)
+        {
+            if(orderLine.quantity > orderLine.product.Stock) {
+                return;
+            }
+            cart.addOrderLine(orderLine);
+        }
+
+        public void removeProductFromCart(OrderLine orderLine)
+        {
+            cart.removeOrderLine(orderLine);
         }
 
         public Cart getCart() { return cart; }
