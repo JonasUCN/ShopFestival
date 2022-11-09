@@ -22,6 +22,10 @@ namespace LayerController
             if(orderLine.quantity > orderLine.product.Stock) {
                 return;
             }
+            if (addToExistingOrderLines(orderLine))
+            {
+                return;
+            }
             cart.addOrderLine(orderLine);
         }
 
@@ -31,5 +35,21 @@ namespace LayerController
         }
 
         public Cart getCart() { return cart; }
+
+        public bool addToExistingOrderLines(OrderLine orderLine)
+        {
+            bool existing = false;
+            foreach (var item in cart.GetOrderLines())
+            {
+                if(orderLine.product.id == item.product.id)
+                {
+                    int? sum = orderLine.quantity + item.quantity;
+                    item.quantity = sum;
+                    existing = true;
+                }
+
+            }
+            return existing;
+        }
     }
 }
