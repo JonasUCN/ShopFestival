@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {}
+    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
         "projectName": "Database Service",
-        "projectPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
-        "packagesPath": "C:\\Users\\Jespe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\obj\\",
+        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jespe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -85,24 +85,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
+    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
+        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
         "projectName": "LayerController",
-        "projectPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
-        "packagesPath": "C:\\Users\\Jespe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\obj\\",
+        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
+        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jespe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -118,11 +118,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
-                "projectPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
+              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
               },
-              "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -152,24 +152,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
-        "packagesPath": "C:\\Users\\Jespe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jespe\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
+        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jespe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -212,7 +212,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
-using Model;
-using Database_Service.DataAccess;
+using ModelLayer;
+
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Data.Common;
@@ -46,7 +46,14 @@ namespace DesktopApp.DataAccess
 
         }
 
+        public async Task<List<Product>> GetAllProductsAsync()
+        {
+            var request = new RestRequest("api/Product/Products");
+            var response = restClient.Get(request);
 
+            List<Product> products =  JsonConvert.DeserializeObject<List<Product>>(response.Content);
+            return products;
+        }
 
     }
     

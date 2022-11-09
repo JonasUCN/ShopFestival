@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "itbOdv6AlE4sj/JLWsE4OK/Wr+hMgaTkT2bYlQI9EYJgfiFxKZNURpofjHTKVnmt33e7M1/K9WIts40W6r6ang==",
+  "dgSpecHash": "lQRYhb8XsAh/fTPEcAENonDrT46uRXKi4KYCkJswq137jylYyxPn4SlQ2wpEGeWDwehJLkncMp8cvwrvFxE44Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+  "projectFilePath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\torho\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\torho\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

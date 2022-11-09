@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 using Dapper;
-using Model;
+using ModelLayer;
 using Microsoft.Extensions.Configuration;
 
 
@@ -11,11 +11,11 @@ namespace Database_Service.DataAccess
     {
         ConfigurationManager configuration = new ConfigurationManager();
 
-        public string connectionString { get; set; }
+        public string connectionString;
         public DBAccessProduct()
         {
             string String = configuration["ConnectionStringToUse"];
-            connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;"; //configuration.GetConnectionString(String);
+            connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;TrustServerCertificate=true;"; //configuration.GetConnectionString(String);
 
         }
         public async Task<List<Product>> GetAllProducts()
@@ -67,11 +67,31 @@ namespace Database_Service.DataAccess
             }
             
         }
+        public async Task RemoveStockOnProductById(Product product)
+        {
+            string sql = "UPDATE [dbo].[Product] SET [Stock] =@Stock - 1 WHERE id = @id;";
+
+            using(var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                connection.Execute(sql, new
+                {
+                    product.id,
+                    product.Price,
+                    product.Stock,
+                    product.ProductDesc,
+                    product.Brand,
+                    product.Title
+                }) ;
+            }
+
+        }
+
         public async Task<bool> CreateProduct(Product product)
         {
             string sql = "INSERT INTO[dbo].[Product] ([Price],[Stock],[ProductDesc],[Brand],[Title]) VALUES (@Price,@Stock,@ProductDesc,@Brand,@Title)";
             bool succes = false;
-            
+
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -89,7 +109,7 @@ namespace Database_Service.DataAccess
                     succes = true;
                 }
             }
-            
+
             return succes;
         }
 

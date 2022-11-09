@@ -1,22 +1,44 @@
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.deps.json
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.runtimeconfig.json
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\appsettings.json
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.exe
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.deps.json
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.dll
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.pdb
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.dll
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\ModelLayer.dll
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\ModelLayer.pdb
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.pdb
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.AssemblyReference.cache
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfoInputs.cache
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfo.cs
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CoreCompileInputs.cache
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CopyComplete
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.dll
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\refint\LayerController.dll
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.pdb
-C:\Users\Jespe\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\ref\LayerController.dll
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/Database Service.deps.json
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/Database Service.runtimeconfig.json
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/appsettings.Development.json
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/appsettings.json
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/Database Service
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/LayerController.deps.json
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/LayerController.dll
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/LayerController.pdb
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/Database Service.dll
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/ModelLayer.dll
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/ModelLayer.pdb
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/bin/Debug/net6.0/Database Service.pdb
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.csproj.AssemblyReference.cache
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.AssemblyInfoInputs.cache
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.AssemblyInfo.cs
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.csproj.CoreCompileInputs.cache
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.csproj.CopyComplete
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.dll
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/refint/LayerController.dll
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/LayerController.pdb
+/Users/lassehas/Desktop/Projects/ShopFestival2/WebShop/LayerController/obj/Debug/net6.0/ref/LayerController.dll
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.deps.json
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.runtimeconfig.json
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\appsettings.json
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.exe
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.deps.json
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.dll
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\LayerController.pdb
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.dll
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\ModelLayer.dll
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\ModelLayer.pdb
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\bin\Debug\net6.0\Database Service.pdb
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.AssemblyReference.cache
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfoInputs.cache
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.AssemblyInfo.cs
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CoreCompileInputs.cache
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.csproj.CopyComplete
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.dll
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\refint\LayerController.dll
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\LayerController.pdb
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\LayerController\obj\Debug\net6.0\ref\LayerController.dll

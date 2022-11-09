@@ -1,14 +1,16 @@
 using DesktopApp.Controller;
 using DesktopApp.DataAccess;
-
+using System.Security.Cryptography;
 
 namespace DesktopApp
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        Form LastPage;
+        public Form1(Form lastPage)
         {
             InitializeComponent();
+            LastPage = lastPage;
         }
 
         private void btn_createProduct_Click(object sender, EventArgs e)
@@ -44,7 +46,6 @@ namespace DesktopApp
 
            
 
-            //Hello
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -54,7 +55,12 @@ namespace DesktopApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LastPage.Hide();
+        }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LastPage.Show();
         }
     }
 }

@@ -7,11 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="RestSharp" Version="108.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Database Service\Database Service.csproj" />
+    <ProjectReference Include="..\LayerController\LayerController.csproj" />
+    <ProjectReference Include="..\Model\ModelLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Product\" />
+  </ItemGroup>
 </Project>

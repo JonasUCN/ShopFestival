@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
-      "projectName": "Model",
-      "projectPath": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+      "projectName": "ModelLayer",
+      "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
       "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\torho\\Source\\Repos\\JonasUCN\\ShopFestival\\WebShop\\Model\\obj\\",
+      "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
