@@ -19,14 +19,14 @@ namespace WebShop.Controllers
 
         public IActionResult ProductsView()
         {
-            Product product = getProductFromAPIByID(3);
-            return View(product);
+            List<Product> products = getAllProductsFromAPI();
+            return View(products);
         }
 
-        public IActionResult ProductView() //TODO Make it to take a para as int id to custom take what product to display
+        public IActionResult ProductView(int id)
         {
 
-            Product product = getProductFromAPIByID(3);
+            Product product = getProductFromAPIByID(id);
 
             return View(product);
         }
@@ -58,5 +58,16 @@ namespace WebShop.Controllers
             Product product = JsonConvert.DeserializeObject<Product>(response.Content);
             return product;
         }
+
+        private List<Product> getAllProductsFromAPI()
+        {
+            List<Product>? products = new List<Product>();
+            string url = "https://localhost:5001/api/Product/Products/";
+            var client = new RestClient(url);
+            var response = client.Get(new RestRequest());
+            products = JsonConvert.DeserializeObject<List<Product>>(response.Content);
+            return products;
+        }
+
     }
 }
