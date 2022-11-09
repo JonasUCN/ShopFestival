@@ -18,7 +18,7 @@ namespace LayerController
         }
 
         public void addProductToCart(Product product)
-        {
+        {if(product.Stock < 1) { return; }
             cart.addProduct(product);
         }
 
