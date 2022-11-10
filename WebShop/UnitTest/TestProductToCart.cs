@@ -19,7 +19,7 @@ namespace UnitTest
             Product product = new Product() { Brand = "Addias", Price = 10, ProductDesc = "Festivals Sko", Stock = 50, Title = "Festivals sko", id = 3 };
 
             ProductController productController = new();
-            CartController cartController = productController.GetCartController();
+            LayerController.CartController cartController = productController.GetCartController();
             //Act
             cartController.addProductToCart(product);
             //Assert
@@ -33,7 +33,7 @@ namespace UnitTest
             Product product = new Product() { Brand = "Addias", Price = 10, ProductDesc = "Festivals Sko", Stock = 0, Title = "Festivals sko", id = 12 };
 
             ProductController productController = new();
-            CartController cartController = productController.GetCartController();
+            LayerController.CartController cartController = productController.GetCartController();
             //Act
             cartController.addProductToCart(product);
             //Assert
