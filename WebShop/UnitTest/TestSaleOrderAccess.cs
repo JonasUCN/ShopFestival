@@ -12,12 +12,12 @@ namespace UnitTest
     {
 
         [Fact]
-        public async void TestGetAllSaleOrders_isObjectValid()
+        public void TestGetAllSaleOrders_isObjectValid()
         {
             //arrange
             SaleOrderAccess _SaleOrdersAccess = new();
             //act
-            var saleorders = await _SaleOrdersAccess.GetAllSaleOrderAsync();
+            var saleorders = _SaleOrdersAccess.GetAllSaleOrder();
             //assert
             Assert.IsType<List<SaleOrder>>(saleorders);
 
@@ -31,9 +31,9 @@ namespace UnitTest
         {
             //arrange
             bool result;
-
+            SaleOrderAccess saleOrderAccess = new();
             //act
-            List<SaleOrder> saleOrders = SaleOrderAccess.ConvertJSONToListOfSaleOrders(inputJSON);
+            List<SaleOrder> saleOrders = saleOrderAccess.ConvertJSONToListOfSaleOrders(inputJSON);
 
             if (saleOrders == null)
             {

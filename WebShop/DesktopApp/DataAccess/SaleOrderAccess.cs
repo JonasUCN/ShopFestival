@@ -12,11 +12,11 @@ using System.Text.Json.Nodes;
 
 namespace DesktopApp.DataAccess
 {
-    public class SaleOrderAccess
+    public class SaleOrderAccess : ISaleOrderAccess
     {
         RestClient restClient = new RestClient("https://localhost:5001");
 
-        public async Task<List<SaleOrder>> GetAllSaleOrderAsync()
+        public List<SaleOrder> GetAllSaleOrder()
         {
             var request = new RestRequest("api/SaleOrder/SaleOrders");
             var response = restClient.Get(request);
@@ -24,7 +24,7 @@ namespace DesktopApp.DataAccess
             return saleOrders;
         }
 
-        public static List<SaleOrder> ConvertJSONToListOfSaleOrders(string content)
+        public  List<SaleOrder> ConvertJSONToListOfSaleOrders(string content)
         {
             
             return JsonConvert.DeserializeObject<List<SaleOrder>>(content);

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DesktopApp.DataAccess;
 
 namespace DesktopApp
 {
@@ -20,17 +21,14 @@ namespace DesktopApp
         {
             InitializeComponent();
             this.LastPage = LastPage;
-
-
-
-
-
+            _ProductController = new ProductController(new ProductAccess());
         }
 
-        private async Task GetAllProductsAsync()
+        private  void GetAllProducts()
         {
-            _ProductController = new ProductController();
-            List<Product> inventory = await _ProductController.GetProductsAsync();
+            
+            
+            List<Product> inventory =  _ProductController.GetProducts();
             var bindingList = new BindingList<Product>(inventory);
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;
@@ -39,7 +37,7 @@ namespace DesktopApp
         private async void StockOverview_Load(object sender, EventArgs e)
         {
             LastPage.Hide();
-            await GetAllProductsAsync();
+             GetAllProducts();
         }
 
         private void StockOverview_FormClosed(object sender, FormClosedEventArgs e)

@@ -8,7 +8,7 @@ namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
-        private CartController _CartController = new();
+        private LayerController.CartController _CartController = new();
 
         public IActionResult Index()
         {
@@ -37,7 +37,7 @@ namespace WebShop.Controllers
             return View(_Product);
         }
 
-        public CartController GetCartController()
+        public LayerController.CartController GetCartController()
         {
             return _CartController;
         }

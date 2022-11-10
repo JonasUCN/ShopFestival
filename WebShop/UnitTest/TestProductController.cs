@@ -1,4 +1,5 @@
 ﻿using DesktopApp.Controller;
+using DesktopApp.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace UnitTest
         {   
 
             // Act
-            ProductController productController = new ProductController();
+            ProductController productController = new ProductController(new ProductAccess());
             bool result = productController.createProduct(price, stock, productDesc, brand, title);
             //Assert
             Assert.Equal(expected, result);

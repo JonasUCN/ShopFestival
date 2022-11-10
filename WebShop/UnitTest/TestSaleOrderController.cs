@@ -12,24 +12,24 @@ namespace UnitTest
     {
 
         [Fact]
-        public async void TestGetAllSaleOrders_isObjectValid()
+        public  void TestGetAllSaleOrders_isObjectValid()
         {
             //arrange
-            SaleOrderController saleOrderController = new();
+            SaleOrderController saleOrderController = new(new SaleOrderAccess());
             //act
-            var saleorders = await saleOrderController.GetAllSaleOrders();
+            var saleorders = saleOrderController.GetAllSaleOrders();
             //assert
             Assert.IsType<List<SaleOrder>>(saleorders);
 
         }
 
         [Fact]
-        public async void TestGetAllActiveSaleOrders()
+        public  void TestGetAllActiveSaleOrders()
         {
             //arrange
-            SaleOrderController saleOrderController = new();
+            SaleOrderController saleOrderController = new(new SaleOrderAccess()) ;
             //act
-            var saleOrders = await saleOrderController.GetActiveSaleOrderes();
+            var saleOrders = saleOrderController.GetActiveSaleOrderes();
 
             //assert
             foreach (var SaleOrder in saleOrders)
