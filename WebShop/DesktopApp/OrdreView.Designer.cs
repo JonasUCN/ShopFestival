@@ -64,7 +64,7 @@
             this.btn_activeOrders.TabIndex = 3;
             this.btn_activeOrders.Text = "Se Aktive Ordre";
             this.btn_activeOrders.UseVisualStyleBackColor = true;
-            this.btn_activeOrders.Click += new System.EventHandler(this.btn_activeOrders_Click);
+            this.btn_activeOrders.Click += new System.EventHandler(this.btn_activeOrders_ClickAsync);
             // 
             // OrdreView
             // 

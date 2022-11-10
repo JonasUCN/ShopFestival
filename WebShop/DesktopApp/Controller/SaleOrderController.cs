@@ -12,8 +12,8 @@ namespace DesktopApp.Controller
 {
     public class SaleOrderController
     {
-        private OrderAccess dataAccess = new OrderAccess();
-        public async Task<List<SaleOrder>> GetSaleOrder()
+        private SaleOrderAccess dataAccess = new SaleOrderAccess();
+        public async Task<List<SaleOrder>> GetAllSaleOrders()
         {
 
             List<SaleOrder> saleOrders = await dataAccess.GetAllSaleOrderAsync();
@@ -21,9 +21,9 @@ namespace DesktopApp.Controller
         }
 
 
-        public List<SaleOrder> GetActiveSaleOrderes()
+        public async Task<List<SaleOrder>> GetActiveSaleOrderes()
         {
-            List<SaleOrder> saleOrders = dataAccess.GetActiveSaleOrders();
+            List<SaleOrder> saleOrders =  await dataAccess.GetAllSaleOrderAsync();
             List<SaleOrder> returnSaleOrder = new List<SaleOrder>() ; 
             foreach (var item in saleOrders)
             {
