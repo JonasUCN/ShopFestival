@@ -23,7 +23,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DesktopApp\DesktopApp.csproj" />
+    <ProjectReference Include="..\LayerController\LayerController.csproj" />
     <ProjectReference Include="..\Model\ModelLayer.csproj" />
+    <ProjectReference Include="..\WebShop\WebShop.csproj" />
   </ItemGroup>
 
 </Project>
