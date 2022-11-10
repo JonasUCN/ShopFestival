@@ -89,3 +89,8 @@ C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\
 C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\Database Service.pdb
 C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\Database Service.genruntimeconfig.cache
 C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\ref\Database Service.dll
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\staticwebassets\msbuild.Database Service.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\staticwebassets\msbuild.build.Database Service.props
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Database Service.props
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Database Service.props
+C:\Users\torho\Documents\GitHub\ShopFestival\WebShop\Database Service\obj\Debug\net6.0\staticwebassets.pack.json

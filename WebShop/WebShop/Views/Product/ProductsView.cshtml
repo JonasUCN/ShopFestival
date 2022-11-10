@@ -62,10 +62,24 @@
                                     </div>
                                     <h6 class="text-success">Gratis forsendelse</h6>
                                     <div class="d-flex flex-column mt-4">
-                                        <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Action(item.id.ToString(),"~index")'">Detaljer</button>
-                                        <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-                                            Tilføj til kurv
-                                        </button>
+                                        <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Action("ProductView", "Product", new { id=item.id })'">Detaljer</button>
+
+                                        <span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url data-reflow-addtocart-text data-reflow-product="43218622" data-reflow-variant="199976733_s">
+                                            <div class="ref-product-controls">
+                                                <div class="ref-variant">
+                                                    @using (Html.BeginForm( "ProductsView", "Product", FormMethod.Post))
+                                                    {
+                                                        @Html.HiddenFor(m => item.Title)
+                                                        @Html.HiddenFor(m => item.Price)
+                                                        @Html.HiddenFor(m => item.id)
+                                                        @Html.HiddenFor(m => item.Brand)
+                                                        @Html.HiddenFor(m => item.Stock)
+                                                        @Html.HiddenFor(m => item.ProductDesc)
+                                                        <input type="submit" value="Tilføj" />
+                                                    }
+                                                </div>
+                                        </span>
+                                        @*<button class="btn btn-outline-primary btn-sm mt-2" type="button" onclick="location.href='@Url.Action("ProductView", "Home", post)'"> Tilføj til kurv </button>*@
                                     </div>
                                 </div>
                             </div>
