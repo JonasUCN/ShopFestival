@@ -84,6 +84,17 @@ namespace Database_Service.Controllers
             Response.StatusCode = 404;
         }
 
+        [HttpPost, Route("IncreaseStock/{id}")]
+        public async void IncreaseStockFromProductById(int id)
+        {
+            if (_ProductController.IncreaseStockOnProductById(id).Result)
+            {
+                Response.StatusCode = 200;
+                return;
+            }
+            Response.StatusCode = 404;
+        }
+
         // GET: ProductController/Details/5
         public ActionResult Details(int id)
         {
