@@ -10,7 +10,7 @@ using WebShop.Controllers;
 
 namespace UnitTest
 {
-    public class TestOrderLineToCart
+    public class TestProductToCart
     {
         [Fact] 
         public void TestAddOrderLineToCart()
