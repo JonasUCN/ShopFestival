@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using LayerController;
 
 namespace WebShop.Controllers
 {
@@ -11,9 +12,7 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult CartView()
         {
-
-            CartController cartController = new CartController();
-
+            CartCon cartController = new();
 
             return View();
         }
