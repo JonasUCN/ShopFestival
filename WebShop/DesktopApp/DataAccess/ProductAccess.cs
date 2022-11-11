@@ -12,7 +12,7 @@ using System.Data.Common;
 
 namespace DesktopApp.DataAccess
 {
-    public class ProductAccess
+    public class ProductAccess : IProductAccess
     {
 
         RestClient restClient = new RestClient("https://localhost:5001");
@@ -46,7 +46,7 @@ namespace DesktopApp.DataAccess
 
         }
 
-        public async Task<List<Product>> GetAllProductsAsync()
+        public List<Product> GetAllProducts()
         {
             var request = new RestRequest("api/Product/Products");
             var response = restClient.Get(request);

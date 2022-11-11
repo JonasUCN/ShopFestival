@@ -22,7 +22,7 @@ namespace DesktopApp
                 Decimal.TryParse(txt_createPrice.Text, out decimal Price))
             {
 
-                ProductController productController = new ProductController();
+                ProductController productController = new ProductController(new ProductAccess());
                bool success = productController.createProduct(Price, Stock, txt_createProductDescription.Text, txt_createBrand.Text, txt_createTitle.Text);
 
                 if (success)

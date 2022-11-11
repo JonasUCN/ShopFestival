@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ModelLayer;
+using DesktopApp.DataAccess;
 
 namespace DesktopApp
 {
@@ -36,10 +37,10 @@ namespace DesktopApp
             getAllSaleOrders();
         }
 
-        private async void getAllSaleOrders()
+        private void getAllSaleOrders()
         {
-            SaleOrderController = new SaleOrderController();
-            List<SaleOrder> saleOrders = await SaleOrderController.GetSaleOrder();
+            SaleOrderController = new SaleOrderController(new SaleOrderAccess());
+            List<SaleOrder> saleOrders =  SaleOrderController.GetAllSaleOrders();
             var bindingList = new BindingList<SaleOrder>(saleOrders);
             var source = new BindingSource(bindingList, null);
             dgv_SaleOrders.DataSource = source;
@@ -51,9 +52,9 @@ namespace DesktopApp
             LastPage.Show();
         }
 
-        private void btn_activeOrders_Click(object sender, EventArgs e)
+        private  void btn_activeOrders_ClickAsync(object sender, EventArgs e)
         {
-            SaleOrderController = new SaleOrderController();
+            SaleOrderController = new SaleOrderController(new SaleOrderAccess());
             List<SaleOrder> saleOrders = SaleOrderController.GetActiveSaleOrderes();
             var bindingList = new BindingList<SaleOrder>(saleOrders);
             var source = new BindingSource(bindingList, null);
