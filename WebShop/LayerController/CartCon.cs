@@ -8,7 +8,7 @@ using Database_Service.Controllers;
 
 namespace LayerController
 {
-    public class CartCon
+    public class CartCon : ICartCon
     {
         private Cart cart;
 

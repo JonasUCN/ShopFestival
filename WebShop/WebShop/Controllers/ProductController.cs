@@ -1,5 +1,6 @@
 ﻿using LayerController;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Session;
 using ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
@@ -8,7 +9,12 @@ namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
-        private CartCon _CartController = new();
+        private CartCon _CartController;
+
+        public ProductController()
+        {
+            _CartController = new CartCon();
+        }
 
         public IActionResult Index()
         {
@@ -32,12 +38,14 @@ namespace WebShop.Controllers
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                _CartController.addOrderLineToCart(new OrderLine { Product = _Product, Quantity = 1}); //TODO Fix quantity to match the page to chose the quantity 
+                OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
+                _CartController.addOrderLineToCart(orderLine); //TODO Fix quantity to match the page to chose the quantity 
+                HttpContext.Session.SetString("OrderLine", JsonConvert.SerializeObject(orderLine));
             }
             return View(_Product);
         }
 
-        public CartCon GetCartController()
+        public ICartCon GetCartController()
         {
             return _CartController;
         }

@@ -1,4 +1,5 @@
-﻿@model ModelLayer.Cart
+﻿@using ModelLayer;
+@model List<OrderLine>
 
 @{
     ViewData["Title"] = "Indkøbskurv";
@@ -17,8 +18,14 @@
                 <div class="p-5">
                   <div class="d-flex justify-content-between align-items-center mb-5">
                     <h1 class="fw-bold mb-0 text-black">Indkøbskurv</h1>
-                    <h6 class="mb-0 text-muted">Her skal vi genere antallet af produkter </h6> 
-                  </div>
+                                        <h6 class="mb-0 text-muted">Antal af produkter:  @Model.Count</h6>
+                                    </div>
+
+
+                  @foreach (var item in Model)
+                   {
+                                        
+                                    
                   <hr class="my-4">
 
                   <div class="row mb-4 d-flex justify-content-between align-items-center">
@@ -28,8 +35,8 @@
                         class="img-fluid rounded-3" alt="Telt">
                     </div>
                     <div class="col-md-3 col-lg-3 col-xl-3">
-                      <h6 class="text-muted">Telt</h6>
-                      <h6 class="text-black mb-0">2 mands telt</h6>
+                      <h6 class="text-muted">@item.Product.Title</h6>
+                      <h6 class="text-black mb-0">@item.Product.ProductDesc</h6>
                     </div>
                     <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                       <button class="btn btn-link px-2"
@@ -46,7 +53,7 @@
                       </button>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h6 class="mb-0">Prisen på produktet skal stå her</h6>
+                      <h6 class="mb-0">@item.Product.Price DKK</h6>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                       <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
@@ -55,7 +62,7 @@
 
                   <hr class="my-4">
 
-
+                  }
               
 
 

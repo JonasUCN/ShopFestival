@@ -1,20 +1,30 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using LayerController;
+using ModelLayer;
+using Newtonsoft.Json;
 
 namespace WebShop.Controllers
 {
     public class CartController : Controller
     {
+        private readonly ICartCon service;
+        public CartController([FromServices] ICartCon cartCon)
+        {
+            service = cartCon;
+        }
+
         [Route("myCart")]
 
         // GET: CartController
         [HttpGet]
         public ActionResult CartView()
         {
-            CartCon cartController = new();
+            OrderLine orderLine = JsonConvert.DeserializeObject<OrderLine>( HttpContext.Session.GetString("OrderLine"));
+            List<OrderLine> orders = new List<OrderLine>();
+            orders.Add(orderLine);
 
-            return View();
+            return View(orders);
         }
 
         // GET: CartController/Details/5
