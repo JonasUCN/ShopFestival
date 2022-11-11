@@ -14,9 +14,9 @@ namespace UnitTest
         {
             //Arrange
             Product product = new Product() { Brand = "Addias", Price = 10, ProductDesc = "Festivals Sko", Stock = 5, Title = "Festivals sko", id = 12 };
-            OrderLine orderLine = new OrderLine { product = product, quantity = 1 };
+            OrderLine orderLine = new OrderLine { Product = product, Quantity = 1 };
             ProductController productController = new();
-            CartController cartController = productController.GetCartController();
+            CartCon cartController = productController.GetCartController();
             cartController.addOrderLineToCart(orderLine);
             //Act
             cartController.removeProductFromCart(orderLine);

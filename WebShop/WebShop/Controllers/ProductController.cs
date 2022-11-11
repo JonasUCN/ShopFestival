@@ -8,7 +8,7 @@ namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
-        private LayerController.CartController _CartController = new();
+        private CartCon _CartController = new();
 
         public IActionResult Index()
         {
@@ -32,12 +32,12 @@ namespace WebShop.Controllers
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                _CartController.addOrderLineToCart(new OrderLine { product = _Product, quantity = 1}); //TODO Fix quantity to match the page to chose the quantity 
+                _CartController.addOrderLineToCart(new OrderLine { Product = _Product, Quantity = 1}); //TODO Fix quantity to match the page to chose the quantity 
             }
             return View(_Product);
         }
 
-        public LayerController.CartController GetCartController()
+        public LayerController.CartCon GetCartController()
         {
             return _CartController;
         }

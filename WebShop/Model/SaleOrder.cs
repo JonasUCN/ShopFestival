@@ -9,6 +9,6 @@ namespace ModelLayer
     public class SaleOrder
     {
         public int OrderNo { get; set; }
-        public string   Status { get; set; }
+        public string Status { get; set; }
     }
 }

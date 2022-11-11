@@ -8,24 +8,31 @@ using Database_Service.Controllers;
 
 namespace LayerController
 {
-    public class CartController
+    public class CartCon
     {
         private Cart cart;
 
-        public CartController()
+        public CartCon()
         {
             cart = new Cart();
         }
 
         public void addOrderLineToCart(OrderLine orderLine)
         {
-            if(orderLine.quantity > orderLine.product.Stock) {
+            if (orderLine.Quantity > orderLine.Product.Stock || orderLine.Quantity == 0) {
                 return;
             }
+
+            if (orderLine.Product == null)
+            {
+                return;
+            }
+
             if (addToExistingOrderLines(orderLine))
             {
                 return;
             }
+
             cart.addOrderLine(orderLine);
         }
 
@@ -41,10 +48,10 @@ namespace LayerController
             bool existing = false;
             foreach (var item in cart.GetOrderLines())
             {
-                if(orderLine.product.id == item.product.id)
+                if(orderLine.Product.id == item.Product.id)
                 {
-                    int? sum = orderLine.quantity + item.quantity;
-                    item.quantity = sum;
+                    int sum = orderLine.Quantity + item.Quantity;
+                    item.Quantity = sum;
                     existing = true;
                 }
 
