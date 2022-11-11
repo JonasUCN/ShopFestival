@@ -37,7 +37,7 @@ namespace WebShop.Controllers
             return View(_Product);
         }
 
-        public LayerController.CartCon GetCartController()
+        public CartCon GetCartController()
         {
             return _CartController;
         }
