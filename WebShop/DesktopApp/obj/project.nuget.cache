@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "blfT9c9DtNee4Y53gVS8x2G+sKB+6X3Vzn+ZpS6pE1Yz6oWLdjEmqZGiV5q+Q/PMPiv3H+qj+mXobDXE9JjBew==",
+  "dgSpecHash": "2CaD4QefqZAnW0hCDOHWJYa7Y3tbgbSPdem1yS8n4awtXUDQXvkOg0LznN3EZ1f8EbuTYlcDzMV3jXEnYr7ODQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+  "projectFilePath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\torho\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\torho\\.nuget\\packages\\newtonsoft.json.bson\\1.0.3-beta1\\newtonsoft.json.bson.1.0.3-beta1.nupkg.sha512",
-    "C:\\Users\\torho\\.nuget\\packages\\restsharp\\108.0.3-alpha.0.5\\restsharp.108.0.3-alpha.0.5.nupkg.sha512"
+    "C:\\Users\\Tor\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Tor\\.nuget\\packages\\newtonsoft.json.bson\\1.0.3-beta1\\newtonsoft.json.bson.1.0.3-beta1.nupkg.sha512",
+    "C:\\Users\\Tor\\.nuget\\packages\\restsharp\\108.0.3-alpha.0.5\\restsharp.108.0.3-alpha.0.5.nupkg.sha512"
   ],
   "logs": []
 }

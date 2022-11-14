@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {}
+    "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+    "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+        "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
         "projectName": "Database Service",
-        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
-        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\obj\\",
+        "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj",
+        "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -85,24 +84,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
+    "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
         "projectName": "DesktopApp",
-        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
-        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
+        "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj",
+        "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -111,15 +110,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -162,24 +160,24 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
+    "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
+        "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
         "projectName": "LayerController",
-        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
-        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\obj\\",
+        "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj",
+        "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,18 +186,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
               },
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -229,24 +226,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+    "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
-        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+        "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -255,7 +252,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -289,24 +285,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {
+    "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
         "projectName": "UnitTest",
-        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
-        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\obj\\",
+        "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\UnitTest.csproj",
+        "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -315,24 +311,23 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\DesktopApp\\DesktopApp.csproj"
               },
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj"
               },
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               },
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj"
               }
             }
           }
@@ -384,24 +379,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {
+    "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+        "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
         "projectName": "WebShop",
-        "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
-        "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\obj\\",
+        "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\WebShop.csproj",
+        "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\WebShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -410,21 +405,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Database Service\\Database Service.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj"
               },
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\LayerController\\LayerController.csproj"
-              },
-              "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
-                "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
+              "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj"
               }
             }
           }
@@ -439,7 +430,23 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[6.0.10, )"
             },
@@ -467,7 +474,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

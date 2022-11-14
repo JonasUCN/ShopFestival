@@ -10,10 +10,18 @@ using ModelLayer;
 
 namespace DesktopApp.Controller
 {
-    
+
     public class ProductController
     {
-        private ProductAccess dataAccess = new ProductAccess();
+        IProductAccess dataAccess;
+        public ProductController(IProductAccess productAccess)
+        {
+             dataAccess = productAccess;
+        }
+        
+            
+            
+    
 
         public bool createProduct(decimal price, int stock, string productDesc, string brand, string title)
         {
@@ -40,10 +48,10 @@ namespace DesktopApp.Controller
         }
 
 
-        public async Task<List<Product>> GetProductsAsync()
+        public  List<Product> GetProducts()
         {
              
-            List<Product> products = await dataAccess.GetAllProductsAsync();
+            List<Product> products =  dataAccess.GetAllProducts();
             return products;
         }
     }

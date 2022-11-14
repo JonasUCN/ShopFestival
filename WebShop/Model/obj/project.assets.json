@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\torho\\.nuget\\packages\\": {},
+    "C:\\Users\\Tor\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
       "projectName": "ModelLayer",
-      "projectPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
-      "packagesPath": "C:\\Users\\torho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\torho\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
+      "projectPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\ModelLayer.csproj",
+      "packagesPath": "C:\\Users\\Tor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tor\\Documents\\GitHub\\ShopFestival\\WebShop\\Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\torho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -67,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

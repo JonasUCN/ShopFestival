@@ -8,18 +8,23 @@ namespace ModelLayer
 {
     public class Cart
     {
-        private List<Product> products;
+        private List<OrderLine> orderLines;
 
         public Cart()
         {
-            products = new List<Product>();
+            orderLines = new List<OrderLine>();
         }
 
-        public void addProduct(Product product)
+        public void addOrderLine(OrderLine orderLine)
         {
-            if (product != null) { products.Add(product); }
+            orderLines.Add(orderLine);
         }
 
-        public List<Product> GetProducts() { return products; }
+        public void removeOrderLine(OrderLine orderLine)
+        {
+            orderLines.Remove(orderLine);
+        }
+
+        public List<OrderLine> GetOrderLines() { return orderLines; }
     }
 }
