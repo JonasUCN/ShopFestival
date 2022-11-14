@@ -20,11 +20,32 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult CartView()
         {
-            OrderLine orderLine = JsonConvert.DeserializeObject<OrderLine>( HttpContext.Session.GetString("OrderLine"));
-            List<OrderLine> orders = new List<OrderLine>();
-            orders.Add(orderLine);
-
+            List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
             return View(orders);
+        }
+
+
+        [Route("myCart")]
+        [HttpPost]
+
+        public ActionResult CartView(int quantity, int id)
+        {
+
+            List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
+
+            foreach (var item in orders)
+            {
+                if(item.Product.id == id)
+                {
+                    item.Quantity = quantity;
+                }
+                
+            }
+
+            string JsonOrderLines = JsonConvert.SerializeObject(orders);
+            HttpContext.Session.SetString("OrderLines", JsonOrderLines);
+
+            return View(orders);  
         }
 
         // GET: CartController/Details/5

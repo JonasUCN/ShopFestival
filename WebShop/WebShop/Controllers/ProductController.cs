@@ -1,19 +1,22 @@
 ﻿using LayerController;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Session;
+
 using ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
+using WebShop.LogicControllers;
 
 namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
         private CartCon _CartController;
+        private OrderLineLogicController OrderLineLogicController;
 
         public ProductController()
         {
             _CartController = new CartCon();
+            OrderLineLogicController = new OrderLineLogicController();
         }
 
         public IActionResult Index()
@@ -24,7 +27,7 @@ namespace WebShop.Controllers
         public IActionResult ProductView() //TODO Make it to take a para as int id to custom take what product to display
         {
 
-            Product product = getProductFromAPIByID(3);
+            Product product = getProductFromAPIByID(1);
 
             return View(product);
         }
@@ -38,9 +41,25 @@ namespace WebShop.Controllers
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
+
+
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
+
+
                 _CartController.addOrderLineToCart(orderLine); //TODO Fix quantity to match the page to chose the quantity 
-                HttpContext.Session.SetString("OrderLine", JsonConvert.SerializeObject(orderLine));
+                string json = "";
+                if (HttpContext.Session.GetString("OrderLines") == null)
+                {
+                    json = OrderLineLogicController.CreateNewOrderlines(orderLine);
+                }
+                else
+                {
+                    string JsonOrderlines = HttpContext.Session.GetString("OrderLines");
+                    json = OrderLineLogicController.AddToExcistingOrderLines(JsonOrderlines, orderLine);
+                    
+                }
+                HttpContext.Session.SetString("OrderLines", json);
+
             }
             return View(_Product);
         }
