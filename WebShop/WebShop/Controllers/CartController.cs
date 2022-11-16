@@ -9,7 +9,7 @@ namespace WebShop.Controllers
     public class CartController : Controller
     {
         private readonly ICartCon service;
-        public CartController([FromServices] ICartCon cartCon)
+        public CartController( ICartCon cartCon)
         {
             service = cartCon;
         }
@@ -24,7 +24,7 @@ namespace WebShop.Controllers
             return View(orders);
         }
 
-
+          
         [Route("myCart")]
         [HttpPost]
 
