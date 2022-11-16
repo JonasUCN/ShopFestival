@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebShop.Models;
-using ModelLayer;
-using Database_Service.LogicController;
-using Newtonsoft.Json;
-using RestSharp;
-using LayerController;
+
 
 namespace WebShop.Controllers;
 
