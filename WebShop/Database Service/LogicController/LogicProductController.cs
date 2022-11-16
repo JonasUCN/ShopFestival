@@ -55,10 +55,6 @@ namespace Database_Service.LogicController
         {
             bool status = false;
             Product p = GetProductByID(id).Result;
-            if (p.Stock <= 0)
-            {
-                return false;
-            }
             try
             {
                 await dBAccessProduct.IncreaseStockOnProductById(p);

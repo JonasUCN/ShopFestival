@@ -42,19 +42,10 @@ namespace Database_Service.Controllers
         }
 
         [HttpGet, Route("Products/{id}")]
-        public async Task<ActionResult<Product>> Get(int id)
+        public async Task<Product> Get(int id)
         {
-            ActionResult<Product> foundReturn;
-            Product product = await _ProductController.GetProductByID(id);
-            if (product != null)
-            {
-                foundReturn = Ok(product);
-            }
-            else
-            {
-                foundReturn= NotFound();
-            }
-            return foundReturn;
+            var product = await _ProductController.GetProductByID(id);
+            return product;
         }
 
         [HttpPost, Route("Create")]
@@ -76,23 +67,27 @@ namespace Database_Service.Controllers
         [HttpPost, Route("RemoveStock/{id}")]
         public async void RemoveStockFromProductById(int id)
         {
-            if (_ProductController.RemoveStockOnProductById(id).Result)
+            bool state = await _ProductController.RemoveStockOnProductById(id);
+            if (state)
             {
                 Response.StatusCode = 200;
                 return;
             }
             Response.StatusCode = 404;
+            return;
         }
 
         [HttpPost, Route("IncreaseStock/{id}")]
         public async void IncreaseStockFromProductById(int id)
         {
-            if (_ProductController.IncreaseStockOnProductById(id).Result)
+            bool state = await _ProductController.IncreaseStockOnProductById(id);
+            if (state)
             {
                 Response.StatusCode = 200;
                 return;
             }
             Response.StatusCode = 404;
+            return;
         }
 
         // GET: ProductController/Details/5

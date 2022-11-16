@@ -17,4 +17,10 @@
     <ProjectReference Include="..\Model\ModelLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="DataAccess\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBAccess\" />
+  </ItemGroup>
 </Project>

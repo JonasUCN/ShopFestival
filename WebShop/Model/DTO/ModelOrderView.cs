@@ -9,6 +9,6 @@ namespace ModelLayer.DTO
     public class ModelOrderView
     {
         public Cart cart { get; set; } //Set; is for testing 
-        public Customer customer { get; }
+        public Customer customer { get; set; } //Set; is for testing in the view & controller
     }
 }
