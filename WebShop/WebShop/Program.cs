@@ -1,9 +1,3 @@
-
-
-
-
-
-
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebShop.Data;
@@ -24,9 +18,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => {
 } )
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddScoped<ICartCon,CartCon>();
 
 builder.Services.AddSession();
+
 
 var app = builder.Build();
 
@@ -49,6 +45,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.UseSession();
 
 

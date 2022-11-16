@@ -13,7 +13,6 @@ namespace ModelLayer
         public Cart()
         {
             orderLines = new List<OrderLine>();
-            
         }
 
         public void addOrderLine(OrderLine orderLine)

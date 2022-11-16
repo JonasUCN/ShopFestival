@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using WebShop.Models;
 
-
 namespace WebShop.Controllers;
 
 public class HomeController : Controller

@@ -13,7 +13,6 @@ namespace WebShop.Controllers
         {
             service = cartCon;
         }
-
         [Route("myCart")]
 
         // GET: CartController

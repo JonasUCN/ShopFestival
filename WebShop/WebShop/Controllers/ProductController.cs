@@ -10,6 +10,7 @@ namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
+
         private CartCon _CartController;
         private OrderLineLogicController OrderLineLogicController;
 
@@ -24,11 +25,16 @@ namespace WebShop.Controllers
             return View();
         }
 
-        public IActionResult ProductView() //TODO Make it to take a para as int id to custom take what product to display
+        public IActionResult ProductsView()
+        {
+            List<Product> products = getAllProductsFromAPI();
+            return View(products);
+        }
+
+        public IActionResult ProductView(int id)
         {
 
-            Product product = getProductFromAPIByID(1);
-
+            Product product = getProductFromAPIByID(id);
             return View(product);
         }
 
@@ -41,8 +47,6 @@ namespace WebShop.Controllers
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-
-
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
 
 
@@ -59,10 +63,10 @@ namespace WebShop.Controllers
                     
                 }
                 HttpContext.Session.SetString("OrderLines", json);
-
             }
             return View(_Product);
         }
+
 
         public ICartCon GetCartController()
         {
@@ -75,8 +79,19 @@ namespace WebShop.Controllers
             var client = new RestClient(url);
             var response = client.Get(new RestRequest());
             Product product = JsonConvert.DeserializeObject<Product>(response.Content);
-
             return product;
         }
+
+        private List<Product> getAllProductsFromAPI()
+        {
+            List<Product>? products = new List<Product>();
+            string url = "https://localhost:5001/api/Product/Products/";
+            var client = new RestClient(url);
+            var response = client.Get(new RestRequest());
+            products = JsonConvert.DeserializeObject<List<Product>>(response.Content);
+            return products;
+        }
+
+
     }
 }
