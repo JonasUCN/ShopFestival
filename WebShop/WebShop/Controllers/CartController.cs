@@ -2,20 +2,49 @@
 using Microsoft.AspNetCore.Mvc;
 using LayerController;
 using ModelLayer;
+using Newtonsoft.Json;
 
 namespace WebShop.Controllers
 {
     public class CartController : Controller
     {
+        private readonly ICartCon service;
+        public CartController( ICartCon cartCon)
+        {
+            service = cartCon;
+        }
         [Route("myCart")]
 
         // GET: CartController
         [HttpGet]
         public ActionResult CartView()
         {
-            CartCon cartController = new();
+            List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
+            return View(orders);
+        }
 
-            return View();
+          
+        [Route("myCart")]
+        [HttpPost]
+
+        public ActionResult CartView(int quantity, int id)
+        {
+
+            List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
+
+            foreach (var item in orders)
+            {
+                if(item.Product.id == id)
+                {
+                    item.Quantity = quantity;
+                }
+                
+            }
+
+            string JsonOrderLines = JsonConvert.SerializeObject(orders);
+            HttpContext.Session.SetString("OrderLines", JsonOrderLines);
+
+            return View(orders);  
         }
 
         // GET: CartController/Details/5
@@ -85,11 +114,6 @@ namespace WebShop.Controllers
             {
                 return View();
             }
-        }
-
-        internal void addProductToCart(Product product)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -1,16 +1,24 @@
-﻿using System.Diagnostics;
-using LayerController;
+﻿using LayerController;
 using Microsoft.AspNetCore.Mvc;
+
 using ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
-using WebShop.Models;
+using WebShop.LogicControllers;
 
 namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
-        private CartCon _CartController = new();
+
+        private CartCon _CartController;
+        private OrderLineLogicController OrderLineLogicController;
+
+        public ProductController()
+        {
+            _CartController = new CartCon();
+            OrderLineLogicController = new OrderLineLogicController();
+        }
 
         public IActionResult Index()
         {
@@ -27,7 +35,6 @@ namespace WebShop.Controllers
         {
 
             Product product = getProductFromAPIByID(id);
-
             return View(product);
         }
 
@@ -40,12 +47,28 @@ namespace WebShop.Controllers
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                _CartController.addOrderLineToCart(new OrderLine { Product = _Product, Quantity = 1 }); //TODO Fix quantity to match the page to chose the quantity 
+                OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
+
+
+                _CartController.addOrderLineToCart(orderLine); //TODO Fix quantity to match the page to chose the quantity 
+                string json = "";
+                if (HttpContext.Session.GetString("OrderLines") == null)
+                {
+                    json = OrderLineLogicController.CreateNewOrderlines(orderLine);
+                }
+                else
+                {
+                    string JsonOrderlines = HttpContext.Session.GetString("OrderLines");
+                    json = OrderLineLogicController.AddToExcistingOrderLines(JsonOrderlines, orderLine);
+                    
+                }
+                HttpContext.Session.SetString("OrderLines", json);
             }
             return View(_Product);
         }
 
-        public CartCon GetCartController()
+
+        public ICartCon GetCartController()
         {
             return _CartController;
         }
@@ -68,6 +91,7 @@ namespace WebShop.Controllers
             products = JsonConvert.DeserializeObject<List<Product>>(response.Content);
             return products;
         }
+
 
     }
 }
