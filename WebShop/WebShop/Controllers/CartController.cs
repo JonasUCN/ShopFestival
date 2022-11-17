@@ -19,11 +19,16 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult CartView()
         {
-            
-            List<OrderLine> orders = new List<OrderLine>(); 
-            if(HttpContext.Session.GetString("OrderLines") != null)
+            List<OrderLine> orders;
+
+
+            if (HttpContext.Session.GetString("OrderLines") != null)
             {
-                JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
+                orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
+            }
+            else
+            {
+                orders = new List<OrderLine>();
             }
             
             return View(orders);

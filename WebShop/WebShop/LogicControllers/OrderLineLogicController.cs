@@ -19,17 +19,25 @@ namespace WebShop.LogicControllers
         public string AddToExcistingOrderLines(string JsonOrderLines, OrderLine orderLine)
         {
             OrderLines = JsonConvert.DeserializeObject<List<OrderLine>>(JsonOrderLines);
+            bool QuantityWasUpdatede= false;
             foreach (var item in OrderLines)
             {
-                if(orderLine.Product.id == item.Product.id)
+                if (orderLine.Product.id == item.Product.id)
                 {
-                   item.Quantity += orderLine.Quantity;
-                }
-                else
-                {
-                    OrderLines.Add(orderLine);
+                    item.Quantity += orderLine.Quantity;
+                    QuantityWasUpdatede= true;
+
                 }
             }
+
+
+            if (QuantityWasUpdatede == false)
+            {
+                OrderLines.Add(orderLine);
+            }    
+            
+                
+            
             
             string JsonOrderLinesToReturn = JsonConvert.SerializeObject(OrderLines);
             return JsonOrderLinesToReturn;
