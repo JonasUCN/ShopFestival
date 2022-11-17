@@ -5,13 +5,15 @@ using ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
 using WebShop.LogicControllers;
+using WebShop.DBAccess;
 
 namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
 
-        private CartCon _CartController;
+        private CartCon _CartController = new();
+        private DBProductAccess dbpa = new();
         private OrderLineLogicController OrderLineLogicController;
 
         public ProductController()
@@ -27,26 +29,25 @@ namespace WebShop.Controllers
 
         public IActionResult ProductsView()
         {
+
             List<Product> products = getAllProductsFromAPI();
             return View(products);
         }
 
         public IActionResult ProductView(int id)
         {
-
-            Product product = getProductFromAPIByID(id);
-            return View(product);
+            Product pp = DBProductAccess.GetProductFromAPIByID(1);
+            return View(pp);
         }
 
         [HttpPost]
         public IActionResult ProductView(Product _Product)
         {
-            string url = "https://localhost:5001/api/Product/RemoveStock/" + _Product.id;
-            var client = new RestClient(url);
-            var response = client.Post(new RestRequest());
+            var response = DBProductAccess.RemoveStockByID(_Product.id);
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
+
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
 
 
@@ -63,6 +64,8 @@ namespace WebShop.Controllers
                     
                 }
                 HttpContext.Session.SetString("OrderLines", json);
+
+                _CartController.addOrderLineToCart(new OrderLine { Product = _Product, Quantity = 1 }); //TODO Fix quantity to match the page to chose the quantity 
             }
             return View(_Product);
         }
@@ -71,15 +74,6 @@ namespace WebShop.Controllers
         public ICartCon GetCartController()
         {
             return _CartController;
-        }
-
-        private Product getProductFromAPIByID(int id)
-        {
-            string url = "https://localhost:5001/api/Product/Products/" + id;
-            var client = new RestClient(url);
-            var response = client.Get(new RestRequest());
-            Product product = JsonConvert.DeserializeObject<Product>(response.Content);
-            return product;
         }
 
         private List<Product> getAllProductsFromAPI()
@@ -91,7 +85,5 @@ namespace WebShop.Controllers
             products = JsonConvert.DeserializeObject<List<Product>>(response.Content);
             return products;
         }
-
-
     }
 }
