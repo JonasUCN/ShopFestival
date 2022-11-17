@@ -19,5 +19,13 @@ namespace Database_Service.LogicController
 
         }
 
+        public async Task<int> CreateSaleOrder(int customerNo)
+        {   
+            SaleOrder saleOrder = new SaleOrder();
+            saleOrder.customer.CustomerNo = customerNo;
+            int orderNo = await _DBAccessSaleOrder.CreateSaleOrder2(saleOrder);
+            return orderNo;
+        }
+
     }
 }

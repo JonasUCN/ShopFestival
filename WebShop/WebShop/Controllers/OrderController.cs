@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ModelLayer.DTO;
 using ModelLayer;
+using Newtonsoft.Json;
+using WebShop.Services;
 
 namespace WebShop.Controllers
 {
@@ -10,11 +12,7 @@ namespace WebShop.Controllers
         public IActionResult OrderView()
         {
             ModelOrderView mov = new ModelOrderView();
-            Product product = new Product() { Brand = "Addias", Price = 10, ProductDesc = "Festivals Sko", Stock = 50, Title = "Festivals sko", id = 3 };
-            OrderLine orderLine = new OrderLine { Product = product, Quantity = 21 };
-            Cart cart = new Cart();
-            cart.addOrderLine(orderLine);
-            mov.cart = cart;
+            mov.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
             mov.customer = new();
 
             return View(mov);
@@ -36,6 +34,7 @@ namespace WebShop.Controllers
 
             ModelOrderView mov = new ModelOrderView();
             mov.customer = c;
+            DBSaleOrderAccess.addSaleOrder();
 
             return View(mov);
         }

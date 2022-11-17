@@ -25,6 +25,16 @@ namespace WebShop.DBAccess
             var response = client.Post(new RestRequest());
             return response;
         }
-	}
+
+        public static List<Product> getAllProductsFromAPI()
+        {
+            List<Product>? products = new List<Product>();
+            string url = "https://localhost:5001/api/Product/Products/";
+            var client = new RestClient(url);
+            var response = client.Get(new RestRequest());
+            products = JsonConvert.DeserializeObject<List<Product>>(response.Content);
+            return products;
+        }
+    }
 }
 

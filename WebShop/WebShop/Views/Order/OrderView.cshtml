@@ -16,14 +16,14 @@
         <span class="badge badge-secondary badge-pill">3</span>
       </h4>
       <ul class="list-group mb-3">
-        @foreach(var i in Model.cart.GetOrderLines()){
+        @foreach(var i in Model.orderLines){
 
           <li class="list-group-item d-flex justify-content-between lh-condensed">
              <div>
                 <h6 class="my-0">@i.Product.Title</h6>
-                <small class="text-muted">@i.Product.ProductDesc</small>
+                <small class="text-muted">Antal: @i.Quantity</small>
              </div>
-             <span class="text-muted">@i.Product.Price</span>
+             <span class="text-muted">@i.SubTotal</span>
            </li>
 
         }
@@ -37,7 +37,7 @@
         </li>
         <li class="list-group-item d-flex justify-content-between">
           <span>Total (DKK)</span>
-          <strong>199</strong>
+          <strong>@Model.GetTotalPrice()</strong>
         </li>
       </ul>
 
@@ -140,7 +140,7 @@
         </div>
         <hr class="mb-4">
 
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                    <input type="submit" value="Check ud" />
         }
       </form>
     </div>

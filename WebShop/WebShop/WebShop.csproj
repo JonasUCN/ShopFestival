@@ -24,7 +24,4 @@
   <ItemGroup>
     <None Remove="DataAccess\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DBAccess\" />
-  </ItemGroup>
 </Project>
