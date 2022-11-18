@@ -44,15 +44,16 @@
                                             <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
 
                                                 @using(Html.BeginForm("CartView","Cart", FormMethod.Post)){
+
                                                     <input id="form1" min="1" name="quantity" value="@item.Quantity" type="number"
                                                    class="form-control form-control-sm" onchange="SetNewQuantity();" />
+
 
                                                     <input id="form2" min="1" name="id" value="@item.Product.id" type="number"
                                                    class="form-control form-control-sm" hidden="hidden" />
 
                                                     <input type="submit" value="Tilføj" />
-                                                    
-                                                    
+
                                                 }
                                                 
                                                 
@@ -79,7 +80,7 @@
 
                                     <div class="pt-5">
                                         <h6 class="mb-0">
-                                            <a href="#!" class="text-body">
+                                            <a href="@Url.Action("ProductsView", "Product")" class="text-body">
                                                 <i class="fas fa-long-arrow-alt-left me-2"></i>Tilbage til produkt oversigt
                                             </a>
                                         </h6>
