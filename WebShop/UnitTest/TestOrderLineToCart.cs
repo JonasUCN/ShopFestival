@@ -33,7 +33,7 @@ namespace UnitTest
             Product product = new Product() { Brand = "Addias", Price = 10, ProductDesc = "Festivals Sko", Stock = 0, Title = "Festivals sko", id = 12 };
             OrderLine orderLine = new OrderLine { Product = product, Quantity = 1 };
             ProductController productController = new();
-            CartCon cartController = productController.GetCartController();
+            ICartCon cartController = productController.GetCartController();
             //Act
             cartController.addOrderLineToCart(orderLine);
             //Assert
@@ -48,7 +48,7 @@ namespace UnitTest
             OrderLine orderLine = new OrderLine { Product = product, Quantity = 1 };
             OrderLine orderline2 = new OrderLine { Product = product, Quantity = 5 };
             ProductController productController = new();
-            CartCon cartController = productController.GetCartController();
+            ICartCon cartController = productController.GetCartController();
             cartController.addOrderLineToCart(orderLine);
             //Act
             cartController.addOrderLineToCart(orderline2);

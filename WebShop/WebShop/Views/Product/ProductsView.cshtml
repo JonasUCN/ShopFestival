@@ -69,12 +69,14 @@
                                                 <div class="ref-variant">
                                                     @using (Html.BeginForm( "ProductsView", "Product", FormMethod.Post))
                                                     {
-                                                        @Html.HiddenFor(m => item.Title)
-                                                        @Html.HiddenFor(m => item.Price)
-                                                        @Html.HiddenFor(m => item.id)
-                                                        @Html.HiddenFor(m => item.Brand)
+                                                        <input id="form2" min="1" name="id" value="@item.id" type="number"
+                                                       class="form-control form-control-sm" hidden="hidden" />
+                                                        @*@Html.HiddenFor(m => item.Title)
+                                                        @Html.HiddenFor(m => item.Price)*@
+                                                        
+                                                        @*@Html.HiddenFor(m => item.Brand)
                                                         @Html.HiddenFor(m => item.Stock)
-                                                        @Html.HiddenFor(m => item.ProductDesc)
+                                                        @Html.HiddenFor(m => item.ProductDesc)*@
                                                         <input type="submit" value="Tilføj" />
                                                     }
                                                 </div>
@@ -89,6 +91,13 @@
             </div>
         </div>
     </section>
+
+    <script type="text/javascript">
+        function sendId(){
+            var id = document.getElementById('form2').value;
+            $('#Product/ProductsView').val(id);
+        }
+    </script>
 }
 
 
