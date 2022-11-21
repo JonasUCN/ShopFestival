@@ -36,20 +36,17 @@ namespace Database_Service.Controllers
 
 
         [HttpPost, Route("AddOrder/{id}")]
-        public async Task<int> AddOrder(int id)
+        public async Task AddOrder(string id)
         {
-            int orderNo = await _SaleOrderController.CreateSaleOrder(id);
-            if(orderNo <= 0)
+            bool status = await _SaleOrderController.CreateSaleOrder(id);
+            if(status)
             {
                 Response.StatusCode = 404;
-               return 0;
+               return;
             }
             Response.StatusCode = 200;
-            return orderNo;
+            return;
         }
-
-
-
 
         // GET: SaleOrderController
         public ActionResult Index()

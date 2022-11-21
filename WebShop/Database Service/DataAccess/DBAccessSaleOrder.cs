@@ -31,51 +31,46 @@ namespace Database_Service.DataAccess
 
         public async Task<int> CreateSaleOrder(SaleOrder saleOrder)
         {
-            string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[processedDate],[orderStatus],[customerNo]) output INSERTED.orderNo VALUES (@OrderDate,@ProccessedDate,@OrderStatus,@customerNo)";
-
+            string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[orderStatus],[customerNo]) output INSERTED.orderNo VALUES (@OrderDate,@Status,@customerNo)";
             using (var connection = new SqlConnection(connectionString))
-                using(SqlCommand cmd = new SqlCommand(sql, connection))
-            {
-                cmd.Parameters.AddWithValue("OrderDate", saleOrder.OrderDate);
-                cmd.Parameters.AddWithValue("ProccessedDate", saleOrder.ProcessedDate);
-                cmd.Parameters.AddWithValue("OrderStatus", saleOrder.Status);
-                cmd.Parameters.AddWithValue("customerNo", saleOrder.customer.CustomerNo);
-                connection.Open();
-
-                int modified = (int)cmd.ExecuteScalar();
-
-                if (connection.State == System.Data.ConnectionState.Open)
+            { 
+                using (SqlCommand cmd = new SqlCommand(sql, connection))
                 {
-                    connection.Close();
+                    cmd.Parameters.AddWithValue("OrderDate", saleOrder.OrderDate);
+                    cmd.Parameters.AddWithValue("Status", saleOrder.Status);
+                    cmd.Parameters.AddWithValue("customerNo", saleOrder.customer.CustomerNo);
+                    connection.Open();
+
+                    int modified = (int)cmd.ExecuteScalar();
+                    Console.WriteLine(modified + " orderNo");
+                    if (connection.State == System.Data.ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                    return modified;
                 }
-                return modified;
             }
         }
 
-        public async Task<int> CreateSaleOrder2(SaleOrder saleOrder)
+        public async Task CreateOrderLine(SaleOrder saleOrder)
         {
-            string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[processedDate],[orderStatus],[customerNo]) VALUES (@OrderDate,@ProccessedDate,@OrderStatus,@customerNo)";
-            bool succes = false;
-
+            string sql = "INSERT INTO[dbo].[OrderLine] ([quantity],[orderNo],[productNo]) VALUES (@Quantity,@OrderNo,@id)";
+            
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                var result = connection.Execute(sql, new
+                foreach (var i in saleOrder.orderLines)
                 {
-                    saleOrder.OrderDate,
-                    saleOrder.ProcessedDate,
-                    saleOrder.Status,
-                    saleOrder.customer.CustomerNo
-
-                }) ;
-                if (result > 0)
-                {
-                    succes = true;
+                    connection.Execute(sql, new
+                    {
+                        i.Quantity,
+                        saleOrder.OrderNo,
+                        i.Product.id
+                    });
                 }
             }
-
-            return 1;
         }
-
     }
+
 }
+

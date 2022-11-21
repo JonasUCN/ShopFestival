@@ -1,5 +1,6 @@
 ﻿using ModelLayer;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebShop.LogicControllers
 {
@@ -30,17 +31,30 @@ namespace WebShop.LogicControllers
                 }
             }
 
-
             if (QuantityWasUpdatede == false)
             {
                 OrderLines.Add(orderLine);
-            }    
-            
-                
-            
-            
+            }
+
             string JsonOrderLinesToReturn = JsonConvert.SerializeObject(OrderLines);
             return JsonOrderLinesToReturn;
+        }
+
+        public string CheckExistingOrderLine(HttpContext http, OrderLine orderLine)
+        {
+            string json;
+            if (http.Session.GetString("OrderLines") == null)
+            {
+                json = CreateNewOrderlines(orderLine);
+            }
+            else
+            {
+                string JsonOrderlines = http.Session.GetString("OrderLines");
+                json = AddToExcistingOrderLines(JsonOrderlines, orderLine);
+
+            }
+            http.Session.SetString("OrderLines", json);
+            return json;
         }
     }
 }

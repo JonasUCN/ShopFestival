@@ -1,10 +1,6 @@
-﻿//using AspNetCore;
-using LayerController;
+﻿using LayerController;
 using Microsoft.AspNetCore.Mvc;
-
 using ModelLayer;
-using Newtonsoft.Json;
-using RestSharp;
 using WebShop.LogicControllers;
 using WebShop.DBAccess;
 
@@ -42,23 +38,17 @@ namespace WebShop.Controllers
         [HttpPost]
         public IActionResult ProductsView(int id)
         {
-            List<Product> Products = getAllProductsFromAPI();
-            bool found = false;
-            int index = 0;
-            while (found == false)
+            List<Product> Products = DBProductAccess.getAllProductsFromAPI();
+
+            foreach (var i in Products)
             {
-                Product product = Products[index];
-                if (product.id == id)
+                if (i.id == id)
                 {
-                    OrderLine orderLine = new OrderLine { Product = product, Quantity = 1 };
-                    OrderLineLogicController.CreateNewOrderlines(orderLine);
-                    string json = "";
-                    json = CheckExistingOrderLine(orderLine);
-                    found = true;
-                }
-                else
-                {
-                    index++;
+                    Product product = i;
+                    OrderLine orderLine2 = new OrderLine { Product = product, Quantity = 1 };
+                    OrderLineLogicController.CreateNewOrderlines(orderLine2);
+                    OrderLineLogicController.CheckExistingOrderLine(HttpContext, orderLine2);
+                    break;
                 }
             }
             return View(Products);
@@ -75,26 +65,9 @@ namespace WebShop.Controllers
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
 
                 string json = "";
-                json = CheckExistingOrderLine(orderLine);
+                json = OrderLineLogicController.CheckExistingOrderLine(HttpContext,orderLine);
             }
             return View(_Product);
-        }
-
-        private string CheckExistingOrderLine(OrderLine orderLine)
-        {
-            string json;
-            if (HttpContext.Session.GetString("OrderLines") == null)
-            {
-                json = OrderLineLogicController.CreateNewOrderlines(orderLine);
-            }
-            else
-            {
-                string JsonOrderlines = HttpContext.Session.GetString("OrderLines");
-                json = OrderLineLogicController.AddToExcistingOrderLines(JsonOrderlines, orderLine);
-
-            }
-            HttpContext.Session.SetString("OrderLines", json);
-            return json;
         }
 
         public ICartCon GetCartController()

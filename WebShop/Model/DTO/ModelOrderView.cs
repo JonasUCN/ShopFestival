@@ -12,6 +12,10 @@ namespace ModelLayer.DTO
         public List<OrderLine> orderLines { get; set; } //Set; is for testing 
         public Customer customer { get; set; } //Set; is for testing in the view & controller
 
+        public ModelOrderView()
+        {
+            customer = new Customer();
+        }
         public double GetTotalPrice()
         {
             double sum = 0;

@@ -10,7 +10,6 @@ namespace ModelLayer
 			get
 			{
 				return Product.Price * Quantity;
-
 			}
 		}
 	}
