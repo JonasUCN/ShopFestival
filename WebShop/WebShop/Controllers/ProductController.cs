@@ -23,22 +23,27 @@ namespace WebShop.Controllers
             return View();
         }
 
-        public IActionResult ProductsView()
+        public IActionResult ProductsView() //TODO Lav kald til LogicController. LogicController Laver kald til ServiceLayer
         {
             List<Product> products = DBProductAccess.getAllProductsFromAPI();
             return View(products);
         }
 
-        public IActionResult ProductView()
+        public IActionResult ProductView(int id)
         {
-            Product pp = DBProductAccess.GetProductFromAPIByID(1);
+            Product pp = DBProductAccess.GetProductFromAPIByID(id);
             return View(pp);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost]
-        public IActionResult ProductsView(int id)
+        public IActionResult ProductsView(int id) //TODO Flyttes ned i LogicControllers. Kaldes her.
         {
-            List<Product> Products = DBProductAccess.getAllProductsFromAPI();
+            List<Product> Products = DBProductAccess.getAllProductsFromAPI(); 
 
             foreach (var i in Products)
             {
