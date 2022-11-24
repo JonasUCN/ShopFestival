@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Database_Service.DataAccess;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebShop.Models;
+using WebShop.Services;
 
 namespace WebShop.Controllers;
 
@@ -12,7 +14,6 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
     public IActionResult Index()
     {
         return View();

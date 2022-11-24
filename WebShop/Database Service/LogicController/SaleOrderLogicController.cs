@@ -1,5 +1,6 @@
 ﻿using Database_Service.DataAccess;
 using ModelLayer;
+using Newtonsoft.Json;
 
 namespace Database_Service.LogicController
 {
@@ -17,6 +18,26 @@ namespace Database_Service.LogicController
             List<SaleOrder> saleOrder = await _DBAccessSaleOrder.GetAllSaleOrders();
             return saleOrder;
 
+        }
+
+        public async Task<bool> CreateSaleOrder(string json)
+        {
+            bool status = true;
+            SaleOrder saleOrder = JsonConvert.DeserializeObject<SaleOrder>(json);
+            int orderNo = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
+            if (orderNo <= 0)
+            {
+                status = false;
+            }
+            saleOrder.OrderNo = orderNo;
+            CreateOrderLine(saleOrder);
+
+            return status;
+        }
+
+        private async Task CreateOrderLine(SaleOrder saleOrder)
+        {
+            await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
         }
 
     }

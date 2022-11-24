@@ -9,9 +9,9 @@ namespace Database_Service.DataAccess
 {
     public class DBAccessProduct
     {
-        ConfigurationManager configuration = new ConfigurationManager();
+        private ConfigurationManager configuration = new ConfigurationManager();
 
-        public string connectionString;
+        private string connectionString;
         public DBAccessProduct()
         {
             string String = configuration["ConnectionStringToUse"];

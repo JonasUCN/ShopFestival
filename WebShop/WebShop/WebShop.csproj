@@ -21,4 +21,7 @@
     <ProjectReference Include="..\Model\ModelLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="DataAccess\" />
+  </ItemGroup>
 </Project>

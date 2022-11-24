@@ -1,23 +1,20 @@
-﻿//using AspNetCore;
-using LayerController;
+﻿using LayerController;
 using Microsoft.AspNetCore.Mvc;
-
 using ModelLayer;
-using Newtonsoft.Json;
-using RestSharp;
 using WebShop.LogicControllers;
+using WebShop.DBAccess;
 
 namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
 
-        private CartCon _CartController;
+        private CartCon _CartController = new();
+        private ProductLogicController _ProductLogicController = new();
         private OrderLineLogicController OrderLineLogicController;
 
         public ProductController()
         {
-            _CartController = new CartCon();
             OrderLineLogicController = new OrderLineLogicController();
         }
 
@@ -26,39 +23,37 @@ namespace WebShop.Controllers
             return View();
         }
 
-        public IActionResult ProductsView()
+        public IActionResult ProductsView() //TODO Lav kald til LogicController. LogicController Laver kald til ServiceLayer
         {
-            List<Product> products = getAllProductsFromAPI();
+            List<Product> products = _ProductLogicController.GetProductsFromService();
             return View(products);
         }
 
         public IActionResult ProductView(int id)
         {
-
-            Product product = getProductFromAPIByID(id);
-            return View(product);
+            Product pp = _ProductLogicController.GetProductFromServiceByID(id);
+            return View(pp);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost]
-        public IActionResult ProductsView(int id)
+        public IActionResult ProductsView(int id) //TODO Flyttes ned i LogicControllers. Kaldes her.
         {
-            List<Product> Products = getAllProductsFromAPI();
-            bool found = false;
-            int index = 0;
-            while (found == false)
+            List<Product> Products = DBProductAccess.getAllProductsFromAPI(); 
+
+            foreach (var i in Products)
             {
-                Product product = Products[index];
-                if (product.id == id)
+                if (i.id == id)
                 {
-                    OrderLine orderLine = new OrderLine { Product = product, Quantity = 1 };
-                    OrderLineLogicController.CreateNewOrderlines(orderLine);
-                    string json = "";
-                    json = CheckExistingOrderLine(orderLine);
-                    found = true;
-                }
-                else
-                {
-                    index++;
+                    Product product = i;
+                    OrderLine orderLine2 = new OrderLine { Product = product, Quantity = 1 };
+                    OrderLineLogicController.CreateNewOrderlines(orderLine2);
+                    OrderLineLogicController.CheckExistingOrderLine(HttpContext, orderLine2);
+                    break;
                 }
             }
             return View(Products);
@@ -67,63 +62,22 @@ namespace WebShop.Controllers
         [HttpPost]
         public IActionResult ProductView(Product _Product)
         {
-            string url = "https://localhost:5001/api/Product/RemoveStock/" + _Product.id;
-            var client = new RestClient(url);
-            var response = client.Post(new RestRequest());
+            var response = DBProductAccess.RemoveStockByID(_Product.id);
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
+
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
 
-
-                _CartController.addOrderLineToCart(orderLine); //TODO Fix quantity to match the page to chose the quantity 
                 string json = "";
-                json = CheckExistingOrderLine(orderLine);
+                json = OrderLineLogicController.CheckExistingOrderLine(HttpContext,orderLine);
             }
             return View(_Product);
-        }
-
-        private string CheckExistingOrderLine(OrderLine orderLine)
-        {
-            string json;
-            if (HttpContext.Session.GetString("OrderLines") == null)
-            {
-                json = OrderLineLogicController.CreateNewOrderlines(orderLine);
-            }
-            else
-            {
-                string JsonOrderlines = HttpContext.Session.GetString("OrderLines");
-                json = OrderLineLogicController.AddToExcistingOrderLines(JsonOrderlines, orderLine);
-
-            }
-            HttpContext.Session.SetString("OrderLines", json);
-            return json;
         }
 
         public ICartCon GetCartController()
         {
             return _CartController;
         }
-
-        private Product getProductFromAPIByID(int id)
-        {
-            string url = "https://localhost:5001/api/Product/Products/" + id;
-            var client = new RestClient(url);
-            var response = client.Get(new RestRequest());
-            Product product = JsonConvert.DeserializeObject<Product>(response.Content);
-            return product;
-        }
-
-        private List<Product> getAllProductsFromAPI()
-        {
-            List<Product>? products = new List<Product>();
-            string url = "https://localhost:5001/api/Product/Products/";
-            var client = new RestClient(url);
-            var response = client.Get(new RestRequest());
-            products = JsonConvert.DeserializeObject<List<Product>>(response.Content);
-            return products;
-        }
-
-
     }
 }
