@@ -10,11 +10,11 @@ namespace WebShop.Controllers
     {
 
         private CartCon _CartController = new();
+        private ProductLogicController _ProductLogicController = new();
         private OrderLineLogicController OrderLineLogicController;
 
         public ProductController()
         {
-            _CartController = new CartCon();
             OrderLineLogicController = new OrderLineLogicController();
         }
 
@@ -25,13 +25,13 @@ namespace WebShop.Controllers
 
         public IActionResult ProductsView() //TODO Lav kald til LogicController. LogicController Laver kald til ServiceLayer
         {
-            List<Product> products = DBProductAccess.getAllProductsFromAPI();
+            List<Product> products = _ProductLogicController.GetProductsFromService();
             return View(products);
         }
 
         public IActionResult ProductView(int id)
         {
-            Product pp = DBProductAccess.GetProductFromAPIByID(id);
+            Product pp = _ProductLogicController.GetProductFromServiceByID(id);
             return View(pp);
         }
 
