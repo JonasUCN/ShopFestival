@@ -1,10 +1,7 @@
  
-﻿@using ModelLayer;
-@model List<OrderLine>
+﻿@using ModelLayer.DTO;
+@model ModelCartView;
 
-@{
-    decimal TotalPrice = 0;
-}
 @{
     ViewData["Title"] = "Indkøbskurv";
 }
@@ -22,14 +19,12 @@
                                 <div class="p-5">
                                     <div class="d-flex justify-content-between align-items-center mb-5">
                                         <h1 class="fw-bold mb-0 text-black">Indkøbskurv</h1>
-                                        <h6 class="mb-0 text-muted">Antal af produkter:  @Model.Count</h6>
+                                        <h6 class="mb-0 text-muted">Antal af produkter:  @Model.OrderLines.Count</h6>
                                     </div>
 
 
-                                    @foreach (var item in Model)
+                                    @foreach (var item in Model.OrderLines)
                                     {
-
-
                                         <hr class="my-4">
 
                                         <div class="row mb-4 d-flex justify-content-between align-items-center">
@@ -53,14 +48,11 @@
                                                    class="form-control form-control-sm" hidden="hidden" />
 
                                                     <input type="submit" value="Tilføj" />
-
                                                 }
-                                                
-                                                
                                                 
                                             </div>
                                             <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                                <h6 class="mb-0"> @item.SubTotal DKK</h6>
+                                                <h6 class="mb-0"> @item.CalcSubTotal() DKK</h6>
                                             </div>
                                             <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                                 <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
@@ -70,13 +62,6 @@
                                         <hr class="my-4">
 
                                     }
-
-                                    @foreach (var item in Model)
-                                    {
-                                        TotalPrice = TotalPrice + item.SubTotal;
-                                    }
-
-
 
                                     <div class="pt-5">
                                         <h6 class="mb-0">
@@ -94,7 +79,7 @@
 
                                     <div class="d-flex justify-content-between mb-4">
                                         <h5 class="text-uppercase">Subtotal</h5>
-                                        <h5>@TotalPrice DKK</h5>
+                                        <h5>@Model.CalcSubTotal() DKK</h5>
                                     </div>
 
 
@@ -112,13 +97,16 @@
                                     <div class="d-flex justify-content-between mb-5">
                                         <h5 class="text-uppercase">Total pris </h5>
                                         
-                                        <h5> @TotalPrice DKK </h5>
+                                        <h5> @Model.CalcSubTotal() DKK</h5>
                                     </div>
-                                    <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Action("ProductView", "Product", new { id=item.id })'">Gå til betaling</button>
-                                    <button type="button" class="btn btn-dark btn-block btn-lg"
-                                            data-mdb-ripple-color="dark">
-                                        Gå til betaling
-                                    </button>
+                                    @if (Model.Loggedin)
+                                    {
+                                        <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Action("OrderView", "Order")'">Gå til betaling</button>
+
+                                    }else{
+                                        <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Content("Identity/Account/Login")'">Gå til betaling</button>
+
+                                    }
 
                                 </div>
                             </div>
