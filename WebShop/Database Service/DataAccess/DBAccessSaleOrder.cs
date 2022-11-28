@@ -30,8 +30,9 @@ namespace Database_Service.DataAccess
 
         public async Task<bool> CreateSaleOrder(SaleOrder saleOrder)
         {
-            string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[orderStatus],[customerNo]) output INSERTED.orderNo VALUES (@OrderDate,@Status,@customerNo)";
+            string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[orderStatus],[customerNo],[orderAddressNo]) output INSERTED.orderNo VALUES (@OrderDate,@Status,@customerNo,@orderAddressNo)";
             string sql2 = "INSERT INTO[dbo].[OrderLine] ([quantity],[orderNo],[productNo]) VALUES (@Quantity,@OrderNo,@id)";
+            string sql3 = "INSERT INTO[dbo].[OrderAddress] ([zipcode], [street], [streetNo]) output INSERTED.orderAddressNo VALUES (@Zipcode,@Street,@StreetNo)";
             var connection = new SqlConnection(connectionString);
             SqlTransaction transaction;
             connection.Open();
@@ -40,18 +41,32 @@ namespace Database_Service.DataAccess
 
             try
             {
+                using (SqlCommand cmd3 = new SqlCommand(sql3, connection))
+                {
+                    cmd3.Parameters.AddWithValue("Zipcode", saleOrder.OrderAddress.zipcode);
+                    cmd3.Parameters.AddWithValue("Street", saleOrder.OrderAddress.Street);
+                    cmd3.Parameters.AddWithValue("StreetNo", saleOrder.OrderAddress.streetNo);
+
+                    cmd3.Connection = connection;
+                    cmd3.Transaction = transaction;
+
+                    int modified2 = (int)cmd3.ExecuteScalar();
+                    saleOrder.OrderAddress.OrderAddressNo = modified2;
+                }
+
                 using (SqlCommand cmd = new SqlCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("OrderDate", saleOrder.OrderDate);
                     cmd.Parameters.AddWithValue("Status", saleOrder.Status);
                     cmd.Parameters.AddWithValue("customerNo", saleOrder.customer.CustomerNo);
+                    cmd.Parameters.AddWithValue("orderAddressNo", saleOrder.OrderAddress.OrderAddressNo);
 
                     cmd.Connection = connection;
                     cmd.Transaction = transaction;
 
                     int modified = (int)cmd.ExecuteScalar();
                     saleOrder.OrderNo = modified;
-                        
+
                 }
 
                 using (var cmd2 = new SqlCommand(sql2, connection))

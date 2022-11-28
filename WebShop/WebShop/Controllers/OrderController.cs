@@ -25,6 +25,7 @@ namespace WebShop.Controllers
             _MOV.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
 
             bool val1 = (HttpContext.User != null) && HttpContext.User.Identity.IsAuthenticated;
+            _OrderLogicController.AddSaleOrderToDB(_MOV);
             if (val1)
             {
                 _OrderLogicController.AddSaleOrderToDB(_MOV);

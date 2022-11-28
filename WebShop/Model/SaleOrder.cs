@@ -14,6 +14,8 @@ namespace ModelLayer
         public DateTime OrderDate { get; set; }
         public Customer customer { get; set; }
         public List<OrderLine> orderLines { get; set; }
+ 
+        public OrderAddress OrderAddress { get; set; }
         public SaleOrder()
         {
             OrderDate = DateTime.Now;
