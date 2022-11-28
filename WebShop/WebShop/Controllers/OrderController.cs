@@ -23,7 +23,12 @@ namespace WebShop.Controllers
         {
             //TODO Add customer information from the textboxes from the checkout page to the object
             _MOV.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
-            _OrderLogicController.AddSaleOrderToDB(_MOV);
+
+            bool val1 = (HttpContext.User != null) && HttpContext.User.Identity.IsAuthenticated;
+            if (val1)
+            {
+                _OrderLogicController.AddSaleOrderToDB(_MOV);
+            }
 
             return View(_MOV);
         }

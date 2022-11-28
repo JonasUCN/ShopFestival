@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using ModelLayer;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 
@@ -12,9 +13,7 @@ namespace Database_Service.DataAccess
         public string connectionString;
         public DBAccessSaleOrder()
         {
-            
             connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;TrustServerCertificate=true;"; //configuration.GetConnectionString(String);
-
         }
         public async Task<List<SaleOrder>> GetAllSaleOrders()
         {
@@ -29,46 +28,64 @@ namespace Database_Service.DataAccess
 
         }
 
-        public async Task<int> CreateSaleOrder(SaleOrder saleOrder)
+        public async Task<bool> CreateSaleOrder(SaleOrder saleOrder)
         {
             string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[orderStatus],[customerNo]) output INSERTED.orderNo VALUES (@OrderDate,@Status,@customerNo)";
-            using (var connection = new SqlConnection(connectionString))
-            { 
+            string sql2 = "INSERT INTO[dbo].[OrderLine] ([quantity],[orderNo],[productNo]) VALUES (@Quantity,@OrderNo,@id)";
+            var connection = new SqlConnection(connectionString);
+            SqlTransaction transaction;
+            connection.Open();
+            transaction = connection.BeginTransaction();
+            bool state = false;
+
+            try
+            {
                 using (SqlCommand cmd = new SqlCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("OrderDate", saleOrder.OrderDate);
                     cmd.Parameters.AddWithValue("Status", saleOrder.Status);
                     cmd.Parameters.AddWithValue("customerNo", saleOrder.customer.CustomerNo);
-                    connection.Open();
+
+                    cmd.Connection = connection;
+                    cmd.Transaction = transaction;
 
                     int modified = (int)cmd.ExecuteScalar();
-                    Console.WriteLine(modified + " orderNo");
-                    if (connection.State == System.Data.ConnectionState.Open)
-                    {
-                        connection.Close();
-                    }
-                    return modified;
+                    saleOrder.OrderNo = modified;
+                        
                 }
-            }
-        }
 
-        public async Task CreateOrderLine(SaleOrder saleOrder)
-        {
-            string sql = "INSERT INTO[dbo].[OrderLine] ([quantity],[orderNo],[productNo]) VALUES (@Quantity,@OrderNo,@id)";
-            
-            using (var connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                foreach (var i in saleOrder.orderLines)
+                using (var cmd2 = new SqlCommand(sql2, connection))
                 {
-                    connection.Execute(sql, new
+
+                    cmd2.Connection = connection;
+                    cmd2.Transaction = transaction;
+                    cmd2.Parameters.Add("@Quantity", SqlDbType.Int);
+                    cmd2.Parameters.Add("@OrderNo", SqlDbType.Int);
+                    cmd2.Parameters.Add("@id", SqlDbType.Int);
+
+
+                    foreach (var i in saleOrder.orderLines)
                     {
-                        i.Quantity,
-                        saleOrder.OrderNo,
-                        i.Product.id
-                    });
+                        cmd2.Parameters["@Quantity"].Value = i.Quantity;
+                        cmd2.Parameters["@OrderNo"].Value = saleOrder.OrderNo;
+                        cmd2.Parameters["@id"].Value = i.Product.id;
+                        cmd2.ExecuteNonQuery();
+                    }
                 }
+                transaction.Commit();
+                state = true;
             }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return state;
         }
     }
 

@@ -22,22 +22,9 @@ namespace Database_Service.LogicController
 
         public async Task<bool> CreateSaleOrder(string json)
         {
-            bool status = true;
             SaleOrder saleOrder = JsonConvert.DeserializeObject<SaleOrder>(json);
-            int orderNo = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
-            if (orderNo <= 0)
-            {
-                status = false;
-            }
-            saleOrder.OrderNo = orderNo;
-            CreateOrderLine(saleOrder);
-
+            bool status = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
             return status;
-        }
-
-        private async Task CreateOrderLine(SaleOrder saleOrder)
-        {
-            await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
         }
 
     }
