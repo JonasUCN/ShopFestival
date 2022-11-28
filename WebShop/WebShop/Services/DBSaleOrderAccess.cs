@@ -8,6 +8,9 @@ namespace WebShop.Services
         {
             string url = "https://localhost:5001/api/SaleOrder/AddOrder/" + saleOrderJson;
             var client = new RestClient(url);
-            var response = client.Post(new RestRequest());
-    }
+            var request = new RestRequest();
+            request.AddHeader("Authorization", $"Bearer {ServiceToken.GetToken()}");
+
+            var response = client.Post(request);
+        }
 }}

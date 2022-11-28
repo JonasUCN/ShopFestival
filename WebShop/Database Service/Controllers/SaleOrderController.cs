@@ -1,4 +1,5 @@
 ﻿using Database_Service.LogicController;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
@@ -16,7 +17,7 @@ namespace Database_Service.Controllers
         {
             _SaleOrderController = new SaleOrderLogicController();
         }
-
+        [Authorize]
         [HttpGet, Route("SaleOrders")]
         public async Task<ActionResult<List<SaleOrder>>> Get()
         {
@@ -34,7 +35,7 @@ namespace Database_Service.Controllers
             return foundReturn;
         }
 
-
+        [Authorize]
         [HttpPost, Route("AddOrder/{id}")]
         public async Task AddOrder(string id)
         {
@@ -47,25 +48,25 @@ namespace Database_Service.Controllers
             Response.StatusCode = 200;
             return;
         }
-
+        [Authorize]
         // GET: SaleOrderController
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         // GET: SaleOrderController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
-
+        [Authorize]
         // GET: SaleOrderController/Create
         public ActionResult Create()
         {
             return View();
         }
-
+        [Authorize]
         // POST: SaleOrderController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -80,13 +81,13 @@ namespace Database_Service.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         // GET: SaleOrderController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
+        [Authorize]
         // POST: SaleOrderController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -101,13 +102,13 @@ namespace Database_Service.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         // GET: SaleOrderController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
+        [Authorize]
         // POST: SaleOrderController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
