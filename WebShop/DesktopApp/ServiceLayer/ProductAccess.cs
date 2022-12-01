@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Data.Common;
 
-namespace DesktopApp.DataAccess
+namespace DesktopApp.ServiceLayer
 {
     public class ProductAccess : IProductAccess
     {

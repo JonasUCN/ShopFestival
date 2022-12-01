@@ -1,8 +1,9 @@
 ﻿using RestSharp;
+using WebShop.ServiceLayer;
 
-namespace WebShop.Services
+namespace WebShop.ServiceLayer
 {
-    public class DBSaleOrderAccess
+    public class DBSaleOrderAccess : IDBSaleOrderAccess
     {
         public static void addSaleOrder(string saleOrderJson)
         {

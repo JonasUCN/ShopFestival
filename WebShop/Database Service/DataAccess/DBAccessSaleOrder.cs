@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace Database_Service.DataAccess
 {
-    public class DBAccessSaleOrder
+    public class DBAccessSaleOrder : IDBAccessSaleOrder
     {
 
 

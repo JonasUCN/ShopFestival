@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebShop.LogicControllers
 {
-    public class OrderLineLogicController
+    public class OrderLineLogicController : IOrderLineLogicController
     {
         private List<OrderLine> OrderLines;
         public string CreateNewOrderlines(OrderLine orderLine)

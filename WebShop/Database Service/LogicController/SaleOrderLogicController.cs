@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Database_Service.LogicController
 {
-    public class SaleOrderLogicController
+    public class SaleOrderLogicController : ISaleOrderLogicController
     {
         DBAccessSaleOrder _DBAccessSaleOrder;
 
@@ -40,5 +40,9 @@ namespace Database_Service.LogicController
             await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
         }
 
+        Task ISaleOrderLogicController.CreateOrderLine(SaleOrder saleOrder)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

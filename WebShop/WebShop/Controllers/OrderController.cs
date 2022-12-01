@@ -2,7 +2,7 @@
 using ModelLayer.DTO;
 using ModelLayer;
 using Newtonsoft.Json;
-using WebShop.Services;
+using WebShop.ServiceLayer;
 using WebShop.LogicControllers;
 
 namespace WebShop.Controllers

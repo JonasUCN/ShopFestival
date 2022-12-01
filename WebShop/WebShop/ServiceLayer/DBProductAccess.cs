@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
-using Database_Service;
 using ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
-namespace WebShop.DBAccess
+using WebShop.ServiceLayer;
+
+namespace WebShop.ServiceLayer
 {
-	public class DBProductAccess
+	public class DBProductAccess : IDBProductAccess
 	{
 
         public static Product GetProductFromAPIByID(int id)

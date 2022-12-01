@@ -1,11 +1,11 @@
 ﻿using ModelLayer;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Session;
-using WebShop.DBAccess;
+using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {
-    public class ProductLogicController
+    public class ProductLogicController : IProductLogicController
     {
         public List<Product> GetProductsFromService()
         {

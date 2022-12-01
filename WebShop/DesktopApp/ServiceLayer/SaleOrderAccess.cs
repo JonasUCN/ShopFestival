@@ -10,7 +10,7 @@ using ModelLayer;
 using Newtonsoft.Json.Schema;
 using System.Text.Json.Nodes;
 
-namespace DesktopApp.DataAccess
+namespace DesktopApp.ServiceLayer
 {
     public class SaleOrderAccess : ISaleOrderAccess
     {

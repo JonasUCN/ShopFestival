@@ -1,11 +1,11 @@
 ﻿using ModelLayer;
 using ModelLayer.DTO;
 using Newtonsoft.Json;
-using WebShop.Services;
+using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {
-    public class OrderLogicController
+    public class OrderLogicController : IOrderLogicController
     {
         private DBSaleOrderAccess DBSaleOrderAccess = new();
         public SaleOrder CreateSaleOrder(ModelOrderView mov)

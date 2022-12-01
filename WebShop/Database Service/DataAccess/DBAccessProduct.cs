@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Database_Service.DataAccess
 {
-    public class DBAccessProduct
+    public class DBAccessProduct : IDBAccessProduct
     {
         private ConfigurationManager configuration = new ConfigurationManager();
 
