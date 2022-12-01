@@ -1,5 +1,4 @@
-﻿using Database_Service.DataAccess;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebShop.Models;
 using WebShop.ServiceLayer;

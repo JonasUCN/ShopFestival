@@ -1,5 +1,4 @@
-﻿using LayerController;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
 using WebShop.LogicControllers;
 using WebShop.ServiceLayer;
@@ -9,7 +8,6 @@ namespace WebShop.Controllers
     public class ProductController : Controller
     {
 
-        private CartCon _CartController = new();
         private ProductLogicController _ProductLogicController = new();
         private OrderLineLogicController OrderLineLogicController;
 
@@ -73,11 +71,6 @@ namespace WebShop.Controllers
                 json = OrderLineLogicController.CheckExistingOrderLine(HttpContext,orderLine);
             }
             return View(_Product);
-        }
-
-        public ICartCon GetCartController()
-        {
-            return _CartController;
         }
     }
 }
