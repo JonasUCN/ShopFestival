@@ -1,16 +1,16 @@
 ﻿
-using DesktopApp.DataAccess;
+using DesktopApp.ServiceLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer;
+using DesktopApp.LogicControllers;
 
-
-namespace DesktopApp.Controller
+namespace DesktopApp.LogicController
 {
-    public class SaleOrderController
+    public class SaleOrderController : ISaleOrderController
     {
         private ISaleOrderAccess dataAccess;
         public SaleOrderController(ISaleOrderAccess saleOrderAccess)

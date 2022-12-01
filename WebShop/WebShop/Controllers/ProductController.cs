@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer;
 using WebShop.LogicControllers;
-using WebShop.DBAccess;
+using WebShop.ServiceLayer;
 
 namespace WebShop.Controllers
 {

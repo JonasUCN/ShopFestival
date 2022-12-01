@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebShop.Models;
-using WebShop.Services;
+using WebShop.ServiceLayer;
 
 namespace WebShop.Controllers;
 

@@ -3,7 +3,7 @@ using ModelLayer;
 
 namespace Database_Service.LogicController
 {
-    public class LogicProductController
+    public class LogicProductController : ILogicProductController
     {
         private readonly DBAccessProduct dBAccessProduct;
 
