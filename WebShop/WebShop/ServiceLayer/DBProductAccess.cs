@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
-using Database_Service;
-using Database_Service.DataAccess;
 using ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
