@@ -31,24 +31,6 @@ namespace Database_Service.LogicController
             return succes;
         }
 
-        public async Task<bool> RemoveStockOnProductByOrder(SaleOrder saleOrder)
-        {
-            bool status = false;
-            try
-            {
-                foreach (var item in saleOrder.orderLines)
-                {
-                    await dBAccessProduct.RemoveStockOnProductById(item);
-                }
-                status = true;
-            }
-            catch 
-            {
-                status = false;
-            }
-            return status;
-        }
-
         public async Task<bool> IncreaseStockOnProductById(int id)
         {
             bool status = false;

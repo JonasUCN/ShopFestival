@@ -4,6 +4,7 @@ using ModelLayer;
 using Newtonsoft.Json;
 using WebShop.Services;
 using WebShop.LogicControllers;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebShop.Controllers
 {
@@ -23,7 +24,7 @@ namespace WebShop.Controllers
         {
             //TODO Add customer information from the textboxes from the checkout page to the object
             _MOV.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
-
+            var user = await _userManager
             bool val1 = (HttpContext.User != null) && HttpContext.User.Identity.IsAuthenticated;
             if (val1)
             {

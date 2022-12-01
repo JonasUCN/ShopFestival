@@ -24,30 +24,8 @@ namespace Database_Service.LogicController
         public async Task<bool> CreateSaleOrder(string json)
         {
             SaleOrder saleOrder = JsonConvert.DeserializeObject<SaleOrder>(json);
-            Console.WriteLine(saleOrder.orderLines[0].Quantity);
-            List<Product> products = LogicProductController.GetAllProducts().Result;
-            bool success = true; //If the stock is not equal or higher than quantity on the products in the order bool turns false.
             bool status = false;
-            foreach (var i in products)
-            {
-                foreach (var item in saleOrder.orderLines)
-                {
-                    if (i.id == item.Product.id && !(item.Quantity <= i.Stock))
-                    {
-                        success = false;
-                    }
-                }
-            }
-            Console.WriteLine(success + " bool");
-            if (success)
-            {
-                status = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
-                Console.WriteLine(status);
-                if (status)
-                {
-                   await LogicProductController.RemoveStockOnProductByOrder(saleOrder);
-                }
-            }
+            status = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
             return status;
         }
 

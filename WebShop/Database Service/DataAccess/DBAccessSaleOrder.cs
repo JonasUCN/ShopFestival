@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Database_Service.LogicController;
 using ModelLayer;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,11 +10,12 @@ namespace Database_Service.DataAccess
     public class DBAccessSaleOrder
     {
 
-
-        public string connectionString;
+        private LogicProductController _LogicProductController;
+        private string connectionString;
         public DBAccessSaleOrder()
         {
             connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;TrustServerCertificate=true;"; //configuration.GetConnectionString(String);
+            _LogicProductController = new LogicProductController();
         }
         public async Task<List<SaleOrder>> GetAllSaleOrders()
         {
@@ -33,6 +35,7 @@ namespace Database_Service.DataAccess
             string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[orderStatus],[customerNo],[orderAddressNo]) output INSERTED.orderNo VALUES (@OrderDate,@Status,@customerNo,@orderAddressNo)";
             string sql2 = "INSERT INTO[dbo].[OrderLine] ([quantity],[orderNo],[productNo]) VALUES (@Quantity,@OrderNo,@id)";
             string sql3 = "INSERT INTO[dbo].[OrderAddress] ([zipcode], [street], [streetNo]) output INSERTED.orderAddressNo VALUES (@Zipcode,@Street,@StreetNo)";
+
             var connection = new SqlConnection(connectionString);
             SqlTransaction transaction;
             connection.Open();
@@ -79,16 +82,35 @@ namespace Database_Service.DataAccess
                     cmd2.Parameters.Add("@id", SqlDbType.Int);
 
 
-                    foreach (var i in saleOrder.orderLines)
+                    foreach (var o in saleOrder.orderLines)
                     {
-                        cmd2.Parameters["@Quantity"].Value = i.Quantity;
+                        cmd2.Parameters["@Quantity"].Value = o.Quantity;
                         cmd2.Parameters["@OrderNo"].Value = saleOrder.OrderNo;
-                        cmd2.Parameters["@id"].Value = i.Product.id;
+                        cmd2.Parameters["@id"].Value = o.Product.id;
                         cmd2.ExecuteNonQuery();
                     }
                 }
-                transaction.Commit();
+                
+                using (var cmd3 = new SqlCommand())
+                {
+                    cmd3.Connection = connection;
+                    cmd3.Transaction = transaction;
+                    cmd3.Parameters.Add("@id", SqlDbType.Int);
+
+                    foreach (var o in saleOrder.orderLines)
+                    {
+                        cmd3.CommandText = "UPDATE Product SET Stock -= " + o.Quantity + " where id = @id AND Stock >= " + o.Quantity + ";";
+                        
+                        cmd3.Parameters["@id"].Value = o.Product.id;
+                        cmd3.ExecuteNonQuery();
+                    }
+                }
                 state = true;
+
+                if (state)
+                {
+                    transaction.Commit();
+                }
             }
             catch (Exception ex)
             {
