@@ -58,14 +58,14 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Fornavn</label>
-            @Html.TextBoxFor(m => Model.customer.FirstName, new {@class = "form-control", id="firstName", placeholder ="", value="", required=""})
+            <text>@Html.TextBoxFor(m => Model.customer.fname, new {@class = "form-control", id="firstName", placeholder ="", value="", required=""})</text>
             <div class="invalid-feedback">
               Gyldig fornavn er nødvendigt.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Efternavn</label>
-            @Html.TextBoxFor(m => Model.customer.LastName, new {@class = "form-control", id="lastName", placeholder ="", value="", required=""})
+            <text>@Html.TextBoxFor(m => Model.customer.lname, new {@class = "form-control", id="lastName", placeholder ="", value="", required=""})</text>
             <div class="invalid-feedback">
               Gyldig efternavn er nødvendigt.
             </div>
@@ -76,7 +76,7 @@
 
           <div class="col-md-8 mb-3">
           <label for="email">Email <span class="text-muted"></span></label>
-          @Html.TextBoxFor(m => Model.customer.Email, new {@class = "form-control", id="email", placeholder ="you@example.com", value="", required=""})
+          <text>@Html.TextBoxFor(m => Model.customer.Email, new {@readonly = true, @class = "form-control", id="email", placeholder ="you@example.com", value="", required=""})</text>
           <div class="invalid-feedback">
             Gyldig email er nødvendigt.
           </div>
@@ -84,7 +84,7 @@
 
         <div class="col-md-4 mb-3">
             <label for="phone">Telefon</label>
-            @Html.TextBoxFor(m => Model.customer.Phone, new {@class = "form-control", id="phone", placeholder ="+45", value="", required=""})
+            <text>@Html.TextBoxFor(m => Model.customer.Phone, new {@class = "form-control", id="phone", placeholder ="+45", value="", required=""})</text>
             <div class="invalid-feedback">
                 Indtast dit telefonnummer.
             </div>
@@ -96,7 +96,7 @@
         <div class="row">
             <div class="col-md-6 mb-3">
             <label for="Address">Adresse</label>
-            @Html.TextBoxFor(m => Model.customer.Street, new {@class = "form-control", id="address", placeholder ="", value="", required=""})
+            <text>@Html.TextBoxFor(m => Model.customer.Street, new {@class = "form-control", id="address", placeholder ="", value="", required=""})</text>
             <div class="invalid-feedback">
             Gyldig adresse er nødvendigt.
              </div>
@@ -104,7 +104,7 @@
 
           <div class="col-md-6 mb-3">
             <label for="Address">Husnummer</label>
-            @Html.TextBoxFor(m => Model.customer.StreetNo, new {@class = "form-control", id="addressNo", placeholder ="", value="", required=""})
+            <text>@Html.TextBoxFor(m => Model.customer.StreetNo, new {@class = "form-control", id="addressNo", placeholder ="", value="", required=""})</text>
             <div class="invalid-feedback">
             Gyldig adresse er nødvendigt.
             </div>
@@ -127,7 +127,7 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="zipcode">Postnummer</label>
-            @Html.TextBoxFor(m => Model.customer.ZipCode, new {@class = "form-control", id="zipcode", placeholder ="", value="", required=""})
+            <text>@Html.TextBoxFor(m => Model.customer.ZipCode, new {@class = "form-control", id="zipcode", placeholder ="", value="", required=""})</text>
             <div class="invalid-feedback">
               Indtast gyldig postnummer.
             </div>
