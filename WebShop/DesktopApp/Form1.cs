@@ -1,5 +1,7 @@
 using DesktopApp.Controller;
 using DesktopApp.DataAccess;
+using Microsoft.Extensions.Configuration;
+using System.Configuration;
 using System.Security.Cryptography;
 
 namespace DesktopApp
@@ -7,10 +9,12 @@ namespace DesktopApp
     public partial class Form1 : Form
     {
         Form LastPage;
+        IConfiguration configuration;
         public Form1(Form lastPage)
         {
             InitializeComponent();
             LastPage = lastPage;
+            
         }
 
         private void btn_createProduct_Click(object sender, EventArgs e)
@@ -22,7 +26,7 @@ namespace DesktopApp
                 Decimal.TryParse(txt_createPrice.Text, out decimal Price))
             {
 
-                ProductController productController = new ProductController(new ProductAccess());
+                ProductController productController = new ProductController(new ProductAccess(configuration));
                bool success = productController.createProduct(Price, Stock, txt_createProductDescription.Text, txt_createBrand.Text, txt_createTitle.Text);
 
                 if (success)

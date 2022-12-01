@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DesktopApp.DataAccess;
+using Microsoft.Extensions.Configuration;
 
 namespace DesktopApp
 {
@@ -17,11 +18,12 @@ namespace DesktopApp
     {
         ProductController _ProductController;
         Form LastPage;
+        IConfiguration configuration;
         public StockOverview(Form LastPage)
         {
             InitializeComponent();
             this.LastPage = LastPage;
-            _ProductController = new ProductController(new ProductAccess());
+            _ProductController = new ProductController(new ProductAccess(configuration));
         }
 
         private  void GetAllProducts()

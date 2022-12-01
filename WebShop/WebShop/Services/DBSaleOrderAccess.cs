@@ -10,7 +10,6 @@ namespace WebShop.Services
             var client = new RestClient(url);
             var request = new RestRequest();
             request.AddHeader("Authorization", $"Bearer {ServiceToken.GetToken()}");
-
             var response = client.Post(request);
         }
 }}

@@ -14,17 +14,19 @@ namespace WebShop.DBAccess
     public class DBProductAccess
     {
 
-        public static string GetToken()
-        {
-            string url = "https://localhost:5001/jwt";
-            var client = new RestClient(url);
+        //public static string GetToken()
+        //{
+        //    string url = "https://localhost:5001/jwt";
+        //    var client = new RestClient(url);
+        //    var request = new RestRequest();
+        //    request.AddHeader("Authorization", $"Bearer {ServiceToken.GetToken()}");
+        //    var response = client.Get(new RestRequest());
+            
+        //    string responseToken = response.Content;
+        //    string FinalToken = responseToken.Replace("\"", "");
 
-            var response = client.Get(new RestRequest());
-            string responseToken = response.Content;
-            string FinalToken = responseToken.Replace("\"", "");
-
-            return FinalToken;
-        }
+        //    return FinalToken;
+        //}
 
         public static Product GetProductFromAPIByID(int id)
         {
