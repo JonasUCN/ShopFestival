@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using LayerController;
 using ModelLayer;
 using Newtonsoft.Json;
 
@@ -8,11 +7,6 @@ namespace WebShop.Controllers
 {
     public class CartController : Controller
     {
-        private readonly ICartCon service;
-        public CartController( ICartCon cartCon)
-        {
-            service = cartCon;
-        }
         [Route("myCart")]
 
         // GET: CartController

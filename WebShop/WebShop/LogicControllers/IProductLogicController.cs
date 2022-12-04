@@ -7,5 +7,6 @@ namespace WebShop.LogicControllers
         List<Product> GetProductsFromService();
 
         Product GetProductFromServiceByID(int id);
+        List<Product> AddProductToCart(int id, HttpContext http);
     }
 }

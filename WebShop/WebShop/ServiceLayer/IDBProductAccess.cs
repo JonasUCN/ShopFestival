@@ -5,11 +5,11 @@ namespace WebShop.ServiceLayer
 {
     public interface IDBProductAccess
     {
-        //Product GetProductFromAPIByID(int id);
+        Product GetProductFromAPIByID(int id);
 
-        //RestResponse RemoveStockByID(int id);
+        RestResponse RemoveStockByID(int id);
 
-        //List<Product> getAllProductsFromAPI();
+        List<Product> getAllProductsFromAPI();
 
     }
 }
