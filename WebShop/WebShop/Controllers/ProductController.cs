@@ -11,9 +11,10 @@ namespace WebShop.Controllers
         private ProductLogicController _ProductLogicController;
         private OrderLineLogicController OrderLineLogicController;
 
-        public ProductController()
+        public ProductController(IConfiguration inConfiguration)
         {
-            OrderLineLogicController = new OrderLineLogicController();
+            OrderLineLogicController = new OrderLineLogicController(inConfiguration);
+            _ProductLogicController = new ProductLogicController(inConfiguration);
         }
 
         public IActionResult Index()

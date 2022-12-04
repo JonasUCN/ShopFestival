@@ -12,6 +12,7 @@ namespace WebShop.LogicControllers
         public ProductLogicController(IConfiguration inConfiguration)
         {
             _DBProductAccess= new DBProductAccess(inConfiguration);
+            _orderLineLogicController = new OrderLineLogicController(inConfiguration);
         }
         public List<Product> GetProductsFromService()
         {
@@ -50,9 +51,7 @@ namespace WebShop.LogicControllers
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
-
-                string json = "";
-                json = _orderLineLogicController.CheckExistingOrderLine(http, orderLine);
+                _orderLineLogicController.CheckExistingOrderLine(http, orderLine);
             }
             return _Product;
         }

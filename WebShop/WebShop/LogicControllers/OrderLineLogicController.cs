@@ -7,6 +7,11 @@ namespace WebShop.LogicControllers
     public class OrderLineLogicController : IOrderLineLogicController
     {
         private List<OrderLine> OrderLines;
+
+        public OrderLineLogicController(IConfiguration inConfiguration)
+        {
+        }
+
         public string CreateNewOrderlines(OrderLine orderLine)
         {
             OrderLines = new List<OrderLine>();
