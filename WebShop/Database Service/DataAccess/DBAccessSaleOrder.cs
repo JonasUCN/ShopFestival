@@ -14,7 +14,8 @@ namespace Database_Service.DataAccess
         private string connectionString;
         public DBAccessSaleOrder()
         {
-            connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;TrustServerCertificate=true;"; //configuration.GetConnectionString(String);
+            //configuration.GetConnectionString(String); FIX KIG NED
+            connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;TrustServerCertificate=true;"; 
             _LogicProductController = new LogicProductController();
         }
         public async Task<List<SaleOrder>> GetAllSaleOrders()

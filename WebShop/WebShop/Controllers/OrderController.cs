@@ -43,12 +43,12 @@ namespace WebShop.Controllers
         public async Task<IActionResult> OrderView(ModelOrderView _MOV)
         {
 
-            System.Security.Claims.ClaimsPrincipal user = User;
+            
                 
             //TODO Add customer information from the textboxes from the checkout page to the object
             _MOV.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
 
-            _OrderLogicController.AddSaleOrderToDB(_MOV,user);
+            
 
             var user = _userManager.FindByNameAsync(HttpContext.User.Identity.Name).Result;
 
