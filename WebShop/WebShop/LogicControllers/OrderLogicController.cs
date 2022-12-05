@@ -19,9 +19,9 @@ namespace WebShop.LogicControllers
             return saleOrder;
         }
 
-        public void AddSaleOrderToDB(ModelOrderView mov)
+        public void AddSaleOrderToDB(ModelOrderView mov, System.Security.Claims.ClaimsPrincipal user)
         {
-            DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov)));
+            DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov)),user);
         }
 
         public string ConvertSaleOrderToJson(SaleOrder saleOrder)

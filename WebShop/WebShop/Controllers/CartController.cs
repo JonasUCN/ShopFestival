@@ -20,7 +20,7 @@ namespace WebShop.Controllers
         public ActionResult CartView()
         {
             List<OrderLine> orders;
-
+            
 
             if (HttpContext.Session.GetString("OrderLines") != null)
             {

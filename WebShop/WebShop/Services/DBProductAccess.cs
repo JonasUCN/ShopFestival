@@ -34,7 +34,7 @@ namespace WebShop.DBAccess
             var client = new RestClient(url);
 
             var request = new RestRequest();
-            request.AddHeader("Authorization", $"Bearer {ServiceToken.GetToken()}");
+            request.AddHeader("Authorization", $"Bearer {ServiceToken.GetTokenDefaultUser()}");
 
             var response = client.Get(request);
             Product product = JsonConvert.DeserializeObject<Product>(response.Content);
@@ -46,7 +46,7 @@ namespace WebShop.DBAccess
             string url = "https://localhost:5001/api/Product/RemoveStock/" + id;
             var client = new RestClient(url);
             var request = new RestRequest();
-            request.AddHeader("Authorization", $"Bearer {ServiceToken.GetToken()}");
+            request.AddHeader("Authorization", $"Bearer {ServiceToken.GetTokenDefaultUser()}");
 
             var response = client.Post(request);
             return response;
@@ -58,7 +58,7 @@ namespace WebShop.DBAccess
             string url = "https://localhost:5001/api/Product/Products/";
             var client = new RestClient(url);
             var request = new RestRequest();
-            request.AddHeader("Authorization", $"Bearer {ServiceToken.GetToken()}");
+            request.AddHeader("Authorization", $"Bearer {ServiceToken.GetTokenDefaultUser()}");
 
             var response = client.Get(request);
             products = JsonConvert.DeserializeObject<List<Product>>(response.Content);
