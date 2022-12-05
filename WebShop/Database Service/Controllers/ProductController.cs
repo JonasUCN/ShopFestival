@@ -65,19 +65,8 @@ namespace Database_Service.Controllers
             }
             return wasCreated;
         }
-        [Authorize]
-        [HttpPost, Route("RemoveStock/{id}")]
-        public async void RemoveStockFromProductById(int id)
-        {
-            bool state = await _ProductController.RemoveStockOnProductById(id);
-            if (state)
-            {
-                Response.StatusCode = 200;
-                return;
-            }
-            Response.StatusCode = 404;
-            return;
-        }
+
+      
         [Authorize]
         [HttpPost, Route("IncreaseStock/{id}")]
         public async void IncreaseStockFromProductById(int id)

@@ -6,11 +6,12 @@ namespace Database_Service.LogicController
 {
     public class SaleOrderLogicController
     {
-        DBAccessSaleOrder _DBAccessSaleOrder;
-
+        private DBAccessSaleOrder _DBAccessSaleOrder;
+        private LogicProductController LogicProductController;
         public SaleOrderLogicController()
         {
             _DBAccessSaleOrder = new();
+            LogicProductController = new();
         }
 
         public async Task<List<SaleOrder>> GetAllSaleOrders()
@@ -22,22 +23,10 @@ namespace Database_Service.LogicController
 
         public async Task<bool> CreateSaleOrder(string json)
         {
-            bool status = true;
             SaleOrder saleOrder = JsonConvert.DeserializeObject<SaleOrder>(json);
-            int orderNo = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
-            if (orderNo <= 0)
-            {
-                status = false;
-            }
-            saleOrder.OrderNo = orderNo;
-            CreateOrderLine(saleOrder);
-
+            bool status = false;
+            status = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
             return status;
-        }
-
-        private async Task CreateOrderLine(SaleOrder saleOrder)
-        {
-            await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
         }
 
     }

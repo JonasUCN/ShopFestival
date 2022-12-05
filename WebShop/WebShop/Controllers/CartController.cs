@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using LayerController;
 using ModelLayer;
 using Newtonsoft.Json;
+using ModelLayer.DTO;
 
 namespace WebShop.Controllers
 {
@@ -20,7 +21,7 @@ namespace WebShop.Controllers
         public ActionResult CartView()
         {
             List<OrderLine> orders;
-            
+            ModelCartView mcv = new();
 
             if (HttpContext.Session.GetString("OrderLines") != null)
             {
@@ -30,18 +31,20 @@ namespace WebShop.Controllers
             {
                 orders = new List<OrderLine>();
             }
-            
-            return View(orders);
+            mcv.OrderLines = orders;
+            mcv.Loggedin = HttpContext.User.Identity.IsAuthenticated && (HttpContext.User != null);
+
+            return View(mcv);
         }
 
           
         [Route("myCart")]
         [HttpPost]
-
         public ActionResult CartView(int quantity, int id)
         {
 
             List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
+            ModelCartView mcv = new();
 
             foreach (var item in orders)
             {
@@ -51,11 +54,12 @@ namespace WebShop.Controllers
                 }
                 
             }
-
+            mcv.OrderLines = orders;
+            mcv.Loggedin = HttpContext.User.Identity.IsAuthenticated && (HttpContext.User != null);
             string JsonOrderLines = JsonConvert.SerializeObject(orders);
             HttpContext.Session.SetString("OrderLines", JsonOrderLines);
 
-            return View(orders);  
+            return View(mcv);  
         }
 
         // GET: CartController/Details/5
