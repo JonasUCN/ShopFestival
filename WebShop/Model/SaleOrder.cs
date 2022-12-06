@@ -18,6 +18,7 @@ namespace ModelLayer
         public OrderAddress OrderAddress { get; set; }
         public SaleOrder()
         {
+            orderLines = new List<OrderLine>();
             OrderDate = DateTime.Now;
             Status = "Active";
             customer = new();
