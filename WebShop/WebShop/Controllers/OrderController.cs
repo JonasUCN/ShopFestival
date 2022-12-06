@@ -4,7 +4,11 @@ using ModelLayer;
 using Newtonsoft.Json;
 using WebShop.Services;
 using WebShop.LogicControllers;
+
+using Microsoft.AspNetCore.Authorization;
+
 using Microsoft.AspNetCore.Identity;
+
 
 namespace WebShop.Controllers
 {
@@ -34,12 +38,18 @@ namespace WebShop.Controllers
 
             return View(mov);
         }
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> OrderView(ModelOrderView _MOV)
         {
+
+            
+                
             //TODO Add customer information from the textboxes from the checkout page to the object
             _MOV.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
+
+            
+
             var user = _userManager.FindByNameAsync(HttpContext.User.Identity.Name).Result;
 
             bool val1 = (HttpContext.User != null) && HttpContext.User.Identity.IsAuthenticated;
@@ -47,6 +57,7 @@ namespace WebShop.Controllers
             {
                 _OrderLogicController.AddSaleOrderToDB(_MOV, user);
             }
+
 
             return View(_MOV);
         }

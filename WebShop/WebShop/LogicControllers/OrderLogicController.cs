@@ -22,9 +22,11 @@ namespace WebShop.LogicControllers
             return saleOrder;
         }
 
+
         public void AddSaleOrderToDB(ModelOrderView mov, IdentityUser user)
         {
-            DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov, user)));
+            DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov, user)),user);
+
         }
 
         public string ConvertSaleOrderToJson(SaleOrder saleOrder)

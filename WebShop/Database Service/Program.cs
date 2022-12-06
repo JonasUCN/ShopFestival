@@ -1,8 +1,33 @@
+using Database_Service.DataAccess;
+using Database_Service.Security;
+using Microsoft.IdentityModel.Tokens;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// Configure the JWT Authentication Service
+builder.Services.AddAuthentication(options => {
+    options.DefaultAuthenticateScheme = "JwtBearer";
+    options.DefaultChallengeScheme = "JwtBearer";
+})
+    .AddJwtBearer("JwtBearer", jwtOptions => {
+        jwtOptions.TokenValidationParameters = new TokenValidationParameters()
+        {
+            // The SigningKey is defined in the TokenController class
+            IssuerSigningKey = new JwtToken(builder.Configuration,new DBASP_NetUser(builder.Configuration)).GetSecurityKey(),
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidIssuer = "https://localhost:5001",
+            ValidAudience = "https://localhost:5001",
+            ValidateLifetime = true
+        };
+    });
+
+
+
+
 
 var app = builder.Build();
 
@@ -10,6 +35,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
