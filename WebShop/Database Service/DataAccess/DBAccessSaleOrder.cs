@@ -132,10 +132,16 @@ namespace Database_Service.DataAccess
 
                     foreach (var o in saleOrder.orderLines)
                     {
+                        Console.WriteLine(o.Quantity);
                         cmd4.CommandText = "UPDATE Product SET Stock -= " + o.Quantity + " where id = @id AND Stock >= " + o.Quantity + ";";
                         
                         cmd4.Parameters["@id"].Value = o.Product.id;
-                        cmd4.ExecuteNonQuery();
+                        int modified = cmd4.ExecuteNonQuery();
+                        Console.WriteLine(modified);
+                        if(modified < 1)
+                        {
+                            throw new Exception();
+                        }
                     }
                 }
 
@@ -149,7 +155,6 @@ namespace Database_Service.DataAccess
             catch (Exception ex)
             {
                 transaction.Rollback();
-                throw;
             }
             finally
             {
