@@ -1,7 +1,8 @@
+using Database_Service.DataAccess;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebShop.Data;
-
+using WebShop.ServiceLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => {
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
+
+builder.Services.AddScoped<IDBAccessSaleOrder, DBAccessSaleOrder>();
+builder.Services.AddScoped<IDBProductAccess, DBProductAccess>();
+
+
 
 
 var app = builder.Build();
