@@ -1,5 +1,5 @@
 ﻿using Database_Service.DataAccess;
-using ModelLayer;
+using Database_Service.Model;
 using Newtonsoft.Json;
 
 namespace Database_Service.LogicController

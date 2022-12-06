@@ -1,4 +1,4 @@
-﻿using ModelLayer;
+﻿using WebShop.Models;
 using RestSharp;
 
 namespace WebShop.ServiceLayer

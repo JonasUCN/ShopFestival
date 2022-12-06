@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 using DesktopApp.ServiceLayer;
 using DesktopApp.LogicControllers;
-using ModelLayer;
+using DesktopApp.ModelLayer;
 
 namespace DesktopApp.LogicController
 {

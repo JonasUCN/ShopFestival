@@ -1,4 +1,4 @@
-﻿using ModelLayer;
+﻿using DesktopApp.ModelLayer;
 using DesktopApp.LogicController;
 using System;
 using System.Collections.Generic;
@@ -26,9 +26,9 @@ namespace DesktopApp
 
         private  void GetAllProducts()
         {
-            
-            
-            List<Product> inventory =  _ProductController.GetProducts();
+
+
+            List<Product> inventory = _ProductController.GetProducts();
             var bindingList = new BindingList<Product>(inventory);
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;

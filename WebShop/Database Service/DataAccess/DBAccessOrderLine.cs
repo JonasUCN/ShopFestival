@@ -1,4 +1,4 @@
-﻿using ModelLayer;
+﻿using Database_Service.Model;
 using System.Data.SqlClient;
 
 namespace Database_Service.DataAccess

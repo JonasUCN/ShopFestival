@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft;
 using Newtonsoft.Json;
-using ModelLayer;
+using Database_Service.Model;
 using System.Net;
 
 namespace Database_Service.Controllers

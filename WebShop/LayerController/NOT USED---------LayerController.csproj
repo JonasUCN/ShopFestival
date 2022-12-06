@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Model\ModelLayer.csproj" />
-    <ProjectReference Include="..\Database Service\Database Service.csproj" />
+    <None Remove="Microsoft.AspNetCore.Mvc.ViewFeatures, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Microsoft.AspNetCore.Mvc.ViewFeatures, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60" />
+    <ProjectReference Include="..\Database Service\Database Service.csproj" />
+    <ProjectReference Include="..\Model\ModelLayer.csproj" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Database_Service.LogicController;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ModelLayer;
+using Database_Service.Model;
 
 namespace Database_Service.Controllers
 {

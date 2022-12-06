@@ -1,4 +1,4 @@
-﻿using ModelLayer;
+﻿using Database_Service.Model;
 
 namespace Database_Service.LogicController
 {
