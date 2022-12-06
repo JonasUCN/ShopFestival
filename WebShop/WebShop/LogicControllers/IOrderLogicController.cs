@@ -1,13 +1,12 @@
-﻿using ModelLayer.DTO;
-using ModelLayer;
+﻿using WebShop.Models;
 
 namespace WebShop.LogicControllers
 {
     public interface IOrderLogicController
     {
-        SaleOrder CreateSaleOrder(ModelOrderView mov);
+        SaleOrder CreateSaleOrder(SaleOrder mov);
 
-        void AddSaleOrderToDB(ModelOrderView mov);
+        void AddSaleOrderToDB(SaleOrder mov);
 
         string ConvertSaleOrderToJson(SaleOrder saleOrder);
     }

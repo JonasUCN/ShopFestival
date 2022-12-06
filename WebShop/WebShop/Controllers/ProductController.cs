@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ModelLayer;
+using WebShop.Models;
 using WebShop.LogicControllers;
 using WebShop.ServiceLayer;
 

@@ -21,7 +21,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddSession();
 
-builder.Services.AddScoped<IDBAccessSaleOrder, DBAccessSaleOrder>();
+builder.Services.AddScoped<IDBSaleOrderAccess, DBSaleOrderAccess>();
 builder.Services.AddScoped<IDBProductAccess, DBProductAccess>();
 
 

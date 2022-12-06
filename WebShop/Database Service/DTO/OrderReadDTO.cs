@@ -4,7 +4,9 @@ namespace Database_Service.DTO
 {
     public class OrderReadDTO
     {
-        //TODO: Skal måske indholde mere fra SaleOrder.cs fra Model
+        public int OrderNo { get; set; }
+        public string Status { get; set; }
+        public DateTime OrderDate { get; set; }
         public List<OrderLine> orderLines { get; set; } //Set; is for testing 
         public Customer customer { get; set; } //Set; is for testing in the view & controller
 

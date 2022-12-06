@@ -1,4 +1,4 @@
-﻿using ModelLayer;
+﻿using WebShop.Models;
 
 namespace WebShop.LogicControllers
 {

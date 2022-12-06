@@ -1,5 +1,6 @@
 ﻿
 using DesktopApp.ServiceLayer;
+using DesktopApp.ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

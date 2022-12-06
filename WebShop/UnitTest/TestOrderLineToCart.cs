@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebShop.Controllers;
+using WebShop.Models;
 
 namespace UnitTest
 {

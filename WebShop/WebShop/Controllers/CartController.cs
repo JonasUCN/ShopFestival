@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ModelLayer;
+using WebShop.Models;
 using Newtonsoft.Json;
 
 namespace WebShop.Controllers

@@ -1,4 +1,4 @@
-﻿using ModelLayer;
+﻿using WebShop.Models;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 
