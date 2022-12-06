@@ -35,17 +35,11 @@ namespace Database_Service.Controllers
         }
 
 
-        [HttpPost, Route("AddOrder/{id}")]
-        public async Task AddOrder(string id)
+        [HttpPost, Route("AddOrder/{json}")]
+        public async Task<bool> AddOrder(string json)
         {
-            bool status = await _SaleOrderController.CreateSaleOrder(id);
-            if(status)
-            {
-                Response.StatusCode = 404;
-               return;
-            }
-            Response.StatusCode = 200;
-            return;
+            bool status = await _SaleOrderController.CreateSaleOrder(json);
+            return status;
         }
 
         // GET: SaleOrderController

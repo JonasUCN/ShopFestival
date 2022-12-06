@@ -23,7 +23,7 @@ namespace WebShop.Controllers
             return View();
         }
 
-        public IActionResult ProductsView() //TODO Lav kald til LogicController. LogicController Laver kald til ServiceLayer
+        public IActionResult ProductsView()
         {
             List<Product> products = _ProductLogicController.GetProductsFromService();
             return View(products);

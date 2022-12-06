@@ -8,8 +8,8 @@ namespace ModelLayer
 {
     public class Customer
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string fname { get; set; }
+        public string lname { get; set; }
         public string ZipCode { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
@@ -17,5 +17,6 @@ namespace ModelLayer
         public string Phone { get; set; }
         public string Email { get; set; }
         public int CustomerNo { get; set; }
+        public string userID { get; set; }
     }
 }

@@ -1,8 +1,81 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using ModelLayer;
+@using LayerController;
+@using WebShop.Controllers;
+@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Produkter";
+}
+<h1 class="text-center">@ViewData["Title"]</h1>
+@foreach (var item in Model)
+{
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-3">
+                <div class="col-md-12 col-xl-10">
+                    <div class="card shadow-0 border rounded-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                    <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                                        <img src="/images/festivalstelt.png"
+                                         class="w-100" />
+                                        <a href="#!">
+                                            <div class="hover-overlay">
+                                                <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                    <h5>@item.Title</h5>
+                                    <div class="d-flex flex-row">
+                                        <div class="text-danger mb-1 me-2">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <span>--------------</span>
+                                    </div>
+                                    <p class="mb-4 mb-md-0">
+                                        @item.ProductDesc
+                                    </p>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                    <div class="d-flex flex-row align-items-center mb-1">
+                                        <h4 class="mb-1 me-1">@item.Price kr.</h4>
+                                    </div>
+                                    <h6 class="text-success">Gratis forsendelse</h6>
+                                    <div class="d-flex flex-column mt-4">
+                                        <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Action("ProductView", "Product", new { id=item.id })'">Detaljer</button>
+
+                                        <span data-reflow-type="add-to-cart" data-reflow-shoppingcart-url data-reflow-addtocart-text data-reflow-product="43218622" data-reflow-variant="199976733_s">
+                                            <div class="ref-product-controls">
+                                                <div class="ref-variant">
+                                                    @using (Html.BeginForm("ProductsView", "Product", FormMethod.Post))
+                                                    {
+                                                        <input id="form2" min="1" name="id" value="@item.id" type="number"
+                                                       class="form-control form-control-sm" hidden="hidden" />
+                                                        <input type="submit" value="Tilføj" />
+                                                    }
+                                                </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        function sendId() {
+            var id = document.getElementById('form2').value;
+            $('#Product/ProductsView').val(id);
+        }
+    </script>
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
