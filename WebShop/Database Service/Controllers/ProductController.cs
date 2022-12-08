@@ -6,11 +6,12 @@ using Newtonsoft;
 using Newtonsoft.Json;
 using Database_Service.Model;
 using System.Net;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Database_Service.Controllers
 {
-    [Route("api/Product")]
     [ApiController]
+    [Route("api/Product")]
     public class ProductController : Controller
     {
         private LogicProductController _ProductController;
@@ -25,6 +26,7 @@ namespace Database_Service.Controllers
         // GET: ProductController
 
         [HttpGet,Route("Products")]
+        [Authorize]
         public async Task<ActionResult<List<Product>>> Get()
         {
             List<Product> p = await _ProductController.GetAllProducts();
@@ -40,14 +42,14 @@ namespace Database_Service.Controllers
             
             return foundReturn;
         }
-
+        [Authorize]
         [HttpGet, Route("Products/{id}")]
         public async Task<Product> Get(int id)
         {
             var product = await _ProductController.GetProductByID(id);
             return product;
         }
-
+        [Authorize]
         [HttpPost, Route("Create")]
         public async Task<ActionResult> PostNewProduct(Product product)
         {
@@ -64,19 +66,8 @@ namespace Database_Service.Controllers
             return wasCreated;
         }
 
-        [HttpPost, Route("RemoveStock/{id}")]
-        public async void RemoveStockFromProductById(int id)
-        {
-            bool state = await _ProductController.RemoveStockOnProductById(id);
-            if (state)
-            {
-                Response.StatusCode = 200;
-                return;
-            }
-            Response.StatusCode = 404;
-            return;
-        }
-
+      
+        [Authorize]
         [HttpPost, Route("IncreaseStock/{id}")]
         public async void IncreaseStockFromProductById(int id)
         {
@@ -89,19 +80,19 @@ namespace Database_Service.Controllers
             Response.StatusCode = 404;
             return;
         }
-
+        [Authorize]
         // GET: ProductController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
-
+        [Authorize]
         // GET: ProductController/Create
         public ActionResult Create()
         {
             return View();
         }
-
+        [Authorize]
         // POST: ProductController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -116,13 +107,13 @@ namespace Database_Service.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         // GET: ProductController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
+        [Authorize]
         // POST: ProductController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -137,13 +128,13 @@ namespace Database_Service.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         // GET: ProductController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
+        [Authorize]
         // POST: ProductController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]

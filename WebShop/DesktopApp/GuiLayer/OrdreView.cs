@@ -10,6 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Extensions.Configuration;
 using DesktopApp.ModelLayer;
 using DesktopApp.ServiceLayer;
 
@@ -19,6 +20,7 @@ namespace DesktopApp
     {
         SaleOrderController SaleOrderController;
         Form LastPage;
+        IConfiguration configuration;
         public OrdreView(Form lastPage)
         {
             InitializeComponent();
@@ -39,7 +41,7 @@ namespace DesktopApp
 
         private void getAllSaleOrders()
         {
-            SaleOrderController = new SaleOrderController(new SaleOrderAccess());
+            SaleOrderController = new SaleOrderController(new SaleOrderAccess(configuration));
             List<SaleOrder> saleOrders =  SaleOrderController.GetAllSaleOrders();
             var bindingList = new BindingList<SaleOrder>(saleOrders);
             var source = new BindingSource(bindingList, null);
@@ -54,7 +56,7 @@ namespace DesktopApp
 
         private  void btn_activeOrders_ClickAsync(object sender, EventArgs e)
         {
-            SaleOrderController = new SaleOrderController(new SaleOrderAccess());
+            SaleOrderController = new SaleOrderController(new SaleOrderAccess(configuration));
             List<SaleOrder> saleOrders = SaleOrderController.GetActiveSaleOrderes();
             var bindingList = new BindingList<SaleOrder>(saleOrders);
             var source = new BindingSource(bindingList, null);

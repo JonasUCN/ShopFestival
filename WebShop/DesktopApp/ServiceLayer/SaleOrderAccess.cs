@@ -9,17 +9,29 @@ using System.Threading.Tasks;
 using DesktopApp.ModelLayer;
 using Newtonsoft.Json.Schema;
 using System.Text.Json.Nodes;
+using Microsoft.Extensions.Configuration;
 
 namespace DesktopApp.ServiceLayer
 {
     public class SaleOrderAccess : ISaleOrderAccess
     {
-        RestClient restClient = new RestClient("https://localhost:5001");
 
+        TokenAccess TokenAccess;
+        public SaleOrderAccess(IConfiguration configuration)
+        {
+            TokenAccess = new TokenAccess(configuration);
+
+        }
+
+
+        RestClient restClient = new RestClient("https://localhost:5001");
+           
         public List<SaleOrder> GetAllSaleOrder()
         {
             var request = new RestRequest("api/SaleOrder/SaleOrders");
+            request.AddHeader("Authorization", $"Bearer {TokenAccess.GetToken()}");
             var response = restClient.Get(request);
+            
             List<SaleOrder> saleOrders = ConvertJSONToListOfSaleOrders(response.Content);
             return saleOrders;
         }

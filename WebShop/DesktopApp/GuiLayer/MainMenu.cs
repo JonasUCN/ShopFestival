@@ -19,6 +19,7 @@ namespace DesktopApp
         public MainMenu()
         {
             InitializeComponent();
+            
         }
 
         private void btn_StockOverview_Click(object sender, EventArgs e)

@@ -1,6 +1,11 @@
 ﻿using Database_Service.LogicController;
+using Database_Service.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using Database_Service.Model;
 
 namespace Database_Service.Controllers
@@ -16,10 +21,11 @@ namespace Database_Service.Controllers
         {
             _SaleOrderController = new SaleOrderLogicController();
         }
-
+        [Authorize]
         [HttpGet, Route("SaleOrders")]
         public async Task<ActionResult<List<SaleOrder>>> Get()
         {
+
             List<SaleOrder> saleOrders = await _SaleOrderController.GetAllSaleOrders();
             ActionResult<List<SaleOrder>> foundReturn;
             if (saleOrders.Count > 0)
@@ -35,37 +41,56 @@ namespace Database_Service.Controllers
         }
 
 
+        [Authorize]
         [HttpPost, Route("AddOrder/{id}")]
-        public async Task AddOrder(string id)
+        public async Task AddOrder([FromHeader] string Authorization, string id)
         {
-            bool status = await _SaleOrderController.CreateSaleOrder(id);
-            if(status)
+            
+
+            var authHeader = this.HttpContext.Request.Headers.Authorization.ToString();
+            bool AuthorizeSuccess = JwtToken.ValidateGrantType(authHeader);
+
+            if (AuthorizeSuccess)
             {
-                Response.StatusCode = 404;
-               return;
+                bool status = await _SaleOrderController.CreateSaleOrder(id);
+                if (status)
+                {
+                    Response.StatusCode = 404;
+                    return;
+                }
+                Response.StatusCode = 200;
+                return;
             }
-            Response.StatusCode = 200;
-            return;
+            else
+            {
+                Response.StatusCode = 401;
+                return;
+            }
+            
+
         }
 
+        
+
+        [Authorize]
         // GET: SaleOrderController
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         // GET: SaleOrderController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
-
+        [Authorize]
         // GET: SaleOrderController/Create
         public ActionResult Create()
         {
             return View();
         }
-
+        [Authorize]
         // POST: SaleOrderController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -80,13 +105,13 @@ namespace Database_Service.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         // GET: SaleOrderController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-
+        [Authorize]
         // POST: SaleOrderController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -101,13 +126,13 @@ namespace Database_Service.Controllers
                 return View();
             }
         }
-
+        [Authorize]
         // GET: SaleOrderController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-
+        [Authorize]
         // POST: SaleOrderController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
