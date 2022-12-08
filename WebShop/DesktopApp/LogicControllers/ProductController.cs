@@ -5,13 +5,14 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-using DesktopApp.DataAccess;
-using ModelLayer;
+using DesktopApp.ServiceLayer;
+using DesktopApp.LogicControllers;
+using DesktopApp.ModelLayer;
 
-namespace DesktopApp.Controller
+namespace DesktopApp.LogicController
 {
 
-    public class ProductController
+    public class ProductController : IProductController
     {
         IProductAccess dataAccess;
         public ProductController(IProductAccess productAccess)

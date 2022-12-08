@@ -1,10 +1,10 @@
 ﻿using Database_Service.DataAccess;
-using ModelLayer;
+using Database_Service.Model;
 using Newtonsoft.Json;
 
 namespace Database_Service.LogicController
 {
-    public class SaleOrderLogicController
+    public class SaleOrderLogicController : ISaleOrderLogicController
     {
         private DBAccessSaleOrder _DBAccessSaleOrder;
         private LogicProductController LogicProductController;
@@ -29,5 +29,9 @@ namespace Database_Service.LogicController
             return status;
         }
 
+        private async Task CreateOrderLine(SaleOrder saleOrder)
+        {
+            await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
+        }
     }
 }

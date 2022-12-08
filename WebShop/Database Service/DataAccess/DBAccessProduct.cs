@@ -1,13 +1,13 @@
 ﻿using System.Data.SqlClient;
 using Dapper;
-using ModelLayer;
+using Database_Service.Model;
 using Microsoft.Extensions.Configuration;
 
 
 
 namespace Database_Service.DataAccess
 {
-    public class DBAccessProduct
+    public class DBAccessProduct : IDBAccessProduct
     {
         private ConfigurationManager configuration = new ConfigurationManager();
 

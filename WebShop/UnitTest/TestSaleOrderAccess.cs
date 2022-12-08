@@ -1,10 +1,10 @@
-﻿using DesktopApp.DataAccess;
+﻿using DesktopApp.ServiceLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesktopApp.DataAccess;
+using DesktopApp.ModelLayer;
 
 namespace UnitTest
 {
@@ -46,10 +46,6 @@ namespace UnitTest
 
             //assert 
             Assert.Equal(expected, result);
-
-
         }
-
-
     }
 }

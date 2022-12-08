@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ModelLayer.DTO;
-using ModelLayer;
+using WebShop.Models;
 using Newtonsoft.Json;
-using WebShop.Services;
+using WebShop.ServiceLayer;
 using WebShop.LogicControllers;
 
 using Microsoft.AspNetCore.Authorization;
@@ -24,7 +23,7 @@ namespace WebShop.Controllers
 
         public IActionResult OrderView()
         {
-            ModelOrderView mov = new ModelOrderView();
+            SaleOrder mov = new SaleOrder();
             mov.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
             var user = _userManager.FindByNameAsync(HttpContext.User.Identity.Name).Result;
             
@@ -40,7 +39,7 @@ namespace WebShop.Controllers
         }
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> OrderView(ModelOrderView _MOV)
+        public IActionResult OrderView(SaleOrder _MOV)
         {
 
             

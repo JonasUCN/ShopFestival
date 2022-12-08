@@ -1,29 +1,27 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using ModelLayer;
-using ModelLayer.DTO;
+﻿using WebShop.Models;
 using Newtonsoft.Json;
-using WebShop.Services;
+using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {
-    public class OrderLogicController
+    public class OrderLogicController : IOrderLogicController
     {
         private DBSaleOrderAccess DBSaleOrderAccess = new();
         private OrderAddress orderAddress = new OrderAddress();
-        public SaleOrder CreateSaleOrder(ModelOrderView mov, IdentityUser user)
+        public SaleOrder CreateSaleOrder(SaleOrder mov, IdentityUser user)
         {
             SaleOrder saleOrder = new SaleOrder();
             orderAddress = CreateOrderAddress(mov);
             saleOrder.OrderAddress = orderAddress;
             saleOrder.orderLines = mov.orderLines;
             saleOrder.customer = CustomerLogicController.CreateCustomerFromModelOrderView(mov, user);
-            saleOrder.customer.CustomerNo = 2;
-
+            //saleOrder.customer.CustomerNo = 2;
             return saleOrder;
         }
 
 
-        public void AddSaleOrderToDB(ModelOrderView mov, IdentityUser user)
+        public void AddSaleOrderToDB(SaleOrder mov, IdentityUser user)
         {
             DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov, user)),user);
 

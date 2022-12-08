@@ -2,6 +2,8 @@ using DesktopApp.Controller;
 using DesktopApp.DataAccess;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
+using DesktopApp.LogicController;
+using DesktopApp.ServiceLayer;
 using System.Security.Cryptography;
 
 namespace DesktopApp
@@ -43,13 +45,6 @@ namespace DesktopApp
             {
                 lbl_createProductSuccess.Text = "Fejl i indtastning";
             }
-
-            
-
-
-
-           
-
         }
 
         private void label6_Click(object sender, EventArgs e)

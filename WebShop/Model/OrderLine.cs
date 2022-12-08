@@ -1,19 +1,17 @@
 ﻿using System;
 namespace ModelLayer
 {
-	public class OrderLine
-	{
-		public Product Product { get; set; }
-		public int Quantity { get; set; }
-
-		public double CalcSubTotal()
-		{
-			double sum = 0;
-
-			sum = (double) Product.Price * Quantity;
-
-			return sum; 
-		}
-	}
+	//public class OrderLine
+	//{
+	//	public Product Product { get; set; }
+	//	public int Quantity { get; set; }
+	//	public decimal SubTotal
+	//	{
+	//		get
+	//		{
+	//			return Product.Price * Quantity;
+	//		}
+	//	}
+	//}
 }
 

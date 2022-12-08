@@ -1,8 +1,8 @@
+using WebShop.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebShop.Data;
-using LayerController;
-
+using WebShop.ServiceLayer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,9 +19,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => {
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<ICartCon,CartCon>();
-
 builder.Services.AddSession();
+
+builder.Services.AddScoped<IDBSaleOrderAccess, DBSaleOrderAccess>();
+builder.Services.AddScoped<IDBProductAccess, DBProductAccess>();
+
+
 
 
 var app = builder.Build();
