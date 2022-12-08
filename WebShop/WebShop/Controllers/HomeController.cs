@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Database_Service.DataAccess;
+using Microsoft.AspNetCore.Mvc;
+using ModelLayer;
 using System.Diagnostics;
 using WebShop.LogicControllers;
 using WebShop.Models;
-using WebShop.ServiceLayer;
+using WebShop.Services;
 
 namespace WebShop.Controllers;
 

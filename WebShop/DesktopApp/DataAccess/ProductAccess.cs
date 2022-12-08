@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
-using DesktopApp.ModelLayer;
+using ModelLayer;
 
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Data.Common;
 using Microsoft.Extensions.Configuration;
 
-namespace DesktopApp.ServiceLayer
+namespace DesktopApp.DataAccess
 {
     public class ProductAccess : IProductAccess
     {

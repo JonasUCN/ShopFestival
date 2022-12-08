@@ -1,12 +1,13 @@
 ﻿using Dapper;
+using Database_Service.LogicController;
+using ModelLayer;
 using System.Data;
-using Database_Service.Model;
 using System.Data.SqlClient;
 using System.Drawing;
 
 namespace Database_Service.DataAccess
 {
-    public class DBAccessSaleOrder : IDBAccessSaleOrder
+    public class DBAccessSaleOrder
     {
 
         private LogicProductController _LogicProductController;

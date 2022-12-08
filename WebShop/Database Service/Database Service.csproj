@@ -27,6 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Model\ModelLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="RestSharp" />
   </ItemGroup>
 </Project>
