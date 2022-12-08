@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
-using WebShop.Models;
+using Database_Service;
+using ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
-using WebShop.ServiceLayer;
 using RestSharp.Authenticators;
 using RestSharp.Authenticators.OAuth2;
+using WebShop.Services;
 
-namespace WebShop.ServiceLayer
+namespace WebShop.DBAccess
 {
-    public class DBProductAccess : IDBProductAccess
-	{
+    public class DBProductAccess
+    {
+
         //public static string GetToken()
         //{
         //    string url = "https://localhost:5001/jwt";
@@ -26,12 +28,7 @@ namespace WebShop.ServiceLayer
         //    return FinalToken;
         //}
 
-        public DBProductAccess(IConfiguration inConfiguration)
-        {
-
-        }
-
-        public Product GetProductFromAPIByID(int id)
+        public static Product GetProductFromAPIByID(int id)
         {
             string url = "https://localhost:5001/api/Product/Products/" + id;
             var client = new RestClient(url);
@@ -44,8 +41,8 @@ namespace WebShop.ServiceLayer
             return product;
         }
 
-        public RestResponse RemoveStockByID(int id)
-		{
+        public static RestResponse RemoveStockByID(int id)
+        {
             string url = "https://localhost:5001/api/Product/RemoveStock/" + id;
             var client = new RestClient(url);
             var request = new RestRequest();
@@ -55,7 +52,7 @@ namespace WebShop.ServiceLayer
             return response;
         }
 
-        public List<Product> getAllProductsFromAPI()
+        public static List<Product> getAllProductsFromAPI()
         {
             List<Product>? products = new List<Product>();
             string url = "https://localhost:5001/api/Product/Products/";

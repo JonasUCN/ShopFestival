@@ -1,11 +1,11 @@
-﻿using DesktopApp.ModelLayer;
+﻿using ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesktopApp.ServiceLayer
+namespace DesktopApp.DataAccess
 {
     public interface ISaleOrderAccess
     {

@@ -1,9 +1,9 @@
 ﻿using Database_Service.DataAccess;
-using Database_Service.Model;
+using ModelLayer;
 
 namespace Database_Service.LogicController
 {
-    public class LogicProductController : ILogicProductController
+    public class LogicProductController
     {
         private readonly DBAccessProduct dBAccessProduct;
 

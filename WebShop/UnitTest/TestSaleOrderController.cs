@@ -1,11 +1,10 @@
-﻿using DesktopApp.ServiceLayer;
+﻿using DesktopApp.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesktopApp.LogicController;
-using DesktopApp.ModelLayer;
+using DesktopApp.Controller;
 
 namespace UnitTest
 {

@@ -1,20 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WebShop.Models;
+﻿using LayerController;
+using Microsoft.AspNetCore.Mvc;
+using ModelLayer;
 using WebShop.LogicControllers;
-using WebShop.ServiceLayer;
+using WebShop.DBAccess;
 
 namespace WebShop.Controllers
 {
     public class ProductController : Controller
     {
 
-        private ProductLogicController _ProductLogicController;
+        private CartCon _CartController = new();
+        private ProductLogicController _ProductLogicController = new();
         private OrderLineLogicController OrderLineLogicController;
 
-        public ProductController(IConfiguration inConfiguration)
+        public ProductController()
         {
-            OrderLineLogicController = new OrderLineLogicController(inConfiguration);
-            _ProductLogicController = new ProductLogicController(inConfiguration);
+            OrderLineLogicController = new OrderLineLogicController();
         }
 
         public IActionResult Index()
@@ -34,20 +35,49 @@ namespace WebShop.Controllers
             return View(pp);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult ProductsView(int id) //TODO Flyttes ned i LogicControllers. Kaldes her.
         {
-            HttpContext http = HttpContext;
-            List<Product> products = _ProductLogicController.AddProductToCart(id, http);
-            return View(products);
+            List<Product> Products = DBProductAccess.getAllProductsFromAPI(); 
+
+            foreach (var i in Products)
+            {
+                if (i.id == id)
+                {
+                    Product product = i;
+                    OrderLine orderLine2 = new OrderLine { Product = product, Quantity = 1 };
+                    OrderLineLogicController.CreateNewOrderlines(orderLine2);
+                    OrderLineLogicController.CheckExistingOrderLine(HttpContext, orderLine2);
+                    break;
+                }
+            }
+            return View(Products);
         }
 
         [HttpPost]
         public IActionResult ProductView(Product _Product)
         {
-            HttpContext http = HttpContext;
-            Product product = _ProductLogicController.addProductToOrder(_Product, http);
-            return View(product);
+            var response = DBProductAccess.RemoveStockByID(_Product.id);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+
+                OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
+
+                string json = "";
+                json = OrderLineLogicController.CheckExistingOrderLine(HttpContext,orderLine);
+            }
+            return View(_Product);
+        }
+
+        public ICartCon GetCartController()
+        {
+            return _CartController;
         }
     }
 }

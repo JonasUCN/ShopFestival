@@ -6,12 +6,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesktopApp.ModelLayer;
+using ModelLayer;
 using Newtonsoft.Json.Schema;
 using System.Text.Json.Nodes;
 using Microsoft.Extensions.Configuration;
 
-namespace DesktopApp.ServiceLayer
+namespace DesktopApp.DataAccess
 {
     public class SaleOrderAccess : ISaleOrderAccess
     {

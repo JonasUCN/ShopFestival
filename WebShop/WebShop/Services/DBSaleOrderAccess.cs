@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
-﻿using RestSharp;
-using WebShop.ServiceLayer;
+using RestSharp;
 
-namespace WebShop.ServiceLayer
+namespace WebShop.Services
 {
-    public class DBSaleOrderAccess : IDBSaleOrderAccess
+    public class DBSaleOrderAccess
     {
 
         public static bool addSaleOrder(string saleOrderJson, IdentityUser user)
