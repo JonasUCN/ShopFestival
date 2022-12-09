@@ -4,6 +4,7 @@ using ModelLayer;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using Database_Service.LogicController;
 
 namespace Database_Service.DataAccess
 {

@@ -15,13 +15,7 @@ namespace DesktopApp.DataAccess
 {
     public class ProductAccess : IProductAccess
     {
-
-
-        
-
         TokenAccess TokenAccess;
-
-
 
         public ProductAccess(IConfiguration configuration)
         {
@@ -46,8 +40,6 @@ namespace DesktopApp.DataAccess
             }
             return success;
         }
-       
-
 
         public Product GetProductByID(int id)
         {
@@ -68,7 +60,5 @@ namespace DesktopApp.DataAccess
             List<Product> products =  JsonConvert.DeserializeObject<List<Product>>(response.Content);
             return products;
         }
-
     }
-    
 }

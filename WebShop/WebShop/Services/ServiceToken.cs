@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using RestSharp;
 
-namespace WebShop.Services
+namespace WebShop.ServiceLayer
 {
-    public static class ServiceToken
+    public static class ServiceToken 
     {
         
         //public static string GetToken()

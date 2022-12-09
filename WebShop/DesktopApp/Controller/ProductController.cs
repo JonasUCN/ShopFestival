@@ -4,9 +4,8 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-
-using DesktopApp.DataAccess;
-using ModelLayer;
+using DesktopApp.ServiceLayer;
+using DesktopApp.ModelLayer;
 
 namespace DesktopApp.Controller
 {

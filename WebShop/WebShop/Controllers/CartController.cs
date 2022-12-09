@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using LayerController;
 using ModelLayer;
 using Newtonsoft.Json;
-using ModelLayer.DTO;
 
 namespace WebShop.Controllers
 {
@@ -21,7 +20,7 @@ namespace WebShop.Controllers
         public ActionResult CartView()
         {
             List<OrderLine> orders;
-            ModelCartView mcv = new();
+            Cart mcv = new();
 
             if (HttpContext.Session.GetString("OrderLines") != null)
             {
@@ -44,7 +43,7 @@ namespace WebShop.Controllers
         {
 
             List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
-            ModelCartView mcv = new();
+            Cart mcv = new();
 
             foreach (var item in orders)
             {
