@@ -1,29 +1,28 @@
-﻿using ModelLayer;
+﻿using WebShop.Models;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Session;
-using WebShop.DBAccess;
+using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {
-    public class ProductLogicController
+    public class ProductLogicController : IProductLogicController
     {
-        private IOrderLineLogicController orderLineLogicController;
+        private readonly OrderLineLogicController _orderLineLogicController;
         private readonly DBProductAccess _DBProductAccess;
         public ProductLogicController(IConfiguration inConfiguration)
         {
-            _DBProductAccess= new DBProductAccess(inConfiguration);
-            orderLineLogicController = new OrderLineLogicController(inConfiguration);
+            _DBProductAccess = new DBProductAccess(inConfiguration);
+            _orderLineLogicController = new OrderLineLogicController(inConfiguration);
         }
-
         public List<Product> GetProductsFromService()
         {
-            List<Product> products = DBProductAccess.getAllProductsFromAPI();
+            List<Product> products = _DBProductAccess.getAllProductsFromAPI();
             return products;
         }
 
         public Product GetProductFromServiceByID(int id)
         {
-            Product product = DBProductAccess.GetProductFromAPIByID(id);
+            Product product = _DBProductAccess.GetProductFromAPIByID(id);
             return product;
         }
 
@@ -37,8 +36,8 @@ namespace WebShop.LogicControllers
                 {
                     Product product = i;
                     OrderLine orderLine2 = new OrderLine { Product = product, Quantity = 1 };
-                    orderLineLogicController.CreateNewOrderlines(orderLine2);
-                    orderLineLogicController.CheckExistingOrderLine(http, orderLine2);
+                    _orderLineLogicController.CreateNewOrderlines(orderLine2);
+                    _orderLineLogicController.CheckExistingOrderLine(http, orderLine2);
                     break;
                 }
             }
@@ -52,7 +51,7 @@ namespace WebShop.LogicControllers
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
-                orderLineLogicController.CheckExistingOrderLine(http, orderLine);
+                _orderLineLogicController.CheckExistingOrderLine(http, orderLine);
             }
             return _Product;
         }

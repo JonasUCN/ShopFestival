@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 using Dapper;
-using ModelLayer;
+using Database_Service.Model;
 using Microsoft.Extensions.Configuration;
 
 

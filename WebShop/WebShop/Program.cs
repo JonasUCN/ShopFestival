@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebShop.Data;
-using LayerController;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,8 +17,6 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => {
 } )
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
-
-builder.Services.AddScoped<ICartCon,CartCon>();
 
 builder.Services.AddSession();
 

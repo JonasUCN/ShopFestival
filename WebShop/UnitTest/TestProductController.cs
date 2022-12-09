@@ -1,5 +1,5 @@
-﻿using DesktopApp.Controller;
-using DesktopApp.DataAccess;
+﻿using DesktopApp.LogicControllers;
+using DesktopApp.ServiceLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;

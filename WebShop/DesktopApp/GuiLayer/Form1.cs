@@ -1,4 +1,4 @@
-using DesktopApp.LogicController;
+using DesktopApp.LogicControllers;
 using DesktopApp.ServiceLayer;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;

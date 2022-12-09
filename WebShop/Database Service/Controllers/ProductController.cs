@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft;
 using Newtonsoft.Json;
-using ModelLayer;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
+using Database_Service.Model;
 
 namespace Database_Service.Controllers
 {

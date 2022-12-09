@@ -1,6 +1,6 @@
 ﻿using WebShop.Models;
 using Microsoft.AspNetCore.Identity;
-using WebShop.Services;
+using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {

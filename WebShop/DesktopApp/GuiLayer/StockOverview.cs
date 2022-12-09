@@ -1,5 +1,5 @@
-﻿using ModelLayer;
-using DesktopApp.Controller;
+﻿using DesktopApp.LogicControllers;
+using DesktopApp.ModelLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DesktopApp.DataAccess;
+using DesktopApp.ServiceLayer;
 using Microsoft.Extensions.Configuration;
 
 namespace DesktopApp

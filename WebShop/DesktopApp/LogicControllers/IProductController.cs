@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesktopApp.LogicController
+namespace DesktopApp.LogicControllers
 {
     internal interface IProductController
     {

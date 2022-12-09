@@ -3,9 +3,9 @@ using RestSharp;
 
 namespace WebShop.ServiceLayer
 {
-    public static class ServiceToken 
+    public static class ServiceToken
     {
-        
+
         //public static string GetToken()
         //{
         //    string url = "https://localhost:5001/jwt";
