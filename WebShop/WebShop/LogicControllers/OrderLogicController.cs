@@ -36,7 +36,7 @@ namespace WebShop.LogicControllers
             return jsonString;
         }
 
-        private OrderAddress CreateOrderAddress(ModelOrderView mov)
+        private OrderAddress CreateOrderAddress(SaleOrder mov)
         {
             orderAddress.Street = mov.customer.Street;
             orderAddress.streetNo = mov.customer.StreetNo;

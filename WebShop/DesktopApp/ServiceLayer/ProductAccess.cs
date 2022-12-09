@@ -15,13 +15,7 @@ namespace DesktopApp.ServiceLayer
 {
     public class ProductAccess : IProductAccess
     {
-
-
-        
-
         TokenAccess TokenAccess;
-
-
 
         public ProductAccess(IConfiguration configuration)
         {
@@ -46,8 +40,6 @@ namespace DesktopApp.ServiceLayer
             }
             return success;
         }
-       
-
 
         public Product GetProductByID(int id)
         {
@@ -68,7 +60,5 @@ namespace DesktopApp.ServiceLayer
             List<Product> products =  JsonConvert.DeserializeObject<List<Product>>(response.Content);
             return products;
         }
-
     }
-    
 }

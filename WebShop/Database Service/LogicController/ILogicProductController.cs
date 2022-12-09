@@ -10,7 +10,7 @@ namespace Database_Service.LogicController
 
         Task<bool> CreateProduct(Product product);
 
-        Task<bool> RemoveStockOnProductById(int id);
+        //Task<bool> RemoveStockOnProductById(int id);
 
         Task<bool> IncreaseStockOnProductById(int id);
     }

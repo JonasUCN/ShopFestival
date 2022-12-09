@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesktopApp.DataAccess
+namespace DesktopApp.ServiceLayer
 {
     public class TokenAccess
     {
@@ -21,8 +21,8 @@ namespace DesktopApp.DataAccess
         public string GetToken()
         {
             var client = new RestClient("https://localhost:5001");
-            
-            var request = new RestRequest("/token",Method.Post);
+
+            var request = new RestRequest("/token", Method.Post);
             request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
             request.AddParameter("username", "jonas@email.dk");
             request.AddParameter("password", "ffa8ffe4-ccea-42e3-b446-d3759f5646fe");

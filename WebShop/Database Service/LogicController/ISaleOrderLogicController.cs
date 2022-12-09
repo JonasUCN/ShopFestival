@@ -8,6 +8,6 @@ namespace Database_Service.LogicController
 
         Task<bool> CreateSaleOrder(string json);
 
-        Task CreateOrderLine(SaleOrder saleOrder);
+        //Task CreateOrderLine(SaleOrder saleOrder);
     }
 }

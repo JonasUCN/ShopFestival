@@ -20,5 +20,19 @@
         }
 
         public List<OrderLine> GetOrderLines() { return orderLines; }
+        public List<OrderLine> OrderLines { get; set; }
+        public bool Loggedin { get; set; }
+
+        public double CalcSubTotal()
+        {
+            double sum = 0;
+
+            foreach (OrderLine line in OrderLines)
+            {
+                sum += line.CalcSubTotal();
+            }
+
+            return sum;
+        }
     }
 }

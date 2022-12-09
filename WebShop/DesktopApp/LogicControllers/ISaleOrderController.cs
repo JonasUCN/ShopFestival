@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesktopApp.LogicControllers
+namespace DesktopApp.LogicController
 {
     internal interface ISaleOrderController
     {

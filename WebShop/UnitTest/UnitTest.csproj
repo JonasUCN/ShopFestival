@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Database Service\Database Service.csproj" />
     <ProjectReference Include="..\DesktopApp\DesktopApp.csproj" />
     <ProjectReference Include="..\WebShop\WebShop.csproj" />
   </ItemGroup>

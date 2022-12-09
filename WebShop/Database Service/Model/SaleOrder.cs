@@ -8,8 +8,10 @@
         public DateTime OrderDate { get; set; }
         public Customer customer { get; set; }
         public List<OrderLine> orderLines { get; set; }
+        public OrderAddress OrderAddress { get; set; }
         public SaleOrder()
         {
+            orderLines = new List<OrderLine>();
             OrderDate = DateTime.Now;
             Status = "Active";
             customer = new();

@@ -1,5 +1,5 @@
-using DesktopApp.Controller;
-using DesktopApp.DataAccess;
+using DesktopApp.LogicController;
+using DesktopApp.ServiceLayer;
 using Microsoft.Extensions.Configuration;
 using System.Configuration;
 using DesktopApp.LogicController;

@@ -1,11 +1,10 @@
 ﻿using Database_Service.DataAccess;
-using ModelLayer;
+using Database_Service.Model;
 
 namespace Database_Service.LogicController
 {
     public class LogicCustomerController
     {
-
         private DBAccessCustomer accessCustomer = new();
 
         public Customer GetCustomerFromEmail(string email)
@@ -13,6 +12,5 @@ namespace Database_Service.LogicController
             Customer c = accessCustomer.GetCustomerByEmail(email);
             return c;
         }
-
     }
 }

@@ -7,6 +7,7 @@ using RestSharp;
 using WebShop.ServiceLayer;
 using RestSharp.Authenticators;
 using RestSharp.Authenticators.OAuth2;
+using WebShop.Services;
 
 namespace WebShop.ServiceLayer
 {

@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DesktopApp.ServiceLayer;
-using DesktopApp.LogicControllers;
 using DesktopApp.ModelLayer;
 
 namespace DesktopApp.LogicController

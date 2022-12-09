@@ -29,9 +29,9 @@ namespace Database_Service.LogicController
             return status;
         }
 
-        private async Task CreateOrderLine(SaleOrder saleOrder)
-        {
-            await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
-        }
+        //private async Task CreateOrderLine(SaleOrder saleOrder)
+        //{
+        //    await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
+        //}
     }
 }

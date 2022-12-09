@@ -7,12 +7,12 @@ namespace WebShop.LogicControllers
 {
     public class ProductLogicController : IProductLogicController
     {
-        private readonly OrderLineLogicController _orderLineLogicController;
+        private IOrderLineLogicController orderLineLogicController;
         private readonly DBProductAccess _DBProductAccess;
         public ProductLogicController(IConfiguration inConfiguration)
         {
             _DBProductAccess= new DBProductAccess(inConfiguration);
-            _orderLineLogicController = new OrderLineLogicController(inConfiguration);
+            orderLineLogicController = new OrderLineLogicController(inConfiguration);
         }
         public List<Product> GetProductsFromService()
         {
@@ -36,8 +36,8 @@ namespace WebShop.LogicControllers
                 {
                     Product product = i;
                     OrderLine orderLine2 = new OrderLine { Product = product, Quantity = 1 };
-                    _orderLineLogicController.CreateNewOrderlines(orderLine2);
-                    _orderLineLogicController.CheckExistingOrderLine(http, orderLine2);
+                    orderLineLogicController.CreateNewOrderlines(orderLine2);
+                    orderLineLogicController.CheckExistingOrderLine(http, orderLine2);
                     break;
                 }
             }
@@ -51,7 +51,7 @@ namespace WebShop.LogicControllers
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 OrderLine orderLine = new OrderLine { Product = _Product, Quantity = 1 };
-                _orderLineLogicController.CheckExistingOrderLine(http, orderLine);
+                orderLineLogicController.CheckExistingOrderLine(http, orderLine);
             }
             return _Product;
         }

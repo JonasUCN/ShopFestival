@@ -4,12 +4,11 @@
     {
         public Product Product { get; set; }
         public int Quantity { get; set; }
-        public decimal SubTotal
+        public double CalcSubTotal()
         {
-            get
-            {
-                return Product.Price * Quantity;
-            }
+            double sum = 0;
+            sum = (double)Product.Price * Quantity;
+            return sum;
         }
     }
 }

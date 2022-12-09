@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 ﻿using RestSharp;
 using WebShop.ServiceLayer;
+using WebShop.Services;
 
 namespace WebShop.ServiceLayer
 {

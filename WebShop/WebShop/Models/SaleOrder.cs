@@ -7,7 +7,7 @@
         public DateTime OrderDate { get; set; }
         public List<OrderLine> orderLines { get; set; } //Set; is for testing 
         public Customer customer { get; set; } //Set; is for testing in the view & controller
-
+        public OrderAddress OrderAddress { get; set; }
         public SaleOrder()
         {
             customer = new Customer();
@@ -17,7 +17,7 @@
             double sum = 0;
             foreach (var item in orderLines)
             {
-                sum += (double)item.SubTotal;
+                sum += item.CalcSubTotal();
             }
             return sum;
         }

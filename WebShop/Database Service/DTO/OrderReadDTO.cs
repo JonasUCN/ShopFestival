@@ -19,7 +19,7 @@ namespace Database_Service.DTO
             double sum = 0;
             foreach (var item in orderLines)
             {
-                sum += (double)item.SubTotal;
+                sum += item.CalcSubTotal();
             }
             return sum;
         }
