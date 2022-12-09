@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft;
 using Newtonsoft.Json;
-using Database_Service.Model;
+using ModelLayer;
 using System.Net;
 using Microsoft.AspNetCore.Authorization;
 

@@ -3,10 +3,10 @@ using Database_Service.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ModelLayer;
 using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
-using Database_Service.Model;
 
 namespace Database_Service.Controllers
 {

@@ -95,15 +95,14 @@
                                     <div class="d-flex justify-content-between mb-5">
                                         <h5 class="text-uppercase">Total pris </h5>
 
+                                        
                                         <h5> @Model.CalcSubTotal() DKK</h5>
                                     </div>
                                     @if (Model.Loggedin)
                                     {
                                         <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Action("OrderView", "Order")'">Gå til betaling</button>
 
-                                    }
-                                    else
-                                    {
+                                    }else{
                                         <button class="btn btn-primary btn-sm" type="button" onclick="location.href='@Url.Content("Identity/Account/Login")'">Gå til betaling</button>
 
                                     }
@@ -136,5 +135,6 @@
 
 
     }
+
 
 </script>

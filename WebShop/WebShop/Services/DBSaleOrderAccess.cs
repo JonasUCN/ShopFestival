@@ -3,9 +3,10 @@
 using WebShop.ServiceLayer;
 using WebShop.Services;
 
-namespace WebShop.ServiceLayer
+
+namespace WebShop.Services
 {
-    public class DBSaleOrderAccess : IDBSaleOrderAccess
+    public class DBSaleOrderAccess
     {
 
         public static bool addSaleOrder(string saleOrderJson, IdentityUser user)

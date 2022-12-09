@@ -1,17 +1,12 @@
-﻿using WebShop.Models;
+﻿using ModelLayer;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebShop.LogicControllers
 {
-    public class OrderLineLogicController : IOrderLineLogicController
+    public class OrderLineLogicController
     {
         private List<OrderLine> OrderLines;
-
-        public OrderLineLogicController(IConfiguration inConfiguration)
-        {
-        }
-
         public string CreateNewOrderlines(OrderLine orderLine)
         {
             OrderLines = new List<OrderLine>();

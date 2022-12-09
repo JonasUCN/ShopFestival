@@ -1,11 +1,11 @@
-﻿using WebShop.Models;
+﻿using ModelLayer;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Session;
-using WebShop.ServiceLayer;
+using WebShop.DBAccess;
 
 namespace WebShop.LogicControllers
 {
-    public class ProductLogicController : IProductLogicController
+    public class ProductLogicController
     {
         private IOrderLineLogicController orderLineLogicController;
         private readonly DBProductAccess _DBProductAccess;
@@ -14,15 +14,16 @@ namespace WebShop.LogicControllers
             _DBProductAccess= new DBProductAccess(inConfiguration);
             orderLineLogicController = new OrderLineLogicController(inConfiguration);
         }
+
         public List<Product> GetProductsFromService()
         {
-            List<Product> products = _DBProductAccess.getAllProductsFromAPI();
+            List<Product> products = DBProductAccess.getAllProductsFromAPI();
             return products;
         }
 
         public Product GetProductFromServiceByID(int id)
         {
-            Product product = _DBProductAccess.GetProductFromAPIByID(id);
+            Product product = DBProductAccess.GetProductFromAPIByID(id);
             return product;
         }
 

@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebShop.Controllers;
-using WebShop.Models;
 
 namespace UnitTest
 {
     public class TestOrderLineToCart
     {
-        [Fact]
+        [Fact] 
         public void TestAddOrderLineToCart()
         {
             //Arrange
@@ -25,6 +24,7 @@ namespace UnitTest
             //cartController.addOrderLineToCart(orderLine);
             ////Assert
             //Assert.Equal(3, cartController.getCart().GetOrderLines()[0].Product.id);
+
         }
 
         [Fact]

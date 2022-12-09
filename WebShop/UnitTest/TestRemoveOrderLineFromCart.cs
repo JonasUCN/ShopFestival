@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebShop.Controllers;
-using WebShop.Models;
 
 namespace UnitTest
 {
@@ -23,6 +22,7 @@ namespace UnitTest
             //cartController.removeProductFromCart(orderLine);
             ////Assert
             //Assert.Equal(0, cartController.getCart().GetOrderLines().Count);
+
         }
     }
 }

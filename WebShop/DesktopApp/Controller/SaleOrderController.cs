@@ -1,5 +1,5 @@
 ﻿
-using DesktopApp.ServiceLayer;
+using DesktopApp.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using DesktopApp.ModelLayer;
 
-namespace DesktopApp.LogicController
+
+namespace DesktopApp.Controller
 {
-    public class SaleOrderController : ISaleOrderController
+    public class SaleOrderController
     {
         private ISaleOrderAccess dataAccess;
         public SaleOrderController(ISaleOrderAccess saleOrderAccess)
