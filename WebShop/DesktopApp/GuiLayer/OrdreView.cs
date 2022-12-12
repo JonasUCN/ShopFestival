@@ -1,4 +1,4 @@
-﻿using DesktopApp.Controller;
+﻿using DesktopApp.LogicControllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,8 +10,8 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ModelLayer;
-using DesktopApp.DataAccess;
+using DesktopApp.ModelLayer;
+using DesktopApp.ServiceLayer;
 using Microsoft.Extensions.Configuration;
 
 namespace DesktopApp

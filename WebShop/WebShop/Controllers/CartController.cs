@@ -1,19 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using LayerController;
-using ModelLayer;
+using WebShop.Models;
 using Newtonsoft.Json;
-using ModelLayer.DTO;
 
 namespace WebShop.Controllers
 {
     public class CartController : Controller
     {
-        private readonly ICartCon service;
-        public CartController( ICartCon cartCon)
-        {
-            service = cartCon;
-        }
         [Route("myCart")]
 
         // GET: CartController
@@ -21,7 +14,7 @@ namespace WebShop.Controllers
         public ActionResult CartView()
         {
             List<OrderLine> orders;
-            ModelCartView mcv = new();
+            Cart mcv = new();
 
             if (HttpContext.Session.GetString("OrderLines") != null)
             {
@@ -37,29 +30,29 @@ namespace WebShop.Controllers
             return View(mcv);
         }
 
-          
+
         [Route("myCart")]
         [HttpPost]
         public ActionResult CartView(int quantity, int id)
         {
 
             List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
-            ModelCartView mcv = new();
+            Cart mcv = new();
 
             foreach (var item in orders)
             {
-                if(item.Product.id == id)
+                if (item.Product.id == id)
                 {
                     item.Quantity = quantity;
                 }
-                
+
             }
             mcv.OrderLines = orders;
             mcv.Loggedin = HttpContext.User.Identity.IsAuthenticated && (HttpContext.User != null);
             string JsonOrderLines = JsonConvert.SerializeObject(orders);
             HttpContext.Session.SetString("OrderLines", JsonOrderLines);
 
-            return View(mcv);  
+            return View(mcv);
         }
 
         // GET: CartController/Details/5

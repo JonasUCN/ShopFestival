@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using RestSharp;
 
-namespace WebShop.Services
+namespace WebShop.ServiceLayer
 {
     public static class ServiceToken
     {
-        
+
         //public static string GetToken()
         //{
         //    string url = "https://localhost:5001/jwt";

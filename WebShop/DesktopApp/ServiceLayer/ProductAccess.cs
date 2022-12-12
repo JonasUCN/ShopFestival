@@ -4,24 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
-using ModelLayer;
-
+using DesktopApp.ModelLayer;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Data.Common;
 using Microsoft.Extensions.Configuration;
 
-namespace DesktopApp.DataAccess
+namespace DesktopApp.ServiceLayer
 {
     public class ProductAccess : IProductAccess
     {
-
-
-        
-
         TokenAccess TokenAccess;
-
-
 
         public ProductAccess(IConfiguration configuration)
         {
@@ -46,8 +39,6 @@ namespace DesktopApp.DataAccess
             }
             return success;
         }
-       
-
 
         public Product GetProductByID(int id)
         {
@@ -68,7 +59,5 @@ namespace DesktopApp.DataAccess
             List<Product> products =  JsonConvert.DeserializeObject<List<Product>>(response.Content);
             return products;
         }
-
     }
-    
 }

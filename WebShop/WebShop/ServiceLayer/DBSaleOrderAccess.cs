@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using RestSharp;
+﻿using RestSharp;
 
-namespace WebShop.Services
+
+namespace WebShop.ServiceLayer
 {
     public class DBSaleOrderAccess
     {

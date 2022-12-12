@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using ModelLayer;
-using ModelLayer.DTO;
 using Newtonsoft.Json;
-using WebShop.Services;
+using WebShop.Models;
+using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {
@@ -10,7 +9,7 @@ namespace WebShop.LogicControllers
     {
         private DBSaleOrderAccess DBSaleOrderAccess = new();
         private OrderAddress orderAddress = new OrderAddress();
-        public SaleOrder CreateSaleOrder(ModelOrderView mov, IdentityUser user)
+        public SaleOrder CreateSaleOrder(SaleOrder mov, IdentityUser user)
         {
             SaleOrder saleOrder = new SaleOrder();
             orderAddress = CreateOrderAddress(mov);
@@ -23,7 +22,7 @@ namespace WebShop.LogicControllers
         }
 
 
-        public void AddSaleOrderToDB(ModelOrderView mov, IdentityUser user)
+        public void AddSaleOrderToDB(SaleOrder mov, IdentityUser user)
         {
             DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov, user)),user);
 
@@ -38,7 +37,7 @@ namespace WebShop.LogicControllers
             return jsonString;
         }
 
-        private OrderAddress CreateOrderAddress(ModelOrderView mov)
+        private OrderAddress CreateOrderAddress(SaleOrder mov)
         {
             orderAddress.Street = mov.customer.Street;
             orderAddress.streetNo = mov.customer.StreetNo;

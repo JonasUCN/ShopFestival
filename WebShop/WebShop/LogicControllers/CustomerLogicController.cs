@@ -1,14 +1,13 @@
-﻿using ModelLayer.DTO;
-using ModelLayer;
+﻿using WebShop.Models;
 using Microsoft.AspNetCore.Identity;
-using WebShop.Services;
+using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {
     public class CustomerLogicController
     {
 
-        public static Customer CreateCustomerFromModelOrderView(ModelOrderView mov, IdentityUser user)
+        public static Customer CreateCustomerFromModelOrderView(SaleOrder mov, IdentityUser user)
         {
             Customer c = new Customer();
             c = mov.customer;

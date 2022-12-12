@@ -1,5 +1,5 @@
 ﻿using Database_Service.DataAccess;
-using ModelLayer;
+using Database_Service.Model;
 using Newtonsoft.Json;
 
 namespace Database_Service.LogicController
@@ -28,6 +28,11 @@ namespace Database_Service.LogicController
             status = await _DBAccessSaleOrder.CreateSaleOrder(saleOrder);
             return status;
         }
+
+        //private async Task CreateOrderLine(SaleOrder saleOrder)
+        //{
+        //    await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
+        //}
 
     }
 }

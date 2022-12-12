@@ -8,7 +8,8 @@ using System.IdentityModel.Tokens.Jwt;
 namespace Database_Service.Controllers
 {
 
-    public class JWTController : ControllerBase {
+    public class JWTController : ControllerBase
+    {
 
 
 
@@ -29,7 +30,7 @@ namespace Database_Service.Controllers
 
             bool hasInput = ((!String.IsNullOrWhiteSpace(username)));
             // Only return JWT token if credentials are valid
-            JwtToken secUtil = new JwtToken(_configuration, new DBASP_NetUser(_configuration) );
+            JwtToken secUtil = new JwtToken(_configuration, new DBASP_NetUser(_configuration));
             if (hasInput && secUtil.IsValidUsernameAndPassword(username))
             {
                 string jwtToken = GenerateToken(username, grant_type);
@@ -78,4 +79,3 @@ namespace Database_Service.Controllers
     }
 
 }
-

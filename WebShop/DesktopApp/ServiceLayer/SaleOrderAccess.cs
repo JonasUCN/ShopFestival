@@ -1,4 +1,4 @@
-﻿
+﻿using DesktopApp.ModelLayer;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -6,12 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ModelLayer;
 using Newtonsoft.Json.Schema;
 using System.Text.Json.Nodes;
 using Microsoft.Extensions.Configuration;
 
-namespace DesktopApp.DataAccess
+namespace DesktopApp.ServiceLayer
 {
     public class SaleOrderAccess : ISaleOrderAccess
     {

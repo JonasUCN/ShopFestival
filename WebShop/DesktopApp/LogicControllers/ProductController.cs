@@ -4,33 +4,32 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using DesktopApp.ServiceLayer;
+using DesktopApp.ModelLayer;
 
-using DesktopApp.DataAccess;
-using ModelLayer;
-
-namespace DesktopApp.Controller
+namespace DesktopApp.LogicControllers
 {
 
-    public class ProductController
+    public class ProductController : IProductController
     {
         IProductAccess dataAccess;
         public ProductController(IProductAccess productAccess)
         {
-             dataAccess = productAccess;
+            dataAccess = productAccess;
         }
-        
-            
-            
-    
+
+
+
+
 
         public bool createProduct(decimal price, int stock, string productDesc, string brand, string title)
         {
             bool success = false;
 
-            try 
-            { 
-            
-                if(price >= 0 && stock >= 0)
+            try
+            {
+
+                if (price >= 0 && stock >= 0)
                 {
                     Product product = new Product() { Price = price, Stock = stock, ProductDesc = productDesc, Brand = brand, Title = title };
                     dataAccess.InsertProduct(product);
@@ -48,10 +47,10 @@ namespace DesktopApp.Controller
         }
 
 
-        public  List<Product> GetProducts()
+        public List<Product> GetProducts()
         {
-             
-            List<Product> products =  dataAccess.GetAllProducts();
+
+            List<Product> products = dataAccess.GetAllProducts();
             return products;
         }
     }

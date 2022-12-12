@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Model\ModelLayer.csproj" />
     <ProjectReference Include="..\Database Service\Database Service.csproj" />
   </ItemGroup>
 

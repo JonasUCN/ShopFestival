@@ -1,9 +1,10 @@
 ﻿using Dapper;
 using Database_Service.LogicController;
-using ModelLayer;
+using Database_Service.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using Database_Service.LogicController;
 
 namespace Database_Service.DataAccess
 {

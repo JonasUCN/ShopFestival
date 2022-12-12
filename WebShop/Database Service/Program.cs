@@ -16,7 +16,7 @@ builder.Services.AddAuthentication(options => {
         jwtOptions.TokenValidationParameters = new TokenValidationParameters()
         {
             // The SigningKey is defined in the TokenController class
-            IssuerSigningKey = new JwtToken(builder.Configuration,new DBASP_NetUser(builder.Configuration)).GetSecurityKey(),
+            IssuerSigningKey = new JwtToken(builder.Configuration, new DBASP_NetUser(builder.Configuration)).GetSecurityKey(),
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidIssuer = "https://localhost:5001",
