@@ -46,7 +46,7 @@ namespace Database_Service.DataAccess
             var connection = new SqlConnection(connectionString);
             SqlTransaction transaction;
             connection.Open();
-            transaction = connection.BeginTransaction();
+            transaction = connection.BeginTransaction(IsolationLevel.Serializable);
             bool state = false;
 
             try
