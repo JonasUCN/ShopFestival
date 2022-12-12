@@ -47,10 +47,10 @@ namespace Database_Service.Controllers
         private string GenerateToken(string username, string grantType)
         {
             string tokenString;
-            JwtToken secUtil = new JwtToken(_configuration, new DBASP_NetUser(_configuration));
+            JwtToken tokenHelper = new JwtToken(_configuration, new DBASP_NetUser(_configuration));
 
             // Create header with algorithm and token type - and secret added
-            SymmetricSecurityKey SIGNING_KEY = secUtil.GetSecurityKey();
+            SymmetricSecurityKey SIGNING_KEY = tokenHelper.GetSecurityKey();
             SigningCredentials credentials = new SigningCredentials(SIGNING_KEY, SecurityAlgorithms.HmacSha256);
             JwtHeader header = new JwtHeader(credentials);
 
