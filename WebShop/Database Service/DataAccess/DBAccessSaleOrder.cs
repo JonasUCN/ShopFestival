@@ -32,6 +32,11 @@ namespace Database_Service.DataAccess
 
         }
 
+        /// <summary>
+        /// Tries to insert and update saleorder and its variables into db. If it fails, it will do a rollback since it is packed in a transaction
+        /// </summary>
+        /// <param name="saleOrder"></param>
+        /// <returns></returns>
         public async Task<bool> CreateSaleOrder(SaleOrder saleOrder)
         {
             string sql = "INSERT INTO[dbo].[SaleOrder] ([orderDate],[orderStatus],[customerNo],[orderAddressNo]) output INSERTED.orderNo VALUES (@OrderDate,@Status,@customerNo,@orderAddressNo)";
@@ -42,7 +47,7 @@ namespace Database_Service.DataAccess
             var connection = new SqlConnection(connectionString);
             SqlTransaction transaction;
             connection.Open();
-            transaction = connection.BeginTransaction();
+            transaction = connection.BeginTransaction(IsolationLevel.Serializable);
             bool state = false;
 
             try
@@ -142,19 +147,19 @@ namespace Database_Service.DataAccess
                         Console.WriteLine(modified);
                         if(modified < 1)
                         {
-                            throw new Exception();
+                            state = false;
+                            break;
                         }
+                        state = true;
                     }
                 }
 
-                state = true;
-
                 if (state)
-                {
                     transaction.Commit();
-                }
+                else
+                    transaction.Rollback();
             }
-            catch (Exception ex)
+            catch
             {
                 transaction.Rollback();
             }
