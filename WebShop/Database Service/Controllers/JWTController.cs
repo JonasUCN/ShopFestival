@@ -28,10 +28,10 @@ namespace Database_Service.Controllers
         public IActionResult Create([FromForm] string username, string grant_type)
         {
 
-            bool hasInput = ((!String.IsNullOrWhiteSpace(username)));
+            bool ValidInput = ((!String.IsNullOrWhiteSpace(username)));
             // Only return JWT token if credentials are valid
-            JwtToken secUtil = new JwtToken(_configuration, new DBASP_NetUser(_configuration));
-            if (hasInput && secUtil.IsValidUsernameAndPassword(username))
+            JwtToken Token = new JwtToken(_configuration, new DBASP_NetUser(_configuration));
+            if (ValidInput && Token.IsValidUsername(username))
             {
                 string jwtToken = GenerateToken(username, grant_type);
                 return new ObjectResult(jwtToken);

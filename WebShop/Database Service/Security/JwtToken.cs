@@ -34,7 +34,7 @@ namespace Database_Service.Security
         }
 
 
-        public bool IsValidUsernameAndPassword(string username)
+        public bool IsValidUsername(string username)
         {
             User user = dBASP_NetUser.GetUser(username);
 
