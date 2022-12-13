@@ -5,11 +5,11 @@ namespace Database_Service.LogicController
 {
     public class LogicProductController : ILogicProductController
     {
-        private readonly DBAccessProduct dBAccessProduct;
+        private readonly IDBAccessProduct dBAccessProduct;
 
-        public LogicProductController()
+        public LogicProductController(IDBAccessProduct dBAccessProduct)
         {
-            dBAccessProduct = new DBAccessProduct();
+            this.dBAccessProduct = dBAccessProduct;
         }
 
         public async Task<List<Product> >GetAllProducts()

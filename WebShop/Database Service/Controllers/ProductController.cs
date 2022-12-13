@@ -16,9 +16,9 @@ namespace Database_Service.Controllers
     {
         private LogicProductController _ProductController;
 
-        public ProductController()
+        public ProductController(IDBAccessProduct dBAccessProduct)
         {
-            _ProductController = new LogicProductController();
+            _ProductController = new LogicProductController(dBAccessProduct);
         }
 
 

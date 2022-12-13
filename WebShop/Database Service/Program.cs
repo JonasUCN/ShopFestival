@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddSingleton<IDBAccessProduct, DBAccessProduct>();
 
 // Configure the JWT Authentication Service
 builder.Services.AddAuthentication(options => {

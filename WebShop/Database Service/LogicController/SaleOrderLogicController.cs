@@ -8,10 +8,10 @@ namespace Database_Service.LogicController
     {
         private DBAccessSaleOrder _DBAccessSaleOrder;
         private LogicProductController LogicProductController;
-        public SaleOrderLogicController()
+        public SaleOrderLogicController(IDBAccessProduct dBAccessProduct)
         {
-            _DBAccessSaleOrder = new();
-            LogicProductController = new();
+            _DBAccessSaleOrder = new(dBAccessProduct);
+            LogicProductController = new(dBAccessProduct);
         }
 
         public async Task<List<SaleOrder>> GetAllSaleOrders()

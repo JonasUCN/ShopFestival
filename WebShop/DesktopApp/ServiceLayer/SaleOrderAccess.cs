@@ -23,10 +23,11 @@ namespace DesktopApp.ServiceLayer
         }
 
 
-        RestClient restClient = new RestClient("https://localhost:5001");
+        public RestClient restClient = new RestClient("https://localhost:5001");
            
         public List<SaleOrder> GetAllSaleOrder()
         {
+            RestClient restClient = new RestClient("https://localhost:5001");
             var request = new RestRequest("api/SaleOrder/SaleOrders");
             request.AddHeader("Authorization", $"Bearer {TokenAccess.GetToken()}");
             var response = restClient.Get(request);
