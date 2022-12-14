@@ -9,6 +9,10 @@
         public Customer customer { get; set; }
         public List<OrderLine> orderLines { get; set; }
         public OrderAddress OrderAddress { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SaleOrder"/> class.
+        /// </summary>
         public SaleOrder()
         {
             orderLines = new List<OrderLine>();

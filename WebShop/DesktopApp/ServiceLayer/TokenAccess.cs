@@ -9,15 +9,29 @@ using System.Threading.Tasks;
 
 namespace DesktopApp.ServiceLayer
 {
+    /// <summary>
+    /// The `TokenAccess` class provides methods for accessing and retrieving tokens for authorization.
+    /// </summary>
     public class TokenAccess
     {
+        /// <summary>
+        /// The application configuration to use.
+        /// </summary>
         readonly IConfiguration configuration;
 
+        /// <summary>
+        /// Constructs a new `TokenAccess` instance.
+        /// </summary>
+        /// <param name="configuration">The application configuration to use.</param>
         public TokenAccess(IConfiguration configuration)
         {
             this.configuration = configuration;
         }
 
+        /// <summary>
+        /// Retrieves a token for use in authorization.
+        /// </summary>
+        /// <returns>A token that can be used in authorization.</returns>
         public string GetToken()
         {
             var client = new RestClient("https://localhost:5001");
@@ -30,8 +44,6 @@ namespace DesktopApp.ServiceLayer
             var response = client.Execute(request).Content;
             string Token = response.Replace("\"", "");
             return Token;
-
         }
-
     }
 }

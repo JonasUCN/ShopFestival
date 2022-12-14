@@ -7,28 +7,37 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace Database_Service.Controllers
 {
-
+    /// <summary>
+    /// The JWTController class is a controller for handling JSON Web Tokens.
+    /// </summary>
     public class JWTController : ControllerBase
     {
-
-
-
-
+        /// <summary>
+        /// The IConfiguration instance used to fetch configuration from various sources.
+        /// </summary>
         private readonly IConfiguration _configuration;
 
-        // Fetches configuration from more sources
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JWTController"/> class.
+        /// </summary>
+        /// <param name="inConfiguration">The IConfiguration instance used to fetch configuration from various sources.</param>
         public JWTController(IConfiguration inConfiguration)
         {
             _configuration = inConfiguration;
         }
 
+        /// <summary>
+        /// This controller method generates and returns a JSON Web Token (JWT) for the specified username and grant type.
+        /// </summary>
+        /// <param name="username">The username to use when generating the JWT.</param>
+        /// <param name="grant_type">The grant type to use when generating the JWT.</param>
+        /// <returns>An <see cref="IActionResult"/> containing the generated JWT, or a BadRequest if the credentials are invalid.</returns>
         [Route("/token")]
         [HttpPost]
-        // Generate and return a JWT token
         public IActionResult Create([FromForm] string username, string grant_type)
         {
-
             bool ValidInput = ((!String.IsNullOrWhiteSpace(username)));
+
             // Only return JWT token if credentials are valid
             JwtToken Token = new JwtToken(_configuration, new DBASP_NetUser(_configuration));
             if (ValidInput && Token.IsValidUsername(username))
@@ -40,10 +49,14 @@ namespace Database_Service.Controllers
             {
                 return BadRequest();
             }
-
-
         }
 
+        /// <summary>
+        /// Generates a JWT token based on the given username and grant type.
+        /// </summary>
+        /// <param name="username">The username to be included in the JWT token.</param>
+        /// <param name="grantType">The grant type to be included in the JWT token.</param>
+        /// <returns>The generated JWT token.</returns>
         private string GenerateToken(string username, string grantType)
         {
             string tokenString;

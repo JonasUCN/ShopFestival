@@ -1,5 +1,8 @@
 ﻿namespace Database_Service.DTO
 {
+    /// <summary>
+    /// Data transfer object for representing customer data in the application
+    /// </summary>
     public class CustomerReadDTO
     {
         public string FirstName { get; set; }
