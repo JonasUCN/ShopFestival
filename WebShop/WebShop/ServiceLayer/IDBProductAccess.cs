@@ -10,6 +10,5 @@ namespace WebShop.ServiceLayer
         RestResponse RemoveStockByID(int id);
 
         List<Product> getAllProductsFromAPI();
-
     }
 }

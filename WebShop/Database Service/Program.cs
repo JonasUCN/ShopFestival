@@ -1,21 +1,26 @@
 using Database_Service.DataAccess;
 using Database_Service.Security;
 using Microsoft.IdentityModel.Tokens;
+
+
+/// <summary>
+/// Creates a web application builder and adds some services to it, including JWT authentication.
+/// </summary>
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 
-// Configure the JWT Authentication Service
+// Configure JWT authentication using the JwtBearer scheme
 builder.Services.AddAuthentication(options => {
     options.DefaultAuthenticateScheme = "JwtBearer";
     options.DefaultChallengeScheme = "JwtBearer";
 })
     .AddJwtBearer("JwtBearer", jwtOptions => {
+        // Set the signing key, issuer, and audience for the JWT token
         jwtOptions.TokenValidationParameters = new TokenValidationParameters()
         {
-            // The SigningKey is defined in the TokenController class
+            // Use the JwtToken and DBASP_NetUser classes to generate the signing key
             IssuerSigningKey = new JwtToken(builder.Configuration, new DBASP_NetUser(builder.Configuration)).GetSecurityKey(),
             ValidateIssuer = true,
             ValidateAudience = true,
@@ -25,19 +30,13 @@ builder.Services.AddAuthentication(options => {
         };
     });
 
-
-
-
-
+// Build the web application
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
+// Start the web application
 app.Run();
