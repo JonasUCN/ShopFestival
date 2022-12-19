@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "GeometryService": {
+    "IIS Service": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/Product/Products",
