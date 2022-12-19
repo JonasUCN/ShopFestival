@@ -19,14 +19,13 @@ namespace WebShop.LogicControllers
         /// <param name="mov">The data to use for creating the sale order.</param>
         /// <param name="user">The user who is creating the sale order.</param>
         /// <returns>The created sale order.</returns>
-        public SaleOrder CreateSaleOrder(SaleOrder mov, IdentityUser user)
+        public SaleOrder CreateSaleOrder(ModelOrderView mov, IdentityUser user)
         {
             SaleOrder saleOrder = new SaleOrder();
             orderAddress = CreateOrderAddress(mov);
             saleOrder.OrderAddress = orderAddress;
             saleOrder.orderLines = mov.orderLines;
             saleOrder.customer = CustomerLogicController.CreateCustomerFromModelOrderView(mov, user);
-            saleOrder.customer.CustomerNo = 2;
 
             return saleOrder;
         }
@@ -36,10 +35,10 @@ namespace WebShop.LogicControllers
         /// </summary>
         /// <param name="mov">The sale order to add to the database.</param>
         /// <param name="user">The user who is adding the sale order to the database.</param>
-        public void AddSaleOrderToDB(SaleOrder mov, IdentityUser user)
+        public bool AddSaleOrderToDB(ModelOrderView mov, IdentityUser user)
         {
-            DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov, user)),user);
-
+            bool status = DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov, user)),user);
+            return status;
         }
 
         /// <summary>
@@ -61,7 +60,7 @@ namespace WebShop.LogicControllers
         /// </summary>
         /// <param name="mov">The SaleOrder object that contains the customer's information.</param>
         /// <returns>An OrderAddress object with the customer's street, street number, zipcode, and city information.</returns>
-        private OrderAddress CreateOrderAddress(SaleOrder mov)
+        private OrderAddress CreateOrderAddress(ModelOrderView mov)
         {
             orderAddress.Street = mov.customer.Street;
             orderAddress.streetNo = mov.customer.StreetNo;

@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 using WebShop.LogicControllers;
 using WebShop.Models;
 
-namespace UnitTest
+namespace UnitTest.Webshop
 {
-    
+
     public class TestOrderLineLogicController
     {
 
@@ -27,7 +27,7 @@ namespace UnitTest
         //    //act
         //    string Result =  orderLineLogicController.CreateNewOrderlines(orderLine);
         //    bool result; 
-           
+
         //    try
         //    {
         //        var obj = JToken.Parse(Result);
@@ -42,7 +42,7 @@ namespace UnitTest
         //    //assert
         //    Assert.True(result);
 
-            
+
         //}
 
 

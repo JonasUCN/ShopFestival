@@ -15,7 +15,7 @@ namespace WebShop.LogicControllers
         /// <param name="mov">The SaleOrder object to use as the basis for the new Customer.</param>
         /// <param name="user">The IdentityUser object to use to populate the Customer's email and userID properties.</param>
         /// <returns>A new Customer object created from the provided SaleOrder and IdentityUser.</returns>
-        public static Customer CreateCustomerFromModelOrderView(SaleOrder mov, IdentityUser user)
+        public static Customer CreateCustomerFromModelOrderView(ModelOrderView mov, IdentityUser user)
         {
             Customer c = new Customer();
             c = mov.customer;

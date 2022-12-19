@@ -35,7 +35,7 @@ namespace WebShop.Controllers
         /// <returns>An IActionResult representing the view of the current sale order.</returns>
         public IActionResult OrderView()
         {
-            SaleOrder mov = new SaleOrder();
+            ModelOrderView mov = new ModelOrderView();
             mov.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
             var user = _userManager.FindByNameAsync(HttpContext.User.Identity.Name).Result;
             
@@ -58,17 +58,30 @@ namespace WebShop.Controllers
         /// <returns>An IActionResult representing the updated sale order view.</returns>
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> OrderView(SaleOrder _MOV)
+        public async Task<IActionResult> OrderView(ModelOrderView _MOV)
         {       
             _MOV.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
 
             var user = _userManager.FindByNameAsync(HttpContext.User.Identity.Name).Result;
 
             bool val1 = (HttpContext.User != null) && HttpContext.User.Identity.IsAuthenticated;
+
+            bool status = false;
             if (val1)
             {
-                _OrderLogicController.AddSaleOrderToDB(_MOV, user);
+               status = _OrderLogicController.AddSaleOrderToDB(_MOV, user);
             }
+
+            if (status)
+            {
+                return RedirectToAction("OrderConfirmation", _MOV);
+            }else
+                return View("ErrorViewModel");
+        }
+
+        [Authorize]
+        public async Task<IActionResult> OrderConfirmationView(ModelOrderView _MOV)
+        {
             return View(_MOV);
         }
     }

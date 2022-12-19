@@ -20,7 +20,7 @@ namespace WebShop.Controllers
         public ActionResult CartView()
         {
             List<OrderLine> orders;
-            Cart mcv = new();
+            ModelCartView mcv = new();
 
             if (HttpContext.Session.GetString("OrderLines") != null)
             {
@@ -48,7 +48,7 @@ namespace WebShop.Controllers
         {
             // Deserialize the order lines from the session
             List<OrderLine> orders = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
-            Cart mcv = new();
+            ModelCartView mcv = new();
 
             // Update the quantity of the item with the specified id
             foreach (var item in orders)
