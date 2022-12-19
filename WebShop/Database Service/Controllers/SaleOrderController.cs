@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using Database_Service.Model;
+using Database_Service.DataAccess;
 
 namespace Database_Service.Controllers
 {
@@ -19,12 +20,13 @@ namespace Database_Service.Controllers
     {
         private SaleOrderLogicController _SaleOrderController;
 
+
         /// <summary>
         /// The constructor for the `SaleOrderController` class.
         /// </summary>
         public SaleOrderController()
         {
-            _SaleOrderController = new SaleOrderLogicController();
+            _SaleOrderController = new SaleOrderLogicController(dBAccessProduct);
         }
 
         /// <summary>

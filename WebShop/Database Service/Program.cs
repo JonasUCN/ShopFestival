@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddSingleton<IDBAccessProduct, DBAccessProduct>();
 
 // Configure JWT authentication using the JwtBearer scheme
 builder.Services.AddAuthentication(options => {

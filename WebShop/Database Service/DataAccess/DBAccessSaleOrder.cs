@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace Database_Service.DataAccess
 {
+
     /// <summary>
     /// This class provides methods for accessing and manipulating sale order data in the database.
     /// </summary>
@@ -15,11 +16,11 @@ namespace Database_Service.DataAccess
 
         private LogicProductController _LogicProductController;
         private string connectionString;
-        public DBAccessSaleOrder()
+        public DBAccessSaleOrder(IDBAccessProduct dBAccessProduct)
         {
             
             connectionString = "Server=hildur.ucn.dk; Database=DMA-CSD-S211_10407530;User=DMA-CSD-S211_10407530;Password=Password1!;TrustServerCertificate=true;"; 
-            _LogicProductController = new LogicProductController();
+            _LogicProductController = new LogicProductController(dBAccessProduct);
         }
 
         /// <summary>

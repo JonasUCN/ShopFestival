@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Database_Service.DataAccess
 {
+
     /// <summary>
     /// This namespace contains classes for accessing data in a database.
     /// </summary>

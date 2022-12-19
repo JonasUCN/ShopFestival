@@ -31,6 +31,7 @@ namespace DesktopApp.ServiceLayer
             TokenAccess = new TokenAccess(configuration);
         }
 
+
         /// <summary>
         /// The `RestClient` instance used to make HTTP requests.
         /// </summary>
@@ -42,6 +43,7 @@ namespace DesktopApp.ServiceLayer
         /// <returns>A list of all sale orders in the database.</returns>
         public List<SaleOrder> GetAllSaleOrder()
         {
+            RestClient restClient = new RestClient("https://localhost:5001");
             var request = new RestRequest("api/SaleOrder/SaleOrders");
             request.AddHeader("Authorization", $"Bearer {TokenAccess.GetToken()}");
             var response = restClient.Get(request);

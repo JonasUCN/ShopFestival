@@ -21,7 +21,7 @@ namespace Database_Service.Controllers
         /// </summary>
         public ProductController()
         {
-            _ProductController = new LogicProductController();
+            _ProductController = new LogicProductController(dBAccessProduct);
         }
 
         /// <summary>

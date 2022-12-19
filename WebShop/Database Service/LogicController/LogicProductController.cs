@@ -5,6 +5,7 @@ namespace Database_Service.LogicController
 {
     public class LogicProductController : ILogicProductController
     {
+
         /// <summary>
         /// The object responsible for accessing the product database
         /// </summary>
@@ -15,7 +16,7 @@ namespace Database_Service.LogicController
         /// </summary>
         public LogicProductController()
         {
-            dBAccessProduct = new DBAccessProduct();
+            this.dBAccessProduct = dBAccessProduct;
         }
 
         /// <summary>
