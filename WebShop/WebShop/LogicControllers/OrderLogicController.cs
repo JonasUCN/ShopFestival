@@ -5,10 +5,20 @@ using WebShop.ServiceLayer;
 
 namespace WebShop.LogicControllers
 {
+    /// <summary>
+    /// A logic controller for creating and managing sale orders.
+    /// </summary>
     public class OrderLogicController
     {
         private DBSaleOrderAccess DBSaleOrderAccess = new();
         private OrderAddress orderAddress = new OrderAddress();
+
+        /// <summary>
+        /// Creates a new sale order using the given data and user.
+        /// </summary>
+        /// <param name="mov">The data to use for creating the sale order.</param>
+        /// <param name="user">The user who is creating the sale order.</param>
+        /// <returns>The created sale order.</returns>
         public SaleOrder CreateSaleOrder(SaleOrder mov, IdentityUser user)
         {
             SaleOrder saleOrder = new SaleOrder();
@@ -21,13 +31,22 @@ namespace WebShop.LogicControllers
             return saleOrder;
         }
 
-
+        /// <summary>
+        /// Adds a sale order to the database.
+        /// </summary>
+        /// <param name="mov">The sale order to add to the database.</param>
+        /// <param name="user">The user who is adding the sale order to the database.</param>
         public void AddSaleOrderToDB(SaleOrder mov, IdentityUser user)
         {
             DBSaleOrderAccess.addSaleOrder(ConvertSaleOrderToJson(CreateSaleOrder(mov, user)),user);
 
         }
 
+        /// <summary>
+        /// Converts a sale order to a JSON string.
+        /// </summary>
+        /// <param name="saleOrder">The sale order to convert to JSON.</param>
+        /// <returns>A JSON string representing the given sale order.</returns>
         public string ConvertSaleOrderToJson(SaleOrder saleOrder)
         {
             string jsonString;
@@ -37,6 +56,11 @@ namespace WebShop.LogicControllers
             return jsonString;
         }
 
+        /// <summary>
+        /// This method creates an OrderAddress object based on the customer's information in a SaleOrder object.
+        /// </summary>
+        /// <param name="mov">The SaleOrder object that contains the customer's information.</param>
+        /// <returns>An OrderAddress object with the customer's street, street number, zipcode, and city information.</returns>
         private OrderAddress CreateOrderAddress(SaleOrder mov)
         {
             orderAddress.Street = mov.customer.Street;

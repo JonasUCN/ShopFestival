@@ -7,6 +7,9 @@ using System.Text;
 
 namespace Database_Service.Security
 {
+    /// <summary>
+    /// Represents a JSON Web Token (JWT) used for authenticating and authorizing users.
+    /// </summary>
     public class JwtToken
     {
  
@@ -14,14 +17,21 @@ namespace Database_Service.Security
         private readonly IConfiguration _configuration;
         private IDBASP_NetUser dBASP_NetUser;
 
-        // Fetches configuration from more sources
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JwtToken"/> class.
+        /// </summary>
+        /// <param name="inConfiguration">The configuration to use for creating the security key.</param>
+        /// <param name="dBASP_NetUser">The database user to use for accessing user information.</param>
         public JwtToken(IConfiguration inConfiguration,IDBASP_NetUser dBASP_NetUser)
         {
             _configuration = inConfiguration;
             this.dBASP_NetUser = dBASP_NetUser;
         }
 
-        // Create key for signing
+        /// <summary>
+        /// Creates a security key using the provided configuration.
+        /// </summary>
+        /// <returns>The security key to use for signing the JWT.</returns>
         public SymmetricSecurityKey GetSecurityKey()
         {
             SymmetricSecurityKey SIGNING_KEY = null;
@@ -33,7 +43,11 @@ namespace Database_Service.Security
             return SIGNING_KEY;
         }
 
-
+        /// <summary>
+        /// Check if the provided username matches the username of the User object retrieved from dBASP_NetUser.GetUser(username).
+        /// </summary>
+        /// <param name="username">The username to check.</param>
+        /// <returns>True if the provided username matches the username of the User object, false otherwise.</returns>
         public bool IsValidUsername(string username)
         {
             User user = dBASP_NetUser.GetUser(username);
@@ -51,7 +65,11 @@ namespace Database_Service.Security
             
         }
 
-
+        /// <summary>
+        /// Check if the "LoggedInUser" property in the JWT contained in the authHeader string is equal to "LoggedInUser".
+        /// </summary>
+        /// <param name="authHeader">The authorization header containing the JWT to check.</param>
+        /// <returns>True if the "LoggedInUser" property in the JWT is equal to "LoggedInUser", false otherwise.</returns>
         public static bool ValidateGrantType(string authHeader)
         {
             bool AuthorizeSuccess = false;

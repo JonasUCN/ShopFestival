@@ -5,19 +5,10 @@ namespace WebShop.ServiceLayer
 {
     public static class ServiceToken
     {
-
-        //public static string GetToken()
-        //{
-        //    string url = "https://localhost:5001/jwt";
-        //    var client = new RestClient(url);
-
-        //    var response = client.Get(new RestRequest());
-        //    string responseToken = response.Content;
-        //    string FinalToken = responseToken.Replace("\"", "");
-
-        //    return FinalToken;
-        //}
-
+        /// <summary>
+        /// This static method retrieves a token for a default user from a specified server.
+        /// </summary>
+        /// <returns>A string containing the retrieved token.</returns>
         public static string GetTokenDefaultUser()
         {
             var client = new RestClient("https://localhost:5001");
@@ -32,6 +23,12 @@ namespace WebShop.ServiceLayer
             return Token;
 
         }
+
+        /// <summary>
+        /// This static method retrieves a token for a logged-in user from a specified server.
+        /// </summary>
+        /// <param name="user">The IdentityUser object representing the logged-in user.</param>
+        /// <returns>A string containing the retrieved token.</returns>
         public static string GetTokenLoggedInUser(IdentityUser user)
         {
             var client = new RestClient("https://localhost:5001");

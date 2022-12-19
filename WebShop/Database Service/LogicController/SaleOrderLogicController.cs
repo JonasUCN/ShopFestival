@@ -14,6 +14,9 @@ namespace Database_Service.LogicController
             LogicProductController = new(dBAccessProduct);
         }
 
+        /// <summary>
+        /// Returns a list of all sale orders from the database.
+        /// </summary>
         public async Task<List<SaleOrder>> GetAllSaleOrders()
         {
             List<SaleOrder> saleOrder = await _DBAccessSaleOrder.GetAllSaleOrders();
@@ -21,6 +24,9 @@ namespace Database_Service.LogicController
 
         }
 
+        // <summary>
+        /// Creates a new sale order from a JSON string and saves it to the database.
+        /// </summary>
         public async Task<bool> CreateSaleOrder(string json)
         {
             SaleOrder saleOrder = JsonConvert.DeserializeObject<SaleOrder>(json);
@@ -29,6 +35,7 @@ namespace Database_Service.LogicController
             return status;
         }
 
+        // Not Used
         //private async Task CreateOrderLine(SaleOrder saleOrder)
         //{
         //    await _DBAccessSaleOrder.CreateOrderLine(saleOrder);
