@@ -17,6 +17,9 @@
         /// </summary>
         public SaleOrder()
         {
+            orderLines = new List<OrderLine>();
+            OrderDate = DateTime.Now;
+            Status = "Active";
             customer = new Customer();
         }
     }

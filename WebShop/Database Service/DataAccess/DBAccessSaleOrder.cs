@@ -82,9 +82,9 @@ namespace Database_Service.DataAccess
                 }
 
                 // define the SQL INSERT and UPDATE statements for the customer data
-                string sqlInsert = "INSERT INTO Customer ([fname], [lname], [zipcode], [street], [streetNo], [phone], [email], [userID]) VALUES (@fname, @lname, @zipcode, @street, @streetno, @phone, @email, @userID)";
+                string sqlInsert = "INSERT INTO Customer ([fname], [lname], [zipcode], [street], [streetNo], [phone], [email], [userID]) output INSERTED.customerNo VALUES (@fname, @lname, @zipcode, @street, @streetno, @phone, @email, @userID)";
                 string sqlUpdate = "UPDATE Customer SET fname = @fname, lname = @lname, zipcode = @zipcode, street = @street, streetNo = @streetNo, phone = @phone where userID = @userID";
-
+                
                 // create a new SQL command and add the parameters for the customer dat
                 using (var cmd5 = new SqlCommand())
                 {
@@ -102,14 +102,16 @@ namespace Database_Service.DataAccess
                     cmd5.Transaction = transaction;
                     
                     // check if a customer record with the given user ID already exists
-                    cmd5.CommandText = "SELECT TOP 1 1 FROM Customer WHERE userID = '" + saleOrder.customer.userID + "';";
-                    Object i = cmd5.ExecuteScalar();
+                    //cmd5.CommandText = "SELECT TOP 1 1 FROM Customer WHERE userID = '" + saleOrder.customer.userID + "';";
+                    //Object i = cmd5.ExecuteScalar();
 
                     // if no record exists, insert a new one using the sqlInsert statement
-                    if (i == null)
+                    if (saleOrder.customer.CustomerNo == -1)
                     {
                         cmd5.CommandText = sqlInsert;
-                        cmd5.ExecuteNonQuery();
+                        int customerNoWhenInsert = (int)cmd5.ExecuteScalar();
+                        saleOrder.customer.CustomerNo = customerNoWhenInsert;
+
                     }
                     // otherwise, update the existing record using the sqlUpdate statement
                     else
@@ -208,10 +210,11 @@ namespace Database_Service.DataAccess
                 else
                     transaction.Rollback();
             }
-            catch
+            catch(Exception ex)
             {
                 // roll back the transaction if an exception is thrown
                 transaction.Rollback();
+                Console.WriteLine(ex.Message);
             }
             finally
             {

@@ -10,7 +10,7 @@
         public string StreetNo { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public string userID { get; internal set; }
+        public string userID { get; set; }
         public int CustomerNo { get; set; }
     }
 }

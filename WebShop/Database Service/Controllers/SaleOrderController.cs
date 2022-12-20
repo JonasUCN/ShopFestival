@@ -56,28 +56,29 @@ namespace Database_Service.Controllers
         /// <param name="id">The ID of the order to add.</param>
         [Authorize]
         [HttpPost, Route("AddOrder/{id}")]
-        public async Task AddOrder([FromHeader] string Authorization, string id)
+        public async Task<bool> AddOrder([FromHeader] string Authorization, string id)
         {
-            
-
+            Console.WriteLine(id);
             var authHeader = this.HttpContext.Request.Headers.Authorization.ToString();
             bool AuthorizeSuccess = JwtToken.ValidateGrantType(authHeader);
-
             if (AuthorizeSuccess)
             {
                 bool status = await _SaleOrderController.CreateSaleOrder(id);
-                if (status)
+                if (!status)
                 {
                     Response.StatusCode = 404;
-                    return;
+                    Console.WriteLine("return false 404");
+                    return false;
                 }
                 Response.StatusCode = 200;
-                return;
+                Console.WriteLine("return true 200");
+                return true;
             }
             else
             {
                 Response.StatusCode = 401;
-                return;
+                Console.WriteLine("return false 401");
+                return false;
             }
             
 

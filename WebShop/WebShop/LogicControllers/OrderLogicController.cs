@@ -26,7 +26,6 @@ namespace WebShop.LogicControllers
             saleOrder.OrderAddress = orderAddress;
             saleOrder.orderLines = mov.orderLines;
             saleOrder.customer = CustomerLogicController.CreateCustomerFromModelOrderView(mov, user);
-
             return saleOrder;
         }
 

@@ -5,6 +5,11 @@
         public List<OrderLine> orderLines { get; set; }
         public Customer customer { get; set; }
 
+        public ModelOrderView()
+        {
+            customer = new();
+        }
+
         /// <summary>
         /// Calculates the total price of all items in the order.
         /// </summary>

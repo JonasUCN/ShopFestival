@@ -40,12 +40,13 @@ namespace WebShop.Controllers
             var user = _userManager.FindByNameAsync(HttpContext.User.Identity.Name).Result;
             
             Customer c = CustomerLogicController.GetCustomerFromAPIByEmail(user.Email);
-
-            if (c.Email == null)
+            if (c.userID == null)
+            {
                 mov.customer.Email = user.Email;
+                mov.customer.userID = user.Id;
+            }
             else
                 mov.customer = c;
-
 
             return View(mov);
         }
@@ -61,7 +62,6 @@ namespace WebShop.Controllers
         public async Task<IActionResult> OrderView(ModelOrderView _MOV)
         {       
             _MOV.orderLines = JsonConvert.DeserializeObject<List<OrderLine>>(HttpContext.Session.GetString("OrderLines"));
-
             var user = _userManager.FindByNameAsync(HttpContext.User.Identity.Name).Result;
 
             bool val1 = (HttpContext.User != null) && HttpContext.User.Identity.IsAuthenticated;
@@ -74,14 +74,15 @@ namespace WebShop.Controllers
 
             if (status)
             {
-                return RedirectToAction("OrderConfirmation", _MOV);
+                return RedirectToAction("OrderConfirmationView", _MOV);
             }else
-                return View("ErrorViewModel");
+                return View("Error");
         }
 
         [Authorize]
         public async Task<IActionResult> OrderConfirmationView(ModelOrderView _MOV)
         {
+            HttpContext.Session.SetString("OrderLines", JsonConvert.SerializeObject(new List<OrderLine>()));
             return View(_MOV);
         }
     }

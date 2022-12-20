@@ -22,8 +22,8 @@ namespace WebShop.ServiceLayer
             var request = new RestRequest();
             request.AddHeader("Authorization", $"Bearer {ServiceToken.GetTokenLoggedInUser(user)}");
             var response = client.Post(request);
-            Console.WriteLine(response.Content);
-            if(response.Content == "true")
+            Console.WriteLine(response.Content + "response content");
+            if(response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                return true;
             }
