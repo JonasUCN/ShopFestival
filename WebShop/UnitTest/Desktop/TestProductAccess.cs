@@ -12,22 +12,7 @@ namespace UnitTest.Desktop
     {
         Microsoft.Extensions.Configuration.IConfiguration configuration;
 
-        //Currect product object IMPORTANT service needs to be running
-        [Fact]
-        public void InsertProduct_Success()
-        {
-
-            // Arrange
-            bool expected = true;
-            decimal Price = 22.22M;
-            Product product = new Product() { Brand = "Addias", Price = Price, ProductDesc = "Festivals Sko", Stock = 50, Title = "Festivals sko" };
-            ProductAccess productAccess = new ProductAccess(configuration);
-            //Act
-            bool result = productAccess.InsertProduct(product);
-
-            // assert
-            Assert.Equal(expected, result);
-        }
+        
         //Empty Product object IMPORTANT service needs to be running
         [Fact]
         public void InsertProduct_FailWithEmptyObject()
