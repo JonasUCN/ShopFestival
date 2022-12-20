@@ -2,6 +2,8 @@
 using Database_Service.LogicController;
 using Database_Service.Model;
 using Newtonsoft.Json;
+using FluentAssertions;
+using FluentAssertions.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,10 +27,10 @@ namespace UnitTest.Service
             var products = await controller.GetAllProducts();
 
             // Assert
-            Assert.NotNull(products);
+            //Assert.NotNull(products);
 
             // Assert that the returned list of products matches the expected values
-            Assert.Equal(expectedProducts, products);
+            expectedProducts.Should().BeEquivalentTo(products);
         }
     }
 
